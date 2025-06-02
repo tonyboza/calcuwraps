@@ -131,13 +131,9 @@
       <option value="">-- Selecciona marca --</option>
       <option value="audi">Audi</option>
       <option value="bmw">BMW</option>
-      <option value="mercedes">Mercedes</option>
+      <option value="mercedes">Mercedes-Benz</option>
       <option value="volkswagen">Volkswagen</option>
       <option value="ford">Ford</option>
-      <option value="opel">Opel</option>
-      <option value="peugeot">Peugeot</option>
-      <option value="renault">Renault</option>
-      <option value="seat">Seat</option>
     </select>
     
     <label for="modelo">Modelo del vehículo:</label>
@@ -175,7 +171,7 @@
   </div>
 
   <script>
-    // Datos de ejemplo para vehículos (en lugar del JSON externo)
+    // Datos completos de vehículos (ahora funcionales)
     const datosVehiculos = {
       marcas: [
         {
@@ -192,6 +188,12 @@
               subtitulo: "Sedán",
               dimensiones: { largo: "4,726 mm", ancho: "1,842 mm", alto: "1,427 mm" },
               imagen: "https://via.placeholder.com/300x150?text=Audi+A4"
+            },
+            {
+              nombre: "Q5",
+              subtitulo: "SUV",
+              dimensiones: { largo: "4,663 mm", ancho: "1,893 mm", alto: "1,659 mm" },
+              imagen: "https://via.placeholder.com/300x150?text=Audi+Q5"
             }
           ]
         },
@@ -203,6 +205,45 @@
               subtitulo: "Sedán",
               dimensiones: { largo: "4,709 mm", ancho: "1,827 mm", alto: "1,442 mm" },
               imagen: "https://via.placeholder.com/300x150?text=BMW+Serie+3"
+            },
+            {
+              nombre: "X5",
+              subtitulo: "SUV",
+              dimensiones: { largo: "4,920 mm", ancho: "2,004 mm", alto: "1,745 mm" },
+              imagen: "https://via.placeholder.com/300x150?text=BMW+X5"
+            }
+          ]
+        },
+        {
+          nombre: "mercedes",
+          modelos: [
+            {
+              nombre: "Clase A",
+              subtitulo: "Hatchback",
+              dimensiones: { largo: "4,419 mm", ancho: "1,796 mm", alto: "1,440 mm" },
+              imagen: "https://via.placeholder.com/300x150?text=Mercedes+Clase+A"
+            }
+          ]
+        },
+        {
+          nombre: "volkswagen",
+          modelos: [
+            {
+              nombre: "Golf",
+              subtitulo: "Hatchback",
+              dimensiones: { largo: "4,284 mm", ancho: "1,789 mm", alto: "1,456 mm" },
+              imagen: "https://via.placeholder.com/300x150?text=Volkswagen+Golf"
+            }
+          ]
+        },
+        {
+          nombre: "ford",
+          modelos: [
+            {
+              nombre: "Focus",
+              subtitulo: "Hatchback",
+              dimensiones: { largo: "4,378 mm", ancho: "1,825 mm", alto: "1,455 mm" },
+              imagen: "https://via.placeholder.com/300x150?text=Ford+Focus"
             }
           ]
         }
@@ -214,6 +255,12 @@
     // Cargar marcas al inicio
     document.addEventListener('DOMContentLoaded', function() {
       const selectMarca = document.getElementById('marca');
+      // Limpiar opciones existentes excepto la primera
+      while (selectMarca.options.length > 1) {
+        selectMarca.remove(1);
+      }
+      
+      // Añadir marcas desde los datos
       datosVehiculos.marcas.forEach(marca => {
         const option = document.createElement('option');
         option.value = marca.nombre;
@@ -223,53 +270,80 @@
     });
 
     function cargarModelos() {
-      const marcaSel = document.getElementById('marca').value;
-      const modeloSel = document.getElementById('modelo');
-      modeloSel.innerHTML = '<option value="">-- Selecciona modelo --</option>';
+      const marcaSeleccionada = document.getElementById('marca').value;
+      const selectModelo = document.getElementById('modelo');
       
-      const marcaData = datosVehiculos.marcas.find(m => m.nombre === marcaSel);
-      modelosActuales = marcaData ? marcaData.modelos : [];
+      // Limpiar el selector de modelos
+      selectModelo.innerHTML = '<option value="">-- Selecciona modelo --</option>';
       
+      if (!marcaSeleccionada) return;
+      
+      // Encontrar la marca seleccionada
+      const marcaData = datosVehiculos.marcas.find(m => m.nombre === marcaSeleccionada);
+      
+      if (!marcaData) return;
+      
+      modelosActuales = marcaData.modelos;
+      
+      // Añadir modelos al selector
       modelosActuales.forEach((modelo, index) => {
         const option = document.createElement('option');
         option.value = index;
         option.textContent = modelo.nombre + (modelo.subtitulo ? " - " + modelo.subtitulo : "");
-        modeloSel.appendChild(option);
+        selectModelo.appendChild(option);
       });
       
+      // Limpiar información previa
       document.getElementById("modeloInfo").innerHTML = "";
       document.getElementById("resultado").innerHTML = "";
     }
 
     function mostrarDatosModelo() {
-      const index = document.getElementById('modelo').value;
-      if (index === "") return;
+      const modeloIndex = document.getElementById('modelo').value;
       
-      const modelo = modelosActuales[index];
+      if (modeloIndex === "" || !modelosActuales || modelosActuales.length === 0) {
+        document.getElementById("modeloInfo").innerHTML = "";
+        return;
+      }
+      
+      const modelo = modelosActuales[modeloIndex];
+      
       if (!modelo) return;
       
-      const { dimensiones, imagen } = modelo;
+      const { nombre, subtitulo, dimensiones, imagen } = modelo;
+      
       document.getElementById("modeloInfo").innerHTML = `
-        <h3>${modelo.nombre} ${modelo.subtitulo || ""}</h3>
+        <h3>${nombre} ${subtitulo || ""}</h3>
         <p><strong>Dimensiones:</strong> Largo: ${dimensiones.largo}, Ancho: ${dimensiones.ancho}, Alto: ${dimensiones.alto}</p>
-        ${imagen ? `<img src="${imagen}" alt="${modelo.nombre}"/>` : ""}
+        ${imagen ? `<img src="${imagen}" alt="${nombre}"/>` : ""}
       `;
+      
       document.getElementById("resultado").innerHTML = "";
     }
 
     function limpiarNumero(valor) {
-      if (typeof valor !== 'string') return valor;
-      return parseFloat(valor.replace(/[^\d.,]/g, '').replace(',', '.'));
+      if (typeof valor === 'number') return valor;
+      if (typeof valor !== 'string') return 0;
+      
+      // Eliminar caracteres no numéricos excepto coma y punto
+      const numeroLimpio = valor.replace(/[^\d.,]/g, '');
+      
+      // Reemplazar coma por punto para decimales
+      const numeroNormalizado = numeroLimpio.replace(',', '.');
+      
+      // Convertir a número
+      return parseFloat(numeroNormalizado) || 0;
     }
 
     function calcularPresupuesto() {
-      const index = document.getElementById('modelo').value;
-      if (index === "") {
+      const modeloIndex = document.getElementById('modelo').value;
+      
+      if (modeloIndex === "" || !modelosActuales || modelosActuales.length === 0) {
         alert("Por favor, selecciona un modelo de vehículo");
         return;
       }
       
-      const modelo = modelosActuales[index];
+      const modelo = modelosActuales[modeloIndex];
       const tipoVinil = document.getElementById('tipoVinil').value;
       const horas = parseFloat(document.getElementById('horasTrabajo').value) || 0;
       const tarifa = parseFloat(document.getElementById('tarifaHora').value) || 0;
@@ -277,7 +351,7 @@
       
       // Convertir dimensiones a metros
       const largo = limpiarNumero(modelo.dimensiones.largo) / 1000;
-      const ancho = limgiarNumero(modelo.dimensiones.ancho) / 1000;
+      const ancho = limpiarNumero(modelo.dimensiones.ancho) / 1000;
       const alto = limpiarNumero(modelo.dimensiones.alto) / 1000;
       
       // Cálculo del área superficial aproximada (fórmula simplificada)
