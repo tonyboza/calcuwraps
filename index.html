@@ -1,103 +1,105 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Calculadora de Vinilado</title>
+  <title>Calculadora de Vinilo para Coches</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f3f5;
+      color: #333;
       margin: 0;
       padding: 0;
     }
     .container {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background: white;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     h1 {
       text-align: center;
       color: #2c3e50;
     }
+    .brand-logos {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .brand-logos img {
+      height: 80px;
+      margin: 0 20px;
+    }
     label {
-      font-weight: bold;
       display: block;
-      margin-top: 15px;
+      margin-top: 20px;
+      font-weight: bold;
     }
     select, input {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
+      font-size: 16px;
       border-radius: 5px;
       border: 1px solid #ccc;
     }
     button {
-      margin-top: 20px;
-      padding: 12px;
-      width: 100%;
-      background: #3498db;
-      color: white;
-      font-size: 16px;
+      background-color: #e74c3c;
+      color: #fff;
       border: none;
+      padding: 15px;
+      margin-top: 25px;
+      width: 100%;
+      font-size: 18px;
       border-radius: 5px;
       cursor: pointer;
     }
     button:hover {
-      background: #2980b9;
+      background-color: #c0392b;
     }
-    .resultado, .modelo-info {
-      margin-top: 20px;
-      padding: 15px;
-      background: #f9f9f9;
+    .resultado {
+      background-color: #f8f9fa;
+      margin-top: 30px;
+      padding: 20px;
+      border-left: 5px solid #2ecc71;
       border-radius: 5px;
     }
-    .logos {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 20px 0;
-    }
-    .logos img {
-      height: 60px;
-      filter: grayscale(40%);
+    .resultado h3 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Calculadora de Vinilo para Coches</h1>
-
-    <div class="logos">
+    <div class="brand-logos">
       <img src="img/gsix9.png" alt="GSIX9">
-      <img src="img/oracal.png" alt="Oracal">
-      <img src="img/totenser.png" alt="Totenser">
+      <img src="img/oracal.png" alt="ORACAL">
+      <img src="img/totenser.png" alt="TOTENSER">
     </div>
 
     <label for="marca">Marca:</label>
     <select id="marca" onchange="cargarModelos()">
-      <option value="">-- Selecciona marca --</option>
+      <option value="">-- Selecciona una marca --</option>
     </select>
 
     <label for="modelo">Modelo:</label>
     <select id="modelo" onchange="mostrarDatosModelo()">
-      <option value="">-- Selecciona modelo --</option>
+      <option value="">-- Selecciona un modelo --</option>
     </select>
 
-    <div class="modelo-info" id="modeloInfo"></div>
+    <div id="infoModelo"></div>
 
     <label for="horas">Horas estimadas:</label>
-    <input type="number" id="horas" value="20" />
+    <input type="number" id="horas" value="20" min="1" />
 
     <label for="tarifa">Tarifa por hora (€):</label>
-    <input type="number" id="tarifa" value="30" />
+    <input type="number" id="tarifa" value="30" min="1" />
 
-    <label for="anchoVinilo">Ancho del vinilo (m):</label>
-    <input type="number" id="anchoVinilo" value="1.52" step="0.01" />
+    <label for="ancho">Ancho del vinilo (m):</label>
+    <input type="number" id="ancho" value="1.52" min="0.1" step="0.01" />
 
     <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
 
@@ -105,84 +107,85 @@
   </div>
 
   <script>
-    let datos = {};
+    let datosVehiculos;
     let modelosActuales = [];
 
-    fetch('vehiculos_combinado_convertido.json')
+    fetch("vehiculos_combinado_convertido.json")
       .then(res => res.json())
       .then(data => {
-        datos = data;
-        const marcas = data.marcas;
+        datosVehiculos = data;
+        const marcas = datosVehiculos.marcas || [];
+        marcas.sort((a, b) => a.nombre.localeCompare(b.nombre));
         const selectMarca = document.getElementById("marca");
-
-        marcas.forEach((marca, index) => {
+        marcas.forEach(marca => {
           const option = document.createElement("option");
-          option.value = index;
+          option.value = marca.nombre;
           option.textContent = marca.nombre;
           selectMarca.appendChild(option);
         });
       });
 
     function cargarModelos() {
-      const marcaIndex = document.getElementById("marca").value;
+      const marca = document.getElementById("marca").value;
       const selectModelo = document.getElementById("modelo");
-      selectModelo.innerHTML = '<option value="">-- Selecciona modelo --</option>';
+      selectModelo.innerHTML = '<option value="">-- Selecciona un modelo --</option>';
       modelosActuales = [];
 
-      if (marcaIndex === "") return;
+      const marcaData = datosVehiculos.marcas.find(m => m.nombre === marca);
+      if (!marcaData) return;
 
-      const modelos = datos.marcas[marcaIndex].modelos;
-      modelosActuales = modelos;
-
-      modelos.forEach((modelo, index) => {
+      marcaData.modelos.forEach((modelo, index) => {
+        modelosActuales.push(modelo);
         const option = document.createElement("option");
         option.value = index;
         option.textContent = modelo.nombre;
         selectModelo.appendChild(option);
       });
 
-      document.getElementById("modeloInfo").innerHTML = '';
+      document.getElementById("infoModelo").innerHTML = "";
+      document.getElementById("resultado").innerHTML = "";
     }
 
     function mostrarDatosModelo() {
-      const modeloIndex = document.getElementById("modelo").value;
-      if (modeloIndex === "") return;
-
-      const modelo = modelosActuales[modeloIndex];
-      const dims = modelo.dimensiones;
-
-      document.getElementById("modeloInfo").innerHTML = `
-        <p><strong>Dimensiones:</strong> Largo: ${dims.largo}, Ancho: ${dims.ancho}, Alto: ${dims.alto}</p>
-      `;
-      document.getElementById("resultado").innerHTML = '';
+      const i = document.getElementById("modelo").value;
+      if (i === "") return;
+      const modelo = modelosActuales[i];
+      const d = modelo.dimensiones;
+      document.getElementById("infoModelo").innerHTML =
+        `<strong>Dimensiones:</strong> Largo: ${d.largo}, Ancho: ${d.ancho}, Alto: ${d.alto}`;
     }
 
-    function parseDim(mm) {
-      return parseFloat(mm.replace(" mm", "").replace(",", ".")) / 1000;
+    function limpiarNumero(valor) {
+      if (typeof valor !== "string") return 0;
+      return parseFloat(
+        valor
+          .replace(/\s*mm\s*/gi, "")
+          .replace(/\./g, "")
+          .replace(",", ".")
+      ) || 0;
     }
 
     function calcularPresupuesto() {
-      const modeloIndex = document.getElementById("modelo").value;
-      if (modeloIndex === "") return alert("Selecciona un modelo.");
-
-      const modelo = modelosActuales[modeloIndex];
-      const dims = modelo.dimensiones;
-
-      const largo = parseDim(dims.largo);
-      const ancho = parseDim(dims.ancho);
-      const alto = parseDim(dims.alto);
+      const i = document.getElementById("modelo").value;
+      if (i === "") return;
+      const modelo = modelosActuales[i];
+      const d = modelo.dimensiones;
+      const largo = limpiarNumero(d.largo) / 1000;
+      const ancho = limpiarNumero(d.ancho) / 1000;
+      const alto = limpiarNumero(d.alto) / 1000;
 
       const area = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
-      const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value);
+      const anchoVinilo = parseFloat(document.getElementById("ancho").value);
       const metrosLineales = area / anchoVinilo;
       const horas = parseFloat(document.getElementById("horas").value);
       const tarifa = parseFloat(document.getElementById("tarifa").value);
 
+      const totalManoObra = horas * tarifa;
       const costeMaterial = area * 15;
-      const costeManoObra = horas * tarifa;
-      const total = costeMaterial + costeManoObra;
+      const total = totalManoObra + costeMaterial;
 
       document.getElementById("resultado").innerHTML = `
+        <h3>Presupuesto Estimado</h3>
         <p><strong>Área estimada:</strong> ${area.toFixed(2)} m²</p>
         <p><strong>Metros lineales:</strong> ${metrosLineales.toFixed(2)} m</p>
         <p><strong>Total estimado:</strong> ${total.toFixed(2)} €</p>
