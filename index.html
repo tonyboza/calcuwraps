@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,10 +7,40 @@
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#3498db" />
   <style>
-    body { font-family: sans-serif; padding: 20px; max-width: 900px; margin: auto; }
-    select, input, button { display: block; margin: 10px 0; padding: 8px; width: 100%; }
-    .modelo-info img { max-width: 300px; margin: 10px 0; }
-    .resultado { margin-top: 20px; padding: 10px; background: #f4f4f4; border-left: 4px solid #4CAF50; }
+    body { 
+      font-family: sans-serif; 
+      padding: 20px; 
+      max-width: 900px; 
+      margin: auto; 
+    }
+    select, input, button { 
+      display: block; 
+      margin: 10px 0; 
+      padding: 8px; 
+      width: 100%; 
+      box-sizing: border-box;
+    }
+    input[type="number"] {
+      text-align: right;
+    }
+    .modelo-info img { 
+      max-width: 300px; 
+      margin: 10px 0; 
+    }
+    .resultado { 
+      margin-top: 20px; 
+      padding: 15px; 
+      background: #f4f4f4; 
+      border-left: 4px solid #4CAF50;
+      border-radius: 4px;
+    }
+    .error {
+      color: red;
+      margin: 10px 0;
+    }
+    label {
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -38,15 +67,17 @@
   </select>
 
   <label for="horasTrabajo">Horas estimadas:</label>
-  <input type="number" id="horasTrabajo" value="20" />
+  <input type="number" id="horasTrabajo" value="20" min="1" />
 
   <label for="tarifaHora">Tarifa por hora (€):</label>
-  <input type="number" id="tarifaHora" value="30" />
+  <input type="number" id="tarifaHora" value="30" min="1" step="0.5" />
 
   <label for="anchoVinilo">Ancho del vinilo (m):</label>
-  <input type="number" id="anchoVinilo" value="1.52" step="0.01" />
+  <input type="number" id="anchoVinilo" value="1.52" step="0.01" min="0.1" />
 
   <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+
+  <div id="error-message" class="error" style="display: none;"></div>
 
   <div class="resultado" id="resultado"></div>
 
@@ -65,6 +96,11 @@
           option.textContent = marca.nombre;
           selectMarca.appendChild(option);
         });
+      })
+      .catch(error => {
+        console.error('Error cargando los datos:', error);
+        document.getElementById('error-message').textContent = 'Error cargando los datos de vehículos.';
+        document.getElementById('error-message').style.display = 'block';
       });
 
     function cargarModelos() {
@@ -84,6 +120,7 @@
 
       document.getElementById("modeloInfo").innerHTML = "";
       document.getElementById("resultado").innerHTML = "";
+      document.getElementById('error-message').style.display = 'none';
     }
 
     function mostrarDatosModelo() {
@@ -99,23 +136,33 @@
       `;
 
       document.getElementById("resultado").innerHTML = "";
+      document.getElementById('error-message').style.display = 'none';
     }
 
     function calcularPresupuesto() {
       const index = document.getElementById('modelo').value;
       const modelo = modelosActuales[index];
-      if (!modelo) return;
+      
+      // Validación
+      if (!modelo) {
+        document.getElementById('error-message').textContent = 'Por favor, selecciona un modelo de vehículo';
+        document.getElementById('error-message').style.display = 'block';
+        document.getElementById("resultado").innerHTML = "";
+        return;
+      }
 
       const tipoVinil = document.getElementById('tipoVinil').value;
       const horas = parseFloat(document.getElementById('horasTrabajo').value);
       const tarifa = parseFloat(document.getElementById('tarifaHora').value);
       const anchoVinilo = parseFloat(document.getElementById('anchoVinilo').value);
 
-      const largo = parseFloat(modelo.dimensiones.largo.replace(" mm", "")) / 1000;
-      const ancho = parseFloat(modelo.dimensiones.ancho.replace(" mm", "")) / 1000;
-      const alto = parseFloat(modelo.dimensiones.alto.replace(" mm", "")) / 1000;
+      // Limpiar los valores de las dimensiones (eliminar " mm" si existe)
+      const largo = parseFloat(modelo.dimensiones.largo.replace(" mm", "").replace("mm", "")) / 1000;
+      const ancho = parseFloat(modelo.dimensiones.ancho.replace(" mm", "").replace("mm", "")) / 1000;
+      const alto = parseFloat(modelo.dimensiones.alto.replace(" mm", "").replace("mm", "")) / 1000;
 
-      const areaSuperficial = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
+      // Cálculo del área superficial (fórmula mejorada)
+      const areaSuperficial = (2 * (largo * alto) + 2 * (ancho * alto) + largo * ancho) * 0.8;
       const areaVinilo = areaSuperficial;
       const metrosLineales = areaVinilo / anchoVinilo;
 
@@ -132,12 +179,13 @@
 
       document.getElementById('resultado').innerHTML = `
         <h3>Presupuesto Estimado</h3>
-        <p>Área vinilo: ${areaVinilo.toFixed(2)} m²</p>
-        <p>Metros lineales: ${metrosLineales.toFixed(2)} m</p>
+        <p>Área a vinilar: ${areaVinilo.toFixed(2)} m²</p>
+        <p>Metros lineales necesarios: ${metrosLineales.toFixed(2)} m</p>
         <p>Coste materiales: ${costeMaterial.toFixed(2)} €</p>
         <p>Coste mano de obra: ${costeManoObra.toFixed(2)} €</p>
-        <p><strong>Total: ${total.toFixed(2)} €</strong></p>
+        <p><strong>Total estimado: ${total.toFixed(2)} €</strong></p>
       `;
+      document.getElementById('error-message').style.display = 'none';
     }
   </script>
 </body>
