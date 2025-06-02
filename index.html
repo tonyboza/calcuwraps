@@ -497,7 +497,7 @@
     // Función para limpiar y convertir valores numéricos
     function limpiarNumero(valor) {
       if (typeof valor !== "string") return parseFloat(valor) || 0;
-      return parseFloat(valor.replace(/[^\d.,]/g, "").replace(",", ".")) || 0;
+      return parseFloat(valor.replace(/[^0-9.,]/g, "").replace(",", ".")) || 0;
     }
 
     // Función principal para calcular el presupuesto
