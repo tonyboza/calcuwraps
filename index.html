@@ -332,11 +332,24 @@
     let datosVehiculos = {};
     let modelosActuales = [];
 
-    // Cargar datos del JSON
+    // Función para cargar datos desde GitHub
     async function cargarDatos() {
       try {
-        const res = await fetch('vehiculos_combinado_convertido.json');
+        // Reemplaza con tu URL real de GitHub
+        const jsonUrl = 'https://raw.githubusercontent.com/tu-usuario/tu-repositorio/main/vehiculos_combinado_convertido.json';
+        
+        const res = await fetch(jsonUrl);
+        
+        if (!res.ok) {
+          throw new Error(`Error al cargar el archivo (${res.status} ${res.statusText})`);
+        }
+        
         datosVehiculos = await res.json();
+        
+        // Validar estructura básica del JSON
+        if (!datosVehiculos.marcas || !Array.isArray(datosVehiculos.marcas)) {
+          throw new Error("El archivo JSON no tiene la estructura esperada");
+        }
         
         // Ordenar marcas alfabéticamente
         const marcas = datosVehiculos.marcas.sort((a, b) => a.nombre.localeCompare(b.nombre));
@@ -351,18 +364,62 @@
           option.textContent = marca.nombre;
           selectMarca.appendChild(option);
         });
+        
+        console.log("Datos de vehículos cargados correctamente");
       } catch (error) {
         console.error("Error al cargar los datos:", error);
-        alert("Hubo un error al cargar los datos de los vehículos. Por favor, recarga la página.");
+        
+        // Mostrar mensaje de error detallado
+        const errorMsg = `Error al cargar los datos: ${error.message}\n\n`;
+        alert(errorMsg + "Por favor, verifica:\n1. La URL del JSON en GitHub\n2. Que el archivo existe\n3. Tu conexión a internet");
+        
+        // Cargar datos de ejemplo mínimos
+        cargarDatosDeEjemplo();
       }
     }
 
-    // Cargar modelos según la marca seleccionada
+    // Función para cargar datos de ejemplo en caso de error
+    function cargarDatosDeEjemplo() {
+      datosVehiculos = {
+        marcas: [
+          {
+            nombre: "Ejemplo",
+            modelos: [
+              {
+                nombre: "Modelo Demo",
+                subtitulo: "Versión estándar",
+                dimensiones: {
+                  largo: "4500 mm",
+                  ancho: "1820 mm",
+                  alto: "1520 mm"
+                },
+                imagen: "https://static.motor.es/imagenes/coche-perfil.jpg"
+              }
+            ]
+          }
+        ]
+      };
+      
+      // Forzar carga de los datos de ejemplo
+      const selectMarca = document.getElementById("marca");
+      selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
+      
+      datosVehiculos.marcas.forEach(marca => {
+        const option = document.createElement("option");
+        option.value = marca.nombre;
+        option.textContent = marca.nombre;
+        selectMarca.appendChild(option);
+      });
+      
+      console.log("Cargados datos de ejemplo debido a error en la carga");
+    }
+
+    // Función para cargar modelos según la marca seleccionada
     function cargarModelos() {
       const marcaSeleccionada = document.getElementById("marca").value;
       const selectModelo = document.getElementById("modelo");
       
-      // Resetear modelo info
+      // Resetear modelo info y resultados
       document.getElementById("modeloInfo").style.display = "none";
       document.getElementById("resultado").style.display = "none";
       
@@ -375,10 +432,10 @@
       const marca = datosVehiculos.marcas.find(m => m.nombre === marcaSeleccionada);
       
       if (marca && marca.modelos) {
-        // Ordenar modelos alfabéticamente
+        // Ordenar modelos alfabéticamente por nombre + subtítulo
         modelosActuales = marca.modelos.sort((a, b) => {
-          const nombreA = a.nombre + (a.subtitulo || "");
-          const nombreB = b.nombre + (b.subtitulo || "");
+          const nombreA = `${a.nombre} ${a.subtitulo || ""}`.toLowerCase();
+          const nombreB = `${b.nombre} ${b.subtitulo || ""}`.toLowerCase();
           return nombreA.localeCompare(nombreB);
         });
         
@@ -399,7 +456,7 @@
       }
     }
 
-    // Mostrar información del modelo seleccionado
+    // Función para mostrar información del modelo seleccionado
     function mostrarDatosModelo() {
       const index = document.getElementById("modelo").value;
       const modeloInfo = document.getElementById("modeloInfo");
@@ -426,10 +483,7 @@
       
       // Mostrar imagen si está disponible
       const imgElement = document.getElementById("modeloImagen");
-      if (modelo.imagen && !isNaN(modelo.imagen)) {
-        imgElement.src = "https://static.motor.es/imagenes/coche-perfil.jpg";
-        imgElement.alt = "Imagen genérica del vehículo";
-      } else if (modelo.imagen) {
+      if (modelo.imagen && typeof modelo.imagen === 'string' && modelo.imagen.startsWith('http')) {
         imgElement.src = modelo.imagen;
         imgElement.alt = `${modelo.nombre} ${modelo.subtitulo || ""}`;
       } else {
@@ -440,13 +494,13 @@
       modeloInfo.style.display = "block";
     }
 
-    // Limpiar y convertir valores numéricos
+    // Función para limpiar y convertir valores numéricos
     function limpiarNumero(valor) {
       if (typeof valor !== "string") return parseFloat(valor) || 0;
       return parseFloat(valor.replace(/[^\d.,]/g, "").replace(",", ".")) || 0;
     }
 
-    // Calcular el presupuesto
+    // Función principal para calcular el presupuesto
     function calcularPresupuesto() {
       const index = document.getElementById("modelo").value;
       if (index === "") {
@@ -456,40 +510,56 @@
       
       const modelo = modelosActuales[index];
       
-      // Obtener dimensiones y convertir a metros
-      const largo = limpiarNumero(modelo.dimensiones.largo) / 1000;
-      const ancho = limpiarNumero(modelo.dimensiones.ancho) / 1000;
-      const alto = limpiarNumero(modelo.dimensiones.alto) / 1000;
-      
-      // Calcular área aproximada (80% de la superficie total)
-      const area = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
-      
-      // Obtener parámetros del formulario
-      const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value) || 1.52;
-      const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 15;
-      const dificultad = parseFloat(document.getElementById("dificultad").value) || 1;
-      const horas = parseFloat(document.getElementById("horas").value) || 20;
-      const tarifa = parseFloat(document.getElementById("tarifa").value) || 30;
-      
-      // Calcular metros lineales
-      const ml = area / anchoVinilo;
-      
-      // Calcular costes
-      const costeMaterial = area * tipoPrecio;
-      const costeTrabajo = horas * tarifa * dificultad;
-      const total = costeMaterial + costeTrabajo;
-      
-      // Mostrar resultados
-      document.getElementById("areaResultado").textContent = area.toFixed(2) + " m²";
-      document.getElementById("metrosResultado").textContent = ml.toFixed(2) + " m";
-      document.getElementById("materialResultado").textContent = costeMaterial.toFixed(2) + " €";
-      document.getElementById("manoObraResultado").textContent = costeTrabajo.toFixed(2) + " €";
-      document.getElementById("totalResultado").textContent = total.toFixed(2) + " €";
-      
-      document.getElementById("resultado").style.display = "block";
-      
-      // Scroll suave al resultado
-      document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
+      try {
+        // Obtener dimensiones y convertir a metros
+        const largo = limpiarNumero(modelo.dimensiones.largo) / 1000;
+        const ancho = limpiarNumero(modelo.dimensiones.ancho) / 1000;
+        const alto = limpiarNumero(modelo.dimensiones.alto) / 1000;
+        
+        // Validar dimensiones
+        if (largo <= 0 || ancho <= 0 || alto <= 0) {
+          throw new Error("Las dimensiones del vehículo no son válidas");
+        }
+        
+        // Calcular área aproximada (80% de la superficie total)
+        const area = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
+        
+        // Obtener parámetros del formulario con validación
+        const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value) || 1.52;
+        if (anchoVinilo <= 0) throw new Error("El ancho del vinilo debe ser positivo");
+        
+        const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 15;
+        const dificultad = parseFloat(document.getElementById("dificultad").value) || 1;
+        
+        const horas = parseFloat(document.getElementById("horas").value);
+        if (isNaN(horas) || horas <= 0) throw new Error("Horas de trabajo no válidas");
+        
+        const tarifa = parseFloat(document.getElementById("tarifa").value);
+        if (isNaN(tarifa) || tarifa <= 0) throw new Error("Tarifa por hora no válida");
+        
+        // Calcular metros lineales
+        const ml = area / anchoVinilo;
+        
+        // Calcular costes
+        const costeMaterial = area * tipoPrecio;
+        const costeTrabajo = horas * tarifa * dificultad;
+        const total = costeMaterial + costeTrabajo;
+        
+        // Mostrar resultados
+        document.getElementById("areaResultado").textContent = area.toFixed(2) + " m²";
+        document.getElementById("metrosResultado").textContent = ml.toFixed(2) + " m";
+        document.getElementById("materialResultado").textContent = costeMaterial.toFixed(2) + " €";
+        document.getElementById("manoObraResultado").textContent = costeTrabajo.toFixed(2) + " €";
+        document.getElementById("totalResultado").textContent = total.toFixed(2) + " €";
+        
+        document.getElementById("resultado").style.display = "block";
+        
+        // Scroll suave al resultado
+        document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
+      } catch (error) {
+        console.error("Error en el cálculo:", error);
+        alert(`Error al calcular: ${error.message}`);
+      }
     }
 
     // Cargar datos al iniciar la página
