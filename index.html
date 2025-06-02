@@ -1,59 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Calculadora de Vinilo para Coches</title>
-  <script src="datosVehiculos.js"></script>
+  <title>Calculadora de Vinilado</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    h1 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 30px;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
     }
     .container {
-      background-color: white;
-      padding: 25px;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .modelo-info img {
-      max-width: 100%;
-      margin-top: 10px;
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background: #3498db;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+    .resultado, .modelo-info {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f9f9f9;
       border-radius: 5px;
     }
-    .resultado {
-      margin-top: 30px;
-      padding: 20px;
-      background: #f4f4f4;
-      border-left: 4px solid #4CAF50;
-      border-radius: 0 5px 5px 0;
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 20px 0;
     }
-    select, input, button {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
+    .logos img {
+      height: 60px;
+      filter: grayscale(40%);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Calculadora de Vinilo para Coches</h1>
+
+    <div class="logos">
+      <img src="img/gsix9.png" alt="GSIX9">
+      <img src="img/oracal.png" alt="Oracal">
+      <img src="img/totenser.png" alt="Totenser">
+    </div>
+
     <label for="marca">Marca:</label>
     <select id="marca" onchange="cargarModelos()">
       <option value="">-- Selecciona marca --</option>
     </select>
+
     <label for="modelo">Modelo:</label>
     <select id="modelo" onchange="mostrarDatosModelo()">
       <option value="">-- Selecciona modelo --</option>
@@ -61,71 +90,102 @@
 
     <div class="modelo-info" id="modeloInfo"></div>
 
+    <label for="horas">Horas estimadas:</label>
+    <input type="number" id="horas" value="20" />
+
+    <label for="tarifa">Tarifa por hora (€):</label>
+    <input type="number" id="tarifa" value="30" />
+
+    <label for="anchoVinilo">Ancho del vinilo (m):</label>
+    <input type="number" id="anchoVinilo" value="1.52" step="0.01" />
+
     <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+
     <div class="resultado" id="resultado"></div>
   </div>
 
   <script>
+    let datos = {};
     let modelosActuales = [];
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const selectMarca = document.getElementById("marca");
-      datosVehiculos.marcas.sort((a,b) => a.nombre.localeCompare(b.nombre));
-      datosVehiculos.marcas.forEach(m => {
-        const opt = document.createElement("option");
-        opt.value = m.nombre;
-        opt.textContent = m.nombre;
-        selectMarca.appendChild(opt);
+    fetch('vehiculos_combinado_convertido.json')
+      .then(res => res.json())
+      .then(data => {
+        datos = data;
+        const marcas = data.marcas;
+        const selectMarca = document.getElementById("marca");
+
+        marcas.forEach((marca, index) => {
+          const option = document.createElement("option");
+          option.value = index;
+          option.textContent = marca.nombre;
+          selectMarca.appendChild(option);
+        });
       });
-    });
 
     function cargarModelos() {
-      const marca = document.getElementById("marca").value;
+      const marcaIndex = document.getElementById("marca").value;
       const selectModelo = document.getElementById("modelo");
       selectModelo.innerHTML = '<option value="">-- Selecciona modelo --</option>';
+      modelosActuales = [];
 
-      const marcaSeleccionada = datosVehiculos.marcas.find(m => m.nombre === marca);
-      if (!marcaSeleccionada) return;
+      if (marcaIndex === "") return;
 
-      modelosActuales = marcaSeleccionada.modelos || [];
-      modelosActuales.forEach((modelo, index) => {
-        const opt = document.createElement("option");
-        opt.value = index;
-        opt.textContent = modelo.nombre;
-        selectModelo.appendChild(opt);
+      const modelos = datos.marcas[marcaIndex].modelos;
+      modelosActuales = modelos;
+
+      modelos.forEach((modelo, index) => {
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = modelo.nombre;
+        selectModelo.appendChild(option);
       });
+
+      document.getElementById("modeloInfo").innerHTML = '';
     }
 
     function mostrarDatosModelo() {
-      const index = document.getElementById("modelo").value;
-      const modelo = modelosActuales[index];
-      if (!modelo) return;
+      const modeloIndex = document.getElementById("modelo").value;
+      if (modeloIndex === "") return;
 
-      const info = document.getElementById("modeloInfo");
-      info.innerHTML = `
-        <h3>${modelo.nombre} ${modelo.subtitulo || ''}</h3>
-        <p><strong>Dimensiones:</strong> Largo: ${modelo.dimensiones.largo}, Ancho: ${modelo.dimensiones.ancho}, Alto: ${modelo.dimensiones.alto}</p>
-        <p><strong>Área estimada:</strong> ${modelo.area_m2 || 'N/A'} m²</p>
-        <p><strong>Metros lineales:</strong> ${modelo.metros_lineales || 'N/A'} m</p>
-        ${modelo.imagen ? '<img src="' + modelo.imagen + '" alt="Imagen de ' + modelo.nombre + '" />' : ''}
+      const modelo = modelosActuales[modeloIndex];
+      const dims = modelo.dimensiones;
+
+      document.getElementById("modeloInfo").innerHTML = `
+        <p><strong>Dimensiones:</strong> Largo: ${dims.largo}, Ancho: ${dims.ancho}, Alto: ${dims.alto}</p>
       `;
+      document.getElementById("resultado").innerHTML = '';
+    }
+
+    function parseDim(mm) {
+      return parseFloat(mm.replace(" mm", "").replace(",", ".")) / 1000;
     }
 
     function calcularPresupuesto() {
-      const index = document.getElementById("modelo").value;
-      const modelo = modelosActuales[index];
-      if (!modelo || !modelo.area_m2 || !modelo.metros_lineales) {
-        document.getElementById("resultado").innerHTML = "<p>Faltan datos para el cálculo.</p>";
-        return;
-      }
-      const precio_m2 = 25;
-      const coste = modelo.area_m2 * precio_m2;
+      const modeloIndex = document.getElementById("modelo").value;
+      if (modeloIndex === "") return alert("Selecciona un modelo.");
+
+      const modelo = modelosActuales[modeloIndex];
+      const dims = modelo.dimensiones;
+
+      const largo = parseDim(dims.largo);
+      const ancho = parseDim(dims.ancho);
+      const alto = parseDim(dims.alto);
+
+      const area = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
+      const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value);
+      const metrosLineales = area / anchoVinilo;
+      const horas = parseFloat(document.getElementById("horas").value);
+      const tarifa = parseFloat(document.getElementById("tarifa").value);
+
+      const costeMaterial = area * 15;
+      const costeManoObra = horas * tarifa;
+      const total = costeMaterial + costeManoObra;
 
       document.getElementById("resultado").innerHTML = `
-        <h3>Presupuesto</h3>
-        <p>Área: ${modelo.area_m2} m²</p>
-        <p>Metros lineales: ${modelo.metros_lineales} m</p>
-        <p><strong>Coste estimado: ${coste.toFixed(2)} €</strong></p>
+        <p><strong>Área estimada:</strong> ${area.toFixed(2)} m²</p>
+        <p><strong>Metros lineales:</strong> ${metrosLineales.toFixed(2)} m</p>
+        <p><strong>Total estimado:</strong> ${total.toFixed(2)} €</p>
       `;
     }
   </script>
