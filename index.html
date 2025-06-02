@@ -24,9 +24,7 @@
     header img {
       height: 60px;
     }
-    h2 {
-      color: #333;
-    }
+    h2 { color: #333; }
     label {
       display: block;
       margin-top: 10px;
@@ -50,9 +48,7 @@
       font-size: 16px;
       font-weight: bold;
     }
-    button:hover {
-      background-color: #388e3c;
-    }
+    button:hover { background-color: #388e3c; }
     .resultado {
       margin-top: 30px;
       padding: 20px;
@@ -79,7 +75,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <img src="img/oracal.png" alt="Oracal logo">
     <img src="img/totenser.jpg" alt="Totensur logo">
@@ -103,7 +98,6 @@
         </select>
       </div>
     </div>
-
     <div class="two-columns">
       <div>
         <label for="anio">Año del vehículo:</label>
@@ -138,7 +132,6 @@
         <input type="number" id="horasTrabajo" min="1" max="100" value="20">
       </div>
     </div>
-
     <div class="two-columns">
       <div>
         <label for="tarifaHora">Tarifa por hora (€):</label>
@@ -159,89 +152,47 @@
   </div>
 
   <script>
-    // Base de datos completa de vehículos con dimensiones
-    const baseDeDatos = {
-      "Audi": {
-        "A3": { largo: 4.34, ancho: 1.82, alto: 1.43 },
-        "A4": { largo: 4.76, ancho: 1.84, alto: 1.43 },
-        "A6": { largo: 4.94, ancho: 1.87, alto: 1.46 },
-        "Q3": { largo: 4.38, ancho: 1.83, alto: 1.61 },
-        "Q5": { largo: 4.66, ancho: 1.89, alto: 1.66 },
-        "Q7": { largo: 5.06, ancho: 1.97, alto: 1.74 },
-        "TT": { largo: 4.19, ancho: 1.84, alto: 1.35 }
-      },
-      "BMW": {
-        "Serie 1": { largo: 4.32, ancho: 1.76, alto: 1.42 },
-        "Serie 3": { largo: 4.63, ancho: 1.82, alto: 1.43 },
-        "Serie 5": { largo: 4.94, ancho: 1.87, alto: 1.50 },
-        "X1": { largo: 4.44, ancho: 1.82, alto: 1.61 },
-        "X3": { largo: 4.71, ancho: 1.89, alto: 1.68 },
-        "X5": { largo: 4.92, ancho: 2.00, alto: 1.74 }
-      },
-      "Citroën": {
-        "C3": { largo: 3.99, ancho: 1.75, alto: 1.47 },
-        "C4": { largo: 4.36, ancho: 1.80, alto: 1.52 },
-        "C5": { largo: 4.82, ancho: 1.86, alto: 1.48 },
-        "Berlingo": { largo: 4.40, ancho: 1.85, alto: 1.83 }
-      },
-      "Jaguar": {
-        "XE": { largo: 4.67, ancho: 1.85, alto: 1.42 },
-        "XF": { largo: 4.95, ancho: 1.88, alto: 1.46 },
-        "F-PACE": { largo: 4.73, ancho: 1.94, alto: 1.67 }
-      },
-      "Jeep": {
-        "Renegade": { largo: 4.23, ancho: 1.81, alto: 1.69 },
-        "Cherokee": { largo: 4.65, ancho: 1.86, alto: 1.68 },
-        "Grand Cherokee": { largo: 4.82, ancho: 1.94, alto: 1.79 }
-      },
-      "Mercedes": {
-        "Clase A": { largo: 4.41, ancho: 1.80, alto: 1.44 },
-        "Clase C": { largo: 4.69, ancho: 1.81, alto: 1.44 },
-        "Clase E": { largo: 4.93, ancho: 1.85, alto: 1.47 },
-        "GLA": { largo: 4.41, ancho: 1.83, alto: 1.61 },
-        "GLC": { largo: 4.66, ancho: 1.89, alto: 1.64 }
-      },
-      "Peugeot": {
-        "208": { largo: 4.05, ancho: 1.74, alto: 1.43 },
-        "308": { largo: 4.25, ancho: 1.82, alto: 1.46 },
-        "508": { largo: 4.75, ancho: 1.86, alto: 1.42 },
-        "3008": { largo: 4.44, ancho: 1.84, alto: 1.62 }
-      },
-      "Renault": {
-        "Clio": { largo: 4.05, ancho: 1.80, alto: 1.44 },
-        "Megane": { largo: 4.36, ancho: 1.81, alto: 1.45 },
-        "Kadjar": { largo: 4.45, ancho: 1.84, alto: 1.61 }
-      },
-      "Seat": {
-        "Ibiza": { largo: 4.06, ancho: 1.75, alto: 1.44 },
-        "León": { largo: 4.37, ancho: 1.80, alto: 1.46 },
-        "Ateca": { largo: 4.36, ancho: 1.84, alto: 1.61 }
-      },
-      "Volkswagen": {
-        "Golf": { largo: 4.26, ancho: 1.79, alto: 1.46 },
-        "Passat": { largo: 4.77, ancho: 1.83, alto: 1.47 },
-        "Tiguan": { largo: 4.49, ancho: 1.84, alto: 1.67 },
-        "T-Roc": { largo: 4.23, ancho: 1.82, alto: 1.57 }
-      }
-    };
+    let baseDeDatos = {};
 
-    // Cargar marcas al iniciar la página
-    window.onload = function() {
+    fetch('vehiculos_combinado_convertido.json')
+      .then(res => res.json())
+      .then(data => {
+        baseDeDatos = agruparPorMarcaYModelo(data);
+        cargarMarcas();
+      });
+
+    function agruparPorMarcaYModelo(lista) {
+      const datos = {};
+      for (const item of lista) {
+        const marca = item.marca?.trim();
+        const modelo = item.modelo?.trim();
+        if (!marca || !modelo || !item.largo || !item.ancho || !item.alto) continue;
+        if (!datos[marca]) datos[marca] = {};
+        datos[marca][modelo] = {
+          largo: parseFloat(item.largo),
+          ancho: parseFloat(item.ancho),
+          alto: parseFloat(item.alto)
+        };
+      }
+      return datos;
+    }
+
+    function cargarMarcas() {
       const marcaSelect = document.getElementById('marca');
+      marcaSelect.innerHTML = '<option value="">-- Selecciona marca --</option>';
       Object.keys(baseDeDatos).forEach(marca => {
         const option = document.createElement('option');
         option.value = marca;
         option.textContent = marca;
         marcaSelect.appendChild(option);
       });
-    };
+    }
 
     function cargarModelos() {
       const marca = document.getElementById('marca').value;
       const modeloSelect = document.getElementById('modelo');
       modeloSelect.innerHTML = '<option value="">-- Selecciona modelo --</option>';
-      
-      if (marca && baseDeDatos[marca]) {
+      if (baseDeDatos[marca]) {
         Object.keys(baseDeDatos[marca]).forEach(modelo => {
           const option = document.createElement('option');
           option.value = modelo;
@@ -255,50 +206,43 @@
       const marca = document.getElementById('marca').value;
       const modelo = document.getElementById('modelo').value;
       const tipoVinil = document.getElementById('tipoVinil').value;
-      const factorComplejidad = parseFloat(document.getElementById('factorComplejidad').value);
-      const horasTrabajo = parseInt(document.getElementById('horasTrabajo').value);
-      const tarifaHora = parseFloat(document.getElementById('tarifaHora').value);
+      const factor = parseFloat(document.getElementById('factorComplejidad').value);
+      const horas = parseFloat(document.getElementById('horasTrabajo').value);
+      const tarifa = parseFloat(document.getElementById('tarifaHora').value);
       const anchoVinilo = parseFloat(document.getElementById('anchoVinilo').value);
 
-      if (!marca || !modelo || !baseDeDatos[marca][modelo]) {
-        alert("Por favor, selecciona una marca y modelo válidos");
+      if (!marca || !modelo || !baseDeDatos[marca]?.[modelo]) {
+        alert('Selecciona una marca y modelo válidos.');
         return;
       }
 
-      const vehiculo = baseDeDatos[marca][modelo];
-      const [largo, ancho, alto] = [vehiculo.largo, vehiculo.ancho, vehiculo.alto];
+      const { largo, ancho, alto } = baseDeDatos[marca][modelo];
       const areaSuperficial = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
-      const areaVinilo = areaSuperficial * factorComplejidad;
+      const areaVinilo = areaSuperficial * factor;
       const metrosLineales = areaVinilo / anchoVinilo;
 
-      const preciosVinilo = {
-        standard: 15,
-        premium: 25,
-        cambioColor: 30,
-        personalizado: 35
-      };
-
-      const precioM2 = preciosVinilo[tipoVinil];
+      const precios = { standard: 15, premium: 25, cambioColor: 30, personalizado: 35 };
+      const precioM2 = precios[tipoVinil];
       const costeMaterial = areaVinilo * precioM2;
-      const costeManoObra = horasTrabajo * tarifaHora;
-      const costeTotal = costeMaterial + costeManoObra;
+      const costeManoObra = horas * tarifa;
+      const total = costeMaterial + costeManoObra;
 
       document.getElementById('resultado').innerHTML = `
         <h3>Resultado del Presupuesto</h3>
         <p><strong>Vehículo:</strong> ${marca} ${modelo}</p>
         <div class="two-columns">
           <div>
-            <h4>Medidas del vehículo:</h4>
+            <h4>Medidas:</h4>
             <p>Largo: ${largo.toFixed(2)} m</p>
             <p>Ancho: ${ancho.toFixed(2)} m</p>
             <p>Alto: ${alto.toFixed(2)} m</p>
-            <p>Área superficial estimada: ${areaSuperficial.toFixed(2)} m²</p>
+            <p>Área estimada: ${areaSuperficial.toFixed(2)} m²</p>
           </div>
           <div>
-            <h4>Material:</h4>
-            <p>Tipo de vinilo: ${document.getElementById('tipoVinil').selectedOptions[0].text}</p>
-            <p>Área de vinilo necesaria: ${areaVinilo.toFixed(2)} m²</p>
-            <p>Metros lineales (@${anchoVinilo}m ancho): ${metrosLineales.toFixed(2)} m</p>
+            <h4>Vinilo:</h4>
+            <p>Tipo: ${document.getElementById('tipoVinil').selectedOptions[0].text}</p>
+            <p>Área necesaria: ${areaVinilo.toFixed(2)} m²</p>
+            <p>Metros lineales: ${metrosLineales.toFixed(2)} m</p>
           </div>
         </div>
         <div class="two-columns">
@@ -306,16 +250,16 @@
             <h4>Costes:</h4>
             <p>Material: ${costeMaterial.toFixed(2)} €</p>
             <p>Mano de obra: ${costeManoObra.toFixed(2)} €</p>
-            <p><strong>Total estimado:</strong> ${costeTotal.toFixed(2)} €</p>
+            <p><strong>Total:</strong> ${total.toFixed(2)} €</p>
           </div>
           <div>
-            <h4>Desglose:</h4>
-            <p>Precio por m²: ${precioM2} €</p>
-            <p>Factor complejidad: ${factorComplejidad}</p>
-            <p>Tarifa por hora: ${tarifaHora} €</p>
+            <h4>Otros:</h4>
+            <p>Precio m²: ${precioM2} €</p>
+            <p>Complejidad: ${factor}</p>
+            <p>Tarifa/hora: ${tarifa} €</p>
           </div>
         </div>
-        <p><em>Nota: Este presupuesto es una estimación. Para un cálculo exacto, consulta con un profesional.</em></p>
+        <p><em>Nota: estimación orientativa.</em></p>
       `;
     }
   </script>
@@ -324,8 +268,8 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('service-worker.js')
-          .then(reg => console.log('✅ Service Worker registrado', reg))
-          .catch(err => console.warn('❌ Error al registrar Service Worker', err));
+          .then(reg => console.log('✅ SW registrado', reg))
+          .catch(err => console.warn('❌ Error SW', err));
       });
     }
   </script>
