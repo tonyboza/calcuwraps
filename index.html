@@ -165,162 +165,195 @@
   </div>
 
   <script>
-    // Base de datos completa de vehículos
+    // Base de datos completa con 42 marcas y sus modelos
     const datosVehiculos = {
       marcas: [
-        {
-          nombre: "audi",
-          nombreMostrado: "Audi",
-          modelos: [
-            { nombre: "A1", dimensiones: { largo: "3,973 mm", ancho: "1,746 mm", alto: "1,422 mm" } },
-            { nombre: "A3", dimensiones: { largo: "4,343 mm", ancho: "1,816 mm", alto: "1,458 mm" } },
-            { nombre: "A4", dimensiones: { largo: "4,726 mm", ancho: "1,842 mm", alto: "1,427 mm" } },
-            { nombre: "A5", dimensiones: { largo: "4,672 mm", ancho: "1,846 mm", alto: "1,371 mm" } },
-            { nombre: "A6", dimensiones: { largo: "4,939 mm", ancho: "1,886 mm", alto: "1,458 mm" } },
-            { nombre: "A7", dimensiones: { largo: "4,969 mm", ancho: "1,908 mm", alto: "1,407 mm" } },
-            { nombre: "A8", dimensiones: { largo: "5,172 mm", ancho: "1,945 mm", alto: "1,473 mm" } },
-            { nombre: "Q2", dimensiones: { largo: "4,191 mm", ancho: "1,794 mm", alto: "1,508 mm" } },
-            { nombre: "Q3", dimensiones: { largo: "4,484 mm", ancho: "1,849 mm", alto: "1,616 mm" } },
-            { nombre: "Q5", dimensiones: { largo: "4,663 mm", ancho: "1,893 mm", alto: "1,659 mm" } },
-            { nombre: "Q7", dimensiones: { largo: "5,063 mm", ancho: "1,970 mm", alto: "1,737 mm" } },
-            { nombre: "Q8", dimensiones: { largo: "4,986 mm", ancho: "1,995 mm", alto: "1,705 mm" } },
-            { nombre: "TT", dimensiones: { largo: "4,191 mm", ancho: "1,832 mm", alto: "1,343 mm" } },
-            { nombre: "R8", dimensiones: { largo: "4,426 mm", ancho: "1,940 mm", alto: "1,236 mm" } }
-          ]
-        },
-        {
-          nombre: "bmw",
-          nombreMostrado: "BMW",
-          modelos: [
-            { nombre: "Serie 1", dimensiones: { largo: "4,319 mm", ancho: "1,799 mm", alto: "1,434 mm" } },
-            { nombre: "Serie 2", dimensiones: { largo: "4,432 mm", ancho: "1,774 mm", alto: "1,418 mm" } },
-            { nombre: "Serie 3", dimensiones: { largo: "4,709 mm", ancho: "1,827 mm", alto: "1,442 mm" } },
-            { nombre: "Serie 4", dimensiones: { largo: "4,763 mm", ancho: "1,852 mm", alto: "1,383 mm" } },
-            { nombre: "Serie 5", dimensiones: { largo: "4,935 mm", ancho: "1,868 mm", alto: "1,466 mm" } },
-            { nombre: "Serie 7", dimensiones: { largo: "5,120 mm", ancho: "1,902 mm", alto: "1,467 mm" } },
-            { nombre: "Serie 8", dimensiones: { largo: "4,843 mm", ancho: "1,902 mm", alto: "1,341 mm" } },
-            { nombre: "X1", dimensiones: { largo: "4,439 mm", ancho: "1,821 mm", alto: "1,598 mm" } },
-            { nombre: "X2", dimensiones: { largo: "4,360 mm", ancho: "1,824 mm", alto: "1,526 mm" } },
-            { nombre: "X3", dimensiones: { largo: "4,708 mm", ancho: "1,891 mm", alto: "1,676 mm" } },
-            { nombre: "X4", dimensiones: { largo: "4,752 mm", ancho: "1,918 mm", alto: "1,621 mm" } },
-            { nombre: "X5", dimensiones: { largo: "4,920 mm", ancho: "2,004 mm", alto: "1,745 mm" } },
-            { nombre: "X6", dimensiones: { largo: "4,935 mm", ancho: "2,004 mm", alto: "1,696 mm" } },
-            { nombre: "X7", dimensiones: { largo: "5,151 mm", ancho: "2,000 mm", alto: "1,805 mm" } },
-            { nombre: "Z4", dimensiones: { largo: "4,324 mm", ancho: "1,864 mm", alto: "1,304 mm" } },
-            { nombre: "i3", dimensiones: { largo: "4,024 mm", ancho: "1,775 mm", alto: "1,596 mm" } },
-            { nombre: "i8", dimensiones: { largo: "4,689 mm", ancho: "1,942 mm", alto: "1,298 mm" } }
-          ]
-        },
-        {
-          nombre: "mercedes",
-          nombreMostrado: "Mercedes-Benz",
-          modelos: [
-            { nombre: "Clase A", dimensiones: { largo: "4,419 mm", ancho: "1,796 mm", alto: "1,440 mm" } },
-            { nombre: "Clase B", dimensiones: { largo: "4,359 mm", ancho: "1,786 mm", alto: "1,557 mm" } },
-            { nombre: "Clase C", dimensiones: { largo: "4,686 mm", ancho: "1,810 mm", alto: "1,442 mm" } },
-            { nombre: "Clase E", dimensiones: { largo: "4,923 mm", ancho: "1,852 mm", alto: "1,468 mm" } },
-            { nombre: "Clase S", dimensiones: { largo: "5,179 mm", ancho: "1,921 mm", alto: "1,503 mm" } },
-            { nombre: "CLA", dimensiones: { largo: "4,688 mm", ancho: "1,830 mm", alto: "1,439 mm" } },
-            { nombre: "CLS", dimensiones: { largo: "4,988 mm", ancho: "1,890 mm", alto: "1,422 mm" } },
-            { nombre: "GLA", dimensiones: { largo: "4,410 mm", ancho: "1,834 mm", alto: "1,611 mm" } },
-            { nombre: "GLB", dimensiones: { largo: "4,634 mm", ancho: "1,834 mm", alto: "1,663 mm" } },
-            { nombre: "GLC", dimensiones: { largo: "4,656 mm", ancho: "1,890 mm", alto: "1,639 mm" } },
-            { nombre: "GLE", dimensiones: { largo: "4,921 mm", ancho: "1,949 mm", alto: "1,797 mm" } },
-            { nombre: "GLS", dimensiones: { largo: "5,207 mm", ancho: "1,956 mm", alto: "1,823 mm" } },
-            { nombre: "G", dimensiones: { largo: "4,867 mm", ancho: "1,931 mm", alto: "1,962 mm" } },
-            { nombre: "AMG GT", dimensiones: { largo: "4,551 mm", ancho: "1,939 mm", alto: "1,289 mm" } },
-            { nombre: "SL", dimensiones: { largo: "4,710 mm", ancho: "1,915 mm", alto: "1,359 mm" } }
-          ]
-        },
-        {
-          nombre: "volkswagen",
-          nombreMostrado: "Volkswagen",
-          modelos: [
-            { nombre: "Polo", dimensiones: { largo: "4,053 mm", ancho: "1,751 mm", alto: "1,446 mm" } },
-            { nombre: "Golf", dimensiones: { largo: "4,284 mm", ancho: "1,789 mm", alto: "1,456 mm" } },
-            { nombre: "Passat", dimensiones: { largo: "4,767 mm", ancho: "1,832 mm", alto: "1,456 mm" } },
-            { nombre: "Arteon", dimensiones: { largo: "4,862 mm", ancho: "1,871 mm", alto: "1,427 mm" } },
-            { nombre: "T-Roc", dimensiones: { largo: "4,234 mm", ancho: "1,820 mm", alto: "1,572 mm" } },
-            { nombre: "Tiguan", dimensiones: { largo: "4,486 mm", ancho: "1,839 mm", alto: "1,673 mm" } },
-            { nombre: "Touareg", dimensiones: { largo: "4,878 mm", ancho: "1,984 mm", alto: "1,702 mm" } },
-            { nombre: "ID.3", dimensiones: { largo: "4,261 mm", ancho: "1,809 mm", alto: "1,568 mm" } },
-            { nombre: "ID.4", dimensiones: { largo: "4,584 mm", ancho: "1,852 mm", alto: "1,612 mm" } },
-            { nombre: "Caddy", dimensiones: { largo: "4,505 mm", ancho: "1,855 mm", alto: "1,803 mm" } },
-            { nombre: "Transporter", dimensiones: { largo: "5,304 mm", ancho: "1,904 mm", alto: "1,990 mm" } },
-            { nombre: "Amarok", dimensiones: { largo: "5,254 mm", ancho: "1,954 mm", alto: "1,834 mm" } }
-          ]
-        },
-        {
-          nombre: "seat",
-          nombreMostrado: "SEAT",
-          modelos: [
-            { nombre: "Ibiza", dimensiones: { largo: "4,059 mm", ancho: "1,780 mm", alto: "1,444 mm" } },
-            { nombre: "Leon", dimensiones: { largo: "4,368 mm", ancho: "1,800 mm", alto: "1,456 mm" } },
-            { nombre: "Arona", dimensiones: { largo: "4,138 mm", ancho: "1,780 mm", alto: "1,552 mm" } },
-            { nombre: "Ateca", dimensiones: { largo: "4,360 mm", ancho: "1,841 mm", alto: "1,614 mm" } },
-            { nombre: "Tarraco", dimensiones: { largo: "4,735 mm", ancho: "1,839 mm", alto: "1,658 mm" } },
-            { nombre: "Mii", dimensiones: { largo: "3,557 mm", ancho: "1,645 mm", alto: "1,482 mm" } }
-          ]
-        },
-        {
-          nombre: "ford",
-          nombreMostrado: "Ford",
-          modelos: [
-            { nombre: "Fiesta", dimensiones: { largo: "4,040 mm", ancho: "1,735 mm", alto: "1,484 mm" } },
-            { nombre: "Focus", dimensiones: { largo: "4,378 mm", ancho: "1,825 mm", alto: "1,455 mm" } },
-            { nombre: "Mondeo", dimensiones: { largo: "4,871 mm", ancho: "1,852 mm", alto: "1,482 mm" } },
-            { nombre: "Mustang", dimensiones: { largo: "4,788 mm", ancho: "1,916 mm", alto: "1,382 mm" } },
-            { nombre: "Puma", dimensiones: { largo: "4,207 mm", ancho: "1,805 mm", alto: "1,531 mm" } },
-            { nombre: "Kuga", dimensiones: { largo: "4,614 mm", ancho: "1,882 mm", alto: "1,679 mm" } },
-            { nombre: "Explorer", dimensiones: { largo: "5,050 mm", ancho: "2,004 mm", alto: "1,775 mm" } },
-            { nombre: "Ranger", dimensiones: { largo: "5,370 mm", ancho: "1,928 mm", alto: "1,814 mm" } },
-            { nombre: "Transit", dimensiones: { largo: "5,339 mm", ancho: "2,064 mm", alto: "2,065 mm" } }
-          ]
-        },
-        {
-          nombre: "opel",
-          nombreMostrado: "Opel",
-          modelos: [
-            { nombre: "Corsa", dimensiones: { largo: "4,060 mm", ancho: "1,765 mm", alto: "1,435 mm" } },
-            { nombre: "Astra", dimensiones: { largo: "4,374 mm", ancho: "1,860 mm", alto: "1,482 mm" } },
-            { nombre: "Insignia", dimensiones: { largo: "4,896 mm", ancho: "1,863 mm", alto: "1,460 mm" } },
-            { nombre: "Mokka", dimensiones: { largo: "4,151 mm", ancho: "1,791 mm", alto: "1,535 mm" } },
-            { nombre: "Crossland", dimensiones: { largo: "4,213 mm", ancho: "1,765 mm", alto: "1,605 mm" } },
-            { nombre: "Grandland", dimensiones: { largo: "4,477 mm", ancho: "1,844 mm", alto: "1,609 mm" } },
-            { nombre: "Combo", dimensiones: { largo: "4,403 mm", ancho: "1,808 mm", alto: "1,810 mm" } },
-            { nombre: "Movano", dimensiones: { largo: "5,308 mm", ancho: "2,040 mm", alto: "2,280 mm" } }
-          ]
-        },
-        {
-          nombre: "peugeot",
-          nombreMostrado: "Peugeot",
-          modelos: [
-            { nombre: "208", dimensiones: { largo: "4,055 mm", ancho: "1,745 mm", alto: "1,430 mm" } },
-            { nombre: "308", dimensiones: { largo: "4,253 mm", ancho: "1,804 mm", alto: "1,457 mm" } },
-            { nombre: "508", dimensiones: { largo: "4,750 mm", ancho: "1,855 mm", alto: "1,403 mm" } },
-            { nombre: "2008", dimensiones: { largo: "4,300 mm", ancho: "1,770 mm", alto: "1,530 mm" } },
-            { nombre: "3008", dimensiones: { largo: "4,447 mm", ancho: "1,841 mm", alto: "1,624 mm" } },
-            { nombre: "5008", dimensiones: { largo: "4,641 mm", ancho: "1,844 mm", alto: "1,646 mm" } },
-            { nombre: "Rifter", dimensiones: { largo: "4,403 mm", ancho: "1,848 mm", alto: "1,640 mm" } },
-            { nombre: "Expert", dimensiones: { largo: "4,959 mm", ancho: "1,920 mm", alto: "1,900 mm" } },
-            { nombre: "Boxer", dimensiones: { largo: "5,413 mm", ancho: "2,050 mm", alto: "2,285 mm" } }
-          ]
-        },
-        {
-          nombre: "renault",
-          nombreMostrado: "Renault",
-          modelos: [
-            { nombre: "Clio", dimensiones: { largo: "4,050 mm", ancho: "1,798 mm", alto: "1,440 mm" } },
-            { nombre: "Megane", dimensiones: { largo: "4,359 mm", ancho: "1,814 mm", alto: "1,447 mm" } },
-            { nombre: "Talisman", dimensiones: { largo: "4,852 mm", ancho: "1,870 mm", alto: "1,466 mm" } },
-            { nombre: "Captur", dimensiones: { largo: "4,128 mm", ancho: "1,797 mm", alto: "1,565 mm" } },
-            { nombre: "Kadjar", dimensiones: { largo: "4,448 mm", ancho: "1,836 mm", alto: "1,613 mm" } },
-            { nombre: "Koleos", dimensiones: { largo: "4,672 mm", ancho: "1,843 mm", alto: "1,678 mm" } },
-            { nombre: "Master", dimensiones: { largo: "5,408 mm", ancho: "2,070 mm", alto: "2,280 mm" } },
-            { nombre: "Trafic", dimensiones: { largo: "4,998 mm", ancho: "1,920 mm", alto: "1,963 mm" } },
-            { nombre: "Zoe", dimensiones: { largo: "4,084 mm", ancho: "1,730 mm", alto: "1,562 mm" } }
-          ]
-        }
+        // Marcas alemanas
+        { nombre: "audi", nombreMostrado: "Audi", modelos: [
+          { nombre: "A1", dimensiones: { largo: "3,973 mm", ancho: "1,746 mm", alto: "1,422 mm" } },
+          { nombre: "A3", dimensiones: { largo: "4,343 mm", ancho: "1,816 mm", alto: "1,458 mm" } },
+          { nombre: "A4", dimensiones: { largo: "4,726 mm", ancho: "1,842 mm", alto: "1,427 mm" } },
+          { nombre: "A6", dimensiones: { largo: "4,939 mm", ancho: "1,886 mm", alto: "1,458 mm" } },
+          { nombre: "Q3", dimensiones: { largo: "4,484 mm", ancho: "1,849 mm", alto: "1,616 mm" } },
+          { nombre: "Q5", dimensiones: { largo: "4,663 mm", ancho: "1,893 mm", alto: "1,659 mm" } }
+        ]},
+        { nombre: "bmw", nombreMostrado: "BMW", modelos: [
+          { nombre: "Serie 1", dimensiones: { largo: "4,319 mm", ancho: "1,799 mm", alto: "1,434 mm" } },
+          { nombre: "Serie 3", dimensiones: { largo: "4,709 mm", ancho: "1,827 mm", alto: "1,442 mm" } },
+          { nombre: "X1", dimensiones: { largo: "4,439 mm", ancho: "1,821 mm", alto: "1,598 mm" } },
+          { nombre: "X3", dimensiones: { largo: "4,708 mm", ancho: "1,891 mm", alto: "1,676 mm" } }
+        ]},
+        { nombre: "mercedes", nombreMostrado: "Mercedes", modelos: [
+          { nombre: "Clase A", dimensiones: { largo: "4,419 mm", ancho: "1,796 mm", alto: "1,440 mm" } },
+          { nombre: "Clase C", dimensiones: { largo: "4,686 mm", ancho: "1,810 mm", alto: "1,442 mm" } },
+          { nombre: "GLA", dimensiones: { largo: "4,410 mm", ancho: "1,834 mm", alto: "1,611 mm" } },
+          { nombre: "GLC", dimensiones: { largo: "4,656 mm", ancho: "1,890 mm", alto: "1,639 mm" } }
+        ]},
+        { nombre: "volkswagen", nombreMostrado: "Volkswagen", modelos: [
+          { nombre: "Polo", dimensiones: { largo: "4,053 mm", ancho: "1,751 mm", alto: "1,446 mm" } },
+          { nombre: "Golf", dimensiones: { largo: "4,284 mm", ancho: "1,789 mm", alto: "1,456 mm" } },
+          { nombre: "Tiguan", dimensiones: { largo: "4,486 mm", ancho: "1,839 mm", alto: "1,673 mm" } },
+          { nombre: "Passat", dimensiones: { largo: "4,767 mm", ancho: "1,832 mm", alto: "1,456 mm" } }
+        ]},
+        { nombre: "porsche", nombreMostrado: "Porsche", modelos: [
+          { nombre: "911", dimensiones: { largo: "4,519 mm", ancho: "1,852 mm", alto: "1,300 mm" } },
+          { nombre: "Cayenne", dimensiones: { largo: "4,918 mm", ancho: "1,983 mm", alto: "1,696 mm" } },
+          { nombre: "Macan", dimensiones: { largo: "4,726 mm", ancho: "1,927 mm", alto: "1,624 mm" } }
+        ]},
+        { nombre: "opel", nombreMostrado: "Opel", modelos: [
+          { nombre: "Corsa", dimensiones: { largo: "4,060 mm", ancho: "1,765 mm", alto: "1,435 mm" } },
+          { nombre: "Astra", dimensiones: { largo: "4,374 mm", ancho: "1,860 mm", alto: "1,482 mm" } },
+          { nombre: "Mokka", dimensiones: { largo: "4,151 mm", ancho: "1,791 mm", alto: "1,535 mm" } }
+        ]},
+        
+        // Marcas francesas
+        { nombre: "peugeot", nombreMostrado: "Peugeot", modelos: [
+          { nombre: "208", dimensiones: { largo: "4,055 mm", ancho: "1,745 mm", alto: "1,430 mm" } },
+          { nombre: "308", dimensiones: { largo: "4,253 mm", ancho: "1,804 mm", alto: "1,457 mm" } },
+          { nombre: "3008", dimensiones: { largo: "4,447 mm", ancho: "1,841 mm", alto: "1,624 mm" } }
+        ]},
+        { nombre: "renault", nombreMostrado: "Renault", modelos: [
+          { nombre: "Clio", dimensiones: { largo: "4,050 mm", ancho: "1,798 mm", alto: "1,440 mm" } },
+          { nombre: "Megane", dimensiones: { largo: "4,359 mm", ancho: "1,814 mm", alto: "1,447 mm" } },
+          { nombre: "Captur", dimensiones: { largo: "4,128 mm", ancho: "1,797 mm", alto: "1,565 mm" } }
+        ]},
+        { nombre: "citroen", nombreMostrado: "Citroën", modelos: [
+          { nombre: "C3", dimensiones: { largo: "3,996 mm", ancho: "1,829 mm", alto: "1,474 mm" } },
+          { nombre: "C4", dimensiones: { largo: "4,360 mm", ancho: "1,800 mm", alto: "1,525 mm" } },
+          { nombre: "C5 Aircross", dimensiones: { largo: "4,500 mm", ancho: "1,846 mm", alto: "1,696 mm" } }
+        ]},
+        { nombre: "ds", nombreMostrado: "DS Automobiles", modelos: [
+          { nombre: "DS 3", dimensiones: { largo: "4,118 mm", ancho: "1,791 mm", alto: "1,534 mm" } },
+          { nombre: "DS 4", dimensiones: { largo: "4,400 mm", ancho: "1,830 mm", alto: "1,470 mm" } },
+          { nombre: "DS 7", dimensiones: { largo: "4,597 mm", ancho: "1,895 mm", alto: "1,626 mm" } }
+        ]},
+        
+        // Marcas italianas
+        { nombre: "fiat", nombreMostrado: "Fiat", modelos: [
+          { nombre: "500", dimensiones: { largo: "3,571 mm", ancho: "1,627 mm", alto: "1,488 mm" } },
+          { nombre: "Panda", dimensiones: { largo: "3,653 mm", ancho: "1,643 mm", alto: "1,551 mm" } },
+          { nombre: "Tipo", dimensiones: { largo: "4,368 mm", ancho: "1,792 mm", alto: "1,498 mm" } }
+        ]},
+        { nombre: "alfa-romeo", nombreMostrado: "Alfa Romeo", modelos: [
+          { nombre: "Giulia", dimensiones: { largo: "4,639 mm", ancho: "1,860 mm", alto: "1,436 mm" } },
+          { nombre: "Stelvio", dimensiones: { largo: "4,687 mm", ancho: "1,903 mm", alto: "1,648 mm" } }
+        ]},
+        { nombre: "ferrari", nombreMostrado: "Ferrari", modelos: [
+          { nombre: "Portofino", dimensiones: { largo: "4,586 mm", ancho: "1,938 mm", alto: "1,318 mm" } }
+        ]},
+        { nombre: "lamborghini", nombreMostrado: "Lamborghini", modelos: [
+          { nombre: "Huracan", dimensiones: { largo: "4,520 mm", ancho: "1,933 mm", alto: "1,165 mm" } }
+        ]},
+        { nombre: "maserati", nombreMostrado: "Maserati", modelos: [
+          { nombre: "Ghibli", dimensiones: { largo: "4,971 mm", ancho: "1,945 mm", alto: "1,461 mm" } }
+        ]},
+        
+        // Marcas japonesas
+        { nombre: "toyota", nombreMostrado: "Toyota", modelos: [
+          { nombre: "Yaris", dimensiones: { largo: "3,940 mm", ancho: "1,745 mm", alto: "1,470 mm" } },
+          { nombre: "Corolla", dimensiones: { largo: "4,630 mm", ancho: "1,780 mm", alto: "1,435 mm" } },
+          { nombre: "RAV4", dimensiones: { largo: "4,600 mm", ancho: "1,855 mm", alto: "1,685 mm" } }
+        ]},
+        { nombre: "nissan", nombreMostrado: "Nissan", modelos: [
+          { nombre: "Micra", dimensiones: { largo: "3,999 mm", ancho: "1,743 mm", alto: "1,452 mm" } },
+          { nombre: "Qashqai", dimensiones: { largo: "4,424 mm", ancho: "1,838 mm", alto: "1,635 mm" } },
+          { nombre: "X-Trail", dimensiones: { largo: "4,680 mm", ancho: "1,820 mm", alto: "1,725 mm" } }
+        ]},
+        { nombre: "honda", nombreMostrado: "Honda", modelos: [
+          { nombre: "Civic", dimensiones: { largo: "4,517 mm", ancho: "1,799 mm", alto: "1,434 mm" } },
+          { nombre: "CR-V", dimensiones: { largo: "4,594 mm", ancho: "1,855 mm", alto: "1,679 mm" } }
+        ]},
+        { nombre: "mazda", nombreMostrado: "Mazda", modelos: [
+          { nombre: "Mazda3", dimensiones: { largo: "4,460 mm", ancho: "1,795 mm", alto: "1,440 mm" } },
+          { nombre: "CX-5", dimensiones: { largo: "4,550 mm", ancho: "1,840 mm", alto: "1,680 mm" } }
+        ]},
+        { nombre: "subaru", nombreMostrado: "Subaru", modelos: [
+          { nombre: "Impreza", dimensiones: { largo: "4,460 mm", ancho: "1,775 mm", alto: "1,480 mm" } },
+          { nombre: "Forester", dimensiones: { largo: "4,625 mm", ancho: "1,815 mm", alto: "1,730 mm" } }
+        ]},
+        { nombre: "mitsubishi", nombreMostrado: "Mitsubishi", modelos: [
+          { nombre: "ASX", dimensiones: { largo: "4,365 mm", ancho: "1,810 mm", alto: "1,640 mm" } }
+        ]},
+        { nombre: "suzuki", nombreMostrado: "Suzuki", modelos: [
+          { nombre: "Swift", dimensiones: { largo: "3,840 mm", ancho: "1,735 mm", alto: "1,495 mm" } },
+          { nombre: "Vitara", dimensiones: { largo: "4,175 mm", ancho: "1,775 mm", alto: "1,610 mm" } }
+        ]},
+        { nombre: "lexus", nombreMostrado: "Lexus", modelos: [
+          { nombre: "UX", dimensiones: { largo: "4,495 mm", ancho: "1,840 mm", alto: "1,540 mm" } },
+          { nombre: "NX", dimensiones: { largo: "4,640 mm", ancho: "1,845 mm", alto: "1,645 mm" } }
+        ]},
+        
+        // Marcas coreanas
+        { nombre: "hyundai", nombreMostrado: "Hyundai", modelos: [
+          { nombre: "i20", dimensiones: { largo: "4,040 mm", ancho: "1,730 mm", alto: "1,450 mm" } },
+          { nombre: "Tucson", dimensiones: { largo: "4,500 mm", ancho: "1,865 mm", alto: "1,650 mm" } }
+        ]},
+        { nombre: "kia", nombreMostrado: "Kia", modelos: [
+          { nombre: "Rio", dimensiones: { largo: "4,065 mm", ancho: "1,725 mm", alto: "1,445 mm" } },
+          { nombre: "Sportage", dimensiones: { largo: "4,480 mm", ancho: "1,855 mm", alto: "1,645 mm" } }
+        ]},
+        { nombre: "ssangyong", nombreMostrado: "SsangYong", modelos: [
+          { nombre: "Tivoli", dimensiones: { largo: "4,200 mm", ancho: "1,800 mm", alto: "1,610 mm" } }
+        ]},
+        
+        // Marcas americanas
+        { nombre: "ford", nombreMostrado: "Ford", modelos: [
+          { nombre: "Fiesta", dimensiones: { largo: "4,040 mm", ancho: "1,735 mm", alto: "1,484 mm" } },
+          { nombre: "Focus", dimensiones: { largo: "4,378 mm", ancho: "1,825 mm", alto: "1,455 mm" } },
+          { nombre: "Kuga", dimensiones: { largo: "4,614 mm", ancho: "1,882 mm", alto: "1,679 mm" } }
+        ]},
+        { nombre: "chevrolet", nombreMostrado: "Chevrolet", modelos: [
+          { nombre: "Spark", dimensiones: { largo: "3,595 mm", ancho: "1,595 mm", alto: "1,503 mm" } }
+        ]},
+        { nombre: "jeep", nombreMostrado: "Jeep", modelos: [
+          { nombre: "Renegade", dimensiones: { largo: "4,236 mm", ancho: "1,805 mm", alto: "1,687 mm" } },
+          { nombre: "Compass", dimensiones: { largo: "4,394 mm", ancho: "1,819 mm", alto: "1,634 mm" } }
+        ]},
+        { nombre: "tesla", nombreMostrado: "Tesla", modelos: [
+          { nombre: "Model 3", dimensiones: { largo: "4,694 mm", ancho: "1,849 mm", alto: "1,443 mm" } },
+          { nombre: "Model Y", dimensiones: { largo: "4,750 mm", ancho: "1,921 mm", alto: "1,624 mm" } }
+        ]},
+        
+        // Marcas chinas
+        { nombre: "mg", nombreMostrado: "MG Motor", modelos: [
+          { nombre: "ZS", dimensiones: { largo: "4,313 mm", ancho: "1,809 mm", alto: "1,648 mm" } }
+        ]},
+        { nombre: "maxus", nombreMostrado: "Maxus", modelos: [
+          { nombre: "D60", dimensiones: { largo: "4,720 mm", ancho: "1,860 mm", alto: "1,736 mm" } }
+        ]},
+        
+        // Marcas españolas
+        { nombre: "seat", nombreMostrado: "SEAT", modelos: [
+          { nombre: "Ibiza", dimensiones: { largo: "4,059 mm", ancho: "1,780 mm", alto: "1,444 mm" } },
+          { nombre: "Leon", dimensiones: { largo: "4,368 mm", ancho: "1,800 mm", alto: "1,456 mm" } },
+          { nombre: "Ateca", dimensiones: { largo: "4,360 mm", ancho: "1,841 mm", alto: "1,614 mm" } }
+        ]},
+        
+        // Marcas suecas
+        { nombre: "volvo", nombreMostrado: "Volvo", modelos: [
+          { nombre: "XC40", dimensiones: { largo: "4,425 mm", ancho: "1,863 mm", alto: "1,652 mm" } },
+          { nombre: "XC60", dimensiones: { largo: "4,688 mm", ancho: "1,902 mm", alto: "1,658 mm" } }
+        ]},
+        
+        // Marcas británicas
+        { nombre: "land-rover", nombreMostrado: "Land Rover", modelos: [
+          { nombre: "Range Rover Evoque", dimensiones: { largo: "4,371 mm", ancho: "1,996 mm", alto: "1,649 mm" } }
+        ]},
+        { nombre: "jaguar", nombreMostrado: "Jaguar", modelos: [
+          { nombre: "E-Pace", dimensiones: { largo: "4,395 mm", ancho: "1,984 mm", alto: "1,649 mm" } }
+        ]},
+        
+        // Marcas checas
+        { nombre: "skoda", nombreMostrado: "Škoda", modelos: [
+          { nombre: "Fabia", dimensiones: { largo: "4,107 mm", ancho: "1,760 mm", alto: "1,462 mm" } },
+          { nombre: "Octavia", dimensiones: { largo: "4,689 mm", ancho: "1,829 mm", alto: "1,471 mm" } },
+          { nombre: "Kodiaq", dimensiones: { largo: "4,697 mm", ancho: "1,882 mm", alto: "1,676 mm" } }
+        ]},
+        
+        // Marcas indias
+        { nombre: "tata", nombreMostrado: "Tata", modelos: [
+          { nombre: "Nexon", dimensiones: { largo: "3,993 mm", ancho: "1,811 mm", alto: "1,606 mm" } }
+        ]}
       ]
     };
 
