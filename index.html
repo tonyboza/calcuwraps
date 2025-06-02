@@ -7,118 +7,301 @@
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#3498db" />
   <style>
-    body { font-family: sans-serif; padding: 20px; max-width: 900px; margin: auto; }
-    select, input, button { display: block; margin: 10px 0; padding: 8px; width: 100%; }
-    .modelo-info img { max-width: 300px; margin: 10px 0; }
-    .resultado { margin-top: 20px; padding: 10px; background: #f4f4f4; border-left: 4px solid #4CAF50; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    select, input {
+      display: block;
+      margin: 15px 0;
+      padding: 12px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    select:focus, input:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 5px rgba(52,152,219,0.5);
+    }
+    button {
+      display: block;
+      margin: 25px auto;
+      padding: 12px 25px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: auto;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .modelo-info {
+      margin: 20px 0;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+    .modelo-info img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .resultado {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f4f4f4;
+      border-left: 4px solid #4CAF50;
+      border-radius: 0 5px 5px 0;
+    }
+    .resultado h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    .resultado p {
+      margin: 10px 0;
+    }
+    .resultado strong {
+      color: #e74c3c;
+      font-size: 18px;
+    }
+    .brand-logos {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .brand-logos img {
+      height: 60px;
+      margin: 10px;
+      filter: grayscale(30%);
+      transition: filter 0.3s;
+    }
+    .brand-logos img:hover {
+      filter: grayscale(0%);
+    }
+    .input-group {
+      display: flex;
+      gap: 15px;
+    }
+    .input-group > div {
+      flex: 1;
+    }
+    @media (max-width: 600px) {
+      .input-group {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Calculadora de Vinilado</h1>
-  <label for="marca">Marca:</label>
-  <select id="marca" onchange="cargarModelos()">
-    <option value="">-- Selecciona marca --</option>
-  </select>
-  <label for="modelo">Modelo:</label>
-  <select id="modelo" onchange="mostrarDatosModelo()">
-    <option value="">-- Selecciona modelo --</option>
-  </select>
-  <div class="modelo-info" id="modeloInfo"></div>
-  <label for="tipoVinil">Tipo de vinilo:</label>
-  <select id="tipoVinil">
-    <option value="standard">Vinilo estándar (€15/m²)</option>
-    <option value="premium">Vinilo premium (€25/m²)</option>
-    <option value="cambioColor">Cambio de color (€30/m²)</option>
-    <option value="personalizado">Personalizado (€35/m²)</option>
-  </select>
-  <label for="horasTrabajo">Horas estimadas:</label>
-  <input type="number" id="horasTrabajo" value="20" />
-  <label for="tarifaHora">Tarifa por hora (€):</label>
-  <input type="number" id="tarifaHora" value="30" />
-  <label for="anchoVinilo">Ancho del vinilo (m):</label>
-  <input type="number" id="anchoVinilo" value="1.52" step="0.01" />
-  <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
-  <div class="resultado" id="resultado"></div>
+  <div class="container">
+    <h1>Calculadora de Vinilado para Coches</h1>
+    
+    <div class="brand-logos">
+      <img src="https://via.placeholder.com/150x60?text=GSIX9" alt="GSIX9 Logo">
+      <img src="https://via.placeholder.com/150x60?text=ORACAL" alt="ORACAL Logo">
+      <img src="https://via.placeholder.com/150x60?text=TOTENSER" alt="TOTENSER Logo">
+    </div>
+    
+    <label for="marca">Marca del vehículo:</label>
+    <select id="marca" onchange="cargarModelos()">
+      <option value="">-- Selecciona marca --</option>
+      <option value="audi">Audi</option>
+      <option value="bmw">BMW</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="volkswagen">Volkswagen</option>
+      <option value="ford">Ford</option>
+      <option value="opel">Opel</option>
+      <option value="peugeot">Peugeot</option>
+      <option value="renault">Renault</option>
+      <option value="seat">Seat</option>
+    </select>
+    
+    <label for="modelo">Modelo del vehículo:</label>
+    <select id="modelo" onchange="mostrarDatosModelo()">
+      <option value="">-- Selecciona modelo --</option>
+    </select>
+    
+    <div class="modelo-info" id="modeloInfo"></div>
+    
+    <label for="tipoVinil">Tipo de vinilo:</label>
+    <select id="tipoVinil">
+      <option value="standard">Vinilo estándar (€15/m²)</option>
+      <option value="premium">Vinilo premium (€25/m²)</option>
+      <option value="cambioColor">Cambio de color (€30/m²)</option>
+      <option value="personalizado">Personalizado (€35/m²)</option>
+    </select>
+    
+    <div class="input-group">
+      <div>
+        <label for="horasTrabajo">Horas estimadas:</label>
+        <input type="number" id="horasTrabajo" value="20" min="1" />
+      </div>
+      <div>
+        <label for="tarifaHora">Tarifa por hora (€):</label>
+        <input type="number" id="tarifaHora" value="30" min="1" step="0.5" />
+      </div>
+    </div>
+    
+    <label for="anchoVinilo">Ancho del vinilo (metros):</label>
+    <input type="number" id="anchoVinilo" value="1.52" step="0.01" min="0.1" />
+    
+    <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+    
+    <div class="resultado" id="resultado"></div>
+  </div>
 
   <script>
-    let datosVehiculos = {};
+    // Datos de ejemplo para vehículos (en lugar del JSON externo)
+    const datosVehiculos = {
+      marcas: [
+        {
+          nombre: "audi",
+          modelos: [
+            {
+              nombre: "A3",
+              subtitulo: "Sportback",
+              dimensiones: { largo: "4,343 mm", ancho: "1,816 mm", alto: "1,458 mm" },
+              imagen: "https://via.placeholder.com/300x150?text=Audi+A3"
+            },
+            {
+              nombre: "A4",
+              subtitulo: "Sedán",
+              dimensiones: { largo: "4,726 mm", ancho: "1,842 mm", alto: "1,427 mm" },
+              imagen: "https://via.placeholder.com/300x150?text=Audi+A4"
+            }
+          ]
+        },
+        {
+          nombre: "bmw",
+          modelos: [
+            {
+              nombre: "Serie 3",
+              subtitulo: "Sedán",
+              dimensiones: { largo: "4,709 mm", ancho: "1,827 mm", alto: "1,442 mm" },
+              imagen: "https://via.placeholder.com/300x150?text=BMW+Serie+3"
+            }
+          ]
+        }
+      ]
+    };
+    
     let modelosActuales = [];
 
-    fetch('vehiculos_combinado_convertido.json')
-      .then(res => res.json())
-      .then(data => {
-        datosVehiculos = data;
-        const selectMarca = document.getElementById('marca');
-        data.marcas.forEach(marca => {
-          const option = document.createElement('option');
-          option.value = marca.nombre;
-          option.textContent = marca.nombre;
-          selectMarca.appendChild(option);
-        });
+    // Cargar marcas al inicio
+    document.addEventListener('DOMContentLoaded', function() {
+      const selectMarca = document.getElementById('marca');
+      datosVehiculos.marcas.forEach(marca => {
+        const option = document.createElement('option');
+        option.value = marca.nombre;
+        option.textContent = marca.nombre.charAt(0).toUpperCase() + marca.nombre.slice(1);
+        selectMarca.appendChild(option);
       });
+    });
 
     function cargarModelos() {
       const marcaSel = document.getElementById('marca').value;
       const modeloSel = document.getElementById('modelo');
       modeloSel.innerHTML = '<option value="">-- Selecciona modelo --</option>';
+      
       const marcaData = datosVehiculos.marcas.find(m => m.nombre === marcaSel);
       modelosActuales = marcaData ? marcaData.modelos : [];
+      
       modelosActuales.forEach((modelo, index) => {
         const option = document.createElement('option');
         option.value = index;
         option.textContent = modelo.nombre + (modelo.subtitulo ? " - " + modelo.subtitulo : "");
         modeloSel.appendChild(option);
       });
+      
       document.getElementById("modeloInfo").innerHTML = "";
       document.getElementById("resultado").innerHTML = "";
     }
 
     function mostrarDatosModelo() {
       const index = document.getElementById('modelo').value;
+      if (index === "") return;
+      
       const modelo = modelosActuales[index];
       if (!modelo) return;
+      
       const { dimensiones, imagen } = modelo;
       document.getElementById("modeloInfo").innerHTML = `
         <h3>${modelo.nombre} ${modelo.subtitulo || ""}</h3>
-        <p>Largo: ${dimensiones.largo}, Ancho: ${dimensiones.ancho}, Alto: ${dimensiones.alto}</p>
+        <p><strong>Dimensiones:</strong> Largo: ${dimensiones.largo}, Ancho: ${dimensiones.ancho}, Alto: ${dimensiones.alto}</p>
         ${imagen ? `<img src="${imagen}" alt="${modelo.nombre}"/>` : ""}
       `;
       document.getElementById("resultado").innerHTML = "";
     }
 
     function limpiarNumero(valor) {
+      if (typeof valor !== 'string') return valor;
       return parseFloat(valor.replace(/[^\d.,]/g, '').replace(',', '.'));
     }
 
     function calcularPresupuesto() {
       const index = document.getElementById('modelo').value;
+      if (index === "") {
+        alert("Por favor, selecciona un modelo de vehículo");
+        return;
+      }
+      
       const modelo = modelosActuales[index];
-      if (!modelo) return;
       const tipoVinil = document.getElementById('tipoVinil').value;
-      const horas = parseFloat(document.getElementById('horasTrabajo').value);
-      const tarifa = parseFloat(document.getElementById('tarifaHora').value);
-      const anchoVinilo = parseFloat(document.getElementById('anchoVinilo').value);
+      const horas = parseFloat(document.getElementById('horasTrabajo').value) || 0;
+      const tarifa = parseFloat(document.getElementById('tarifaHora').value) || 0;
+      const anchoVinilo = parseFloat(document.getElementById('anchoVinilo').value) || 1.52;
+      
+      // Convertir dimensiones a metros
       const largo = limpiarNumero(modelo.dimensiones.largo) / 1000;
-      const ancho = limpiarNumero(modelo.dimensiones.ancho) / 1000;
-      const alto  = limpiarNumero(modelo.dimensiones.alto) / 1000;
-      const areaSuperficial = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
+      const ancho = limgiarNumero(modelo.dimensiones.ancho) / 1000;
+      const alto = limpiarNumero(modelo.dimensiones.alto) / 1000;
+      
+      // Cálculo del área superficial aproximada (fórmula simplificada)
+      const areaSuperficial = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho;
       const areaVinilo = areaSuperficial;
       const metrosLineales = areaVinilo / anchoVinilo;
+      
       const precios = {
         standard: 15,
         premium: 25,
         cambioColor: 30,
         personalizado: 35
       };
+      
       const costeMaterial = areaVinilo * precios[tipoVinil];
       const costeManoObra = horas * tarifa;
       const total = costeMaterial + costeManoObra;
+      
       document.getElementById('resultado').innerHTML = `
         <h3>Presupuesto Estimado</h3>
-        <p>Área vinilo: ${areaVinilo.toFixed(2)} m²</p>
+        <p>Área de vinilo: ${areaVinilo.toFixed(2)} m²</p>
         <p>Metros lineales: ${metrosLineales.toFixed(2)} m</p>
-        <p>Coste materiales: ${costeMaterial.toFixed(2)} €</p>
-        <p>Coste mano de obra: ${costeManoObra.toFixed(2)} €</p>
+        <p>Coste de materiales: ${costeMaterial.toFixed(2)} €</p>
+        <p>Coste de mano de obra: ${costeManoObra.toFixed(2)} €</p>
         <p><strong>Total: ${total.toFixed(2)} €</strong></p>
       `;
     }
