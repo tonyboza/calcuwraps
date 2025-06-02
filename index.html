@@ -1,196 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Vinilo para Coches</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f3f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+      background-color: #f9f9f9;
       color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     h1 {
       text-align: center;
+      margin-bottom: 10px;
       color: #2c3e50;
     }
-    .brand-logos {
+    .logo-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .logo-bar img {
+      height: 60px;
+    }
+    .logo-center {
       text-align: center;
-      margin: 30px 0;
+      flex: 1;
     }
-    .brand-logos img {
+    .logo-center img {
       height: 80px;
-      margin: 0 20px;
     }
-    label {
-      display: block;
-      margin-top: 20px;
-      font-weight: bold;
+    .container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    select, input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-size: 16px;
     }
     select, input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      font-size: 16px;
-      border-radius: 5px;
       border: 1px solid #ccc;
     }
     button {
       background-color: #e74c3c;
-      color: #fff;
+      color: white;
       border: none;
-      padding: 15px;
-      margin-top: 25px;
-      width: 100%;
-      font-size: 18px;
-      border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
     button:hover {
       background-color: #c0392b;
     }
-    .resultado {
-      background-color: #f8f9fa;
-      margin-top: 30px;
-      padding: 20px;
-      border-left: 5px solid #2ecc71;
+    .modelo-info, .resultado, .tabla-desglose {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f4f4f4;
       border-radius: 5px;
     }
     .resultado h3 {
-      margin-top: 0;
+      color: #2c3e50;
+    }
+    .tabla-desglose table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .tabla-desglose th, .tabla-desglose td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    .tabla-desglose th {
+      background-color: #34495e;
+      color: white;
+    }
+    .tabla-desglose td.highlight {
+      background-color: #dff0d8;
+    }
+    @media (max-width: 600px) {
+      .logo-bar {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Calculadora de Vinilo para Coches</h1>
-    <div class="brand-logos">
-      <img src="img/gsix9.png" alt="GSIX9">
-      <img src="img/oracal.png" alt="ORACAL">
-      <img src="img/totenser.png" alt="TOTENSER">
+  <h1>Calculadora de Vinilo para Coches</h1>
+  <div class="logo-bar">
+    <img src="img/logo-gsix9.png" alt="GSIX9">
+    <div class="logo-center">
+      <img src="img/logo-oracal.png" alt="ORACAL">
     </div>
+    <img src="img/logo-totenser.png" alt="Totensen">
+  </div>
 
-    <label for="marca">Marca:</label>
-    <select id="marca" onchange="cargarModelos()">
-      <option value="">-- Selecciona una marca --</option>
+  <div class="container">
+    <label for="marca">Marca del vehículo:</label>
+    <select id="marca">
+      <option value="">-- Selecciona marca --</option>
     </select>
 
     <label for="modelo">Modelo:</label>
-    <select id="modelo" onchange="mostrarDatosModelo()">
-      <option value="">-- Selecciona un modelo --</option>
+    <select id="modelo">
+      <option value="">-- Selecciona modelo --</option>
     </select>
 
-    <div id="infoModelo"></div>
+    <div class="modelo-info" id="modeloInfo"></div>
 
-    <label for="horas">Horas estimadas:</label>
-    <input type="number" id="horas" value="20" min="1" />
+    <label for="tipoVinilo">Tipo de vinilo:</label>
+    <select id="tipoVinilo">
+      <option value="15">Vinilo estándar (€15/m²)</option>
+      <option value="25">Vinilo premium (€25/m²)</option>
+      <option value="30">Cambio de color (€30/m²)</option>
+      <option value="35">Personalizado (€35/m²)</option>
+    </select>
 
-    <label for="tarifa">Tarifa por hora (€):</label>
-    <input type="number" id="tarifa" value="30" min="1" />
+    <label for="dificultad">Dificultad del trabajo:</label>
+    <select id="dificultad">
+      <option value="0">Normal (0%)</option>
+      <option value="5">Media (5%)</option>
+      <option value="10">Alta (10%)</option>
+    </select>
 
-    <label for="ancho">Ancho del vinilo (m):</label>
-    <input type="number" id="ancho" value="1.52" min="0.1" step="0.01" />
+    <label for="horasTrabajo">Horas estimadas:</label>
+    <input type="number" id="horasTrabajo" value="20">
+
+    <label for="tarifaHora">Tarifa por hora (€):</label>
+    <input type="number" id="tarifaHora" value="30">
+
+    <label for="anchoVinilo">Ancho del vinilo (metros):</label>
+    <input type="number" id="anchoVinilo" value="1.52" step="0.01">
 
     <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
 
     <div class="resultado" id="resultado"></div>
+    <div class="tabla-desglose" id="desglose"></div>
   </div>
 
-  <script>
-    let datosVehiculos;
-    let modelosActuales = [];
-
-    fetch("vehiculos_combinado_convertido.json")
-      .then(res => res.json())
-      .then(data => {
-        datosVehiculos = data;
-        const marcas = datosVehiculos.marcas || [];
-        marcas.sort((a, b) => a.nombre.localeCompare(b.nombre));
-        const selectMarca = document.getElementById("marca");
-        marcas.forEach(marca => {
-          const option = document.createElement("option");
-          option.value = marca.nombre;
-          option.textContent = marca.nombre;
-          selectMarca.appendChild(option);
-        });
-      });
-
-    function cargarModelos() {
-      const marca = document.getElementById("marca").value;
-      const selectModelo = document.getElementById("modelo");
-      selectModelo.innerHTML = '<option value="">-- Selecciona un modelo --</option>';
-      modelosActuales = [];
-
-      const marcaData = datosVehiculos.marcas.find(m => m.nombre === marca);
-      if (!marcaData) return;
-
-      marcaData.modelos.forEach((modelo, index) => {
-        modelosActuales.push(modelo);
-        const option = document.createElement("option");
-        option.value = index;
-        option.textContent = modelo.nombre;
-        selectModelo.appendChild(option);
-      });
-
-      document.getElementById("infoModelo").innerHTML = "";
-      document.getElementById("resultado").innerHTML = "";
-    }
-
-    function mostrarDatosModelo() {
-      const i = document.getElementById("modelo").value;
-      if (i === "") return;
-      const modelo = modelosActuales[i];
-      const d = modelo.dimensiones;
-      document.getElementById("infoModelo").innerHTML =
-        `<strong>Dimensiones:</strong> Largo: ${d.largo}, Ancho: ${d.ancho}, Alto: ${d.alto}`;
-    }
-
-    function limpiarNumero(valor) {
-      if (typeof valor !== "string") return 0;
-      return parseFloat(
-        valor
-          .replace(/\s*mm\s*/gi, "")
-          .replace(/\./g, "")
-          .replace(",", ".")
-      ) || 0;
-    }
-
-    function calcularPresupuesto() {
-      const i = document.getElementById("modelo").value;
-      if (i === "") return;
-      const modelo = modelosActuales[i];
-      const d = modelo.dimensiones;
-      const largo = limpiarNumero(d.largo) / 1000;
-      const ancho = limpiarNumero(d.ancho) / 1000;
-      const alto = limpiarNumero(d.alto) / 1000;
-
-      const area = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
-      const anchoVinilo = parseFloat(document.getElementById("ancho").value);
-      const metrosLineales = area / anchoVinilo;
-      const horas = parseFloat(document.getElementById("horas").value);
-      const tarifa = parseFloat(document.getElementById("tarifa").value);
-
-      const totalManoObra = horas * tarifa;
-      const costeMaterial = area * 15;
-      const total = totalManoObra + costeMaterial;
-
-      document.getElementById("resultado").innerHTML = `
-        <h3>Presupuesto Estimado</h3>
-        <p><strong>Área estimada:</strong> ${area.toFixed(2)} m²</p>
-        <p><strong>Metros lineales:</strong> ${metrosLineales.toFixed(2)} m</p>
-        <p><strong>Total estimado:</strong> ${total.toFixed(2)} €</p>
-      `;
-    }
-  </script>
+<script>
+// Aquí irá el script JS que calculará el desglose y presupuesto
+// Puedes cargar los datos JSON como en versiones anteriores
+// y procesar con lógica condicional para sumar piezas dentro del ancho del vinilo
+</script>
 </body>
 </html>
