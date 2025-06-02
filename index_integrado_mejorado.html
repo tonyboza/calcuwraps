@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Vinilo para Coches</title>
+  <script src="datosVehiculos.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .modelo-info img {
+      max-width: 100%;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .resultado {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f4f4f4;
+      border-left: 4px solid #4CAF50;
+      border-radius: 0 5px 5px 0;
+    }
+    select, input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Vinilo para Coches</h1>
+    <label for="marca">Marca:</label>
+    <select id="marca" onchange="cargarModelos()">
+      <option value="">-- Selecciona marca --</option>
+    </select>
+    <label for="modelo">Modelo:</label>
+    <select id="modelo" onchange="mostrarDatosModelo()">
+      <option value="">-- Selecciona modelo --</option>
+    </select>
+
+    <div class="modelo-info" id="modeloInfo"></div>
+
+    <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script>
+    let modelosActuales = [];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const selectMarca = document.getElementById("marca");
+      datosVehiculos.marcas.sort((a,b) => a.nombre.localeCompare(b.nombre));
+      datosVehiculos.marcas.forEach(m => {
+        const opt = document.createElement("option");
+        opt.value = m.nombre;
+        opt.textContent = m.nombre;
+        selectMarca.appendChild(opt);
+      });
+    });
+
+    function cargarModelos() {
+      const marca = document.getElementById("marca").value;
+      const selectModelo = document.getElementById("modelo");
+      selectModelo.innerHTML = '<option value="">-- Selecciona modelo --</option>';
+
+      const marcaSeleccionada = datosVehiculos.marcas.find(m => m.nombre === marca);
+      if (!marcaSeleccionada) return;
+
+      modelosActuales = marcaSeleccionada.modelos || [];
+      modelosActuales.forEach((modelo, index) => {
+        const opt = document.createElement("option");
+        opt.value = index;
+        opt.textContent = modelo.nombre;
+        selectModelo.appendChild(opt);
+      });
+    }
+
+    function mostrarDatosModelo() {
+      const index = document.getElementById("modelo").value;
+      const modelo = modelosActuales[index];
+      if (!modelo) return;
+
+      const info = document.getElementById("modeloInfo");
+      info.innerHTML = `
+        <h3>${modelo.nombre} ${modelo.subtitulo || ''}</h3>
+        <p><strong>Dimensiones:</strong> Largo: ${modelo.dimensiones.largo}, Ancho: ${modelo.dimensiones.ancho}, Alto: ${modelo.dimensiones.alto}</p>
+        <p><strong>Área estimada:</strong> ${modelo.area_m2 || 'N/A'} m²</p>
+        <p><strong>Metros lineales:</strong> ${modelo.metros_lineales || 'N/A'} m</p>
+        ${modelo.imagen ? '<img src="' + modelo.imagen + '" alt="Imagen de ' + modelo.nombre + '" />' : ''}
+      `;
+    }
+
+    function calcularPresupuesto() {
+      const index = document.getElementById("modelo").value;
+      const modelo = modelosActuales[index];
+      if (!modelo || !modelo.area_m2 || !modelo.metros_lineales) {
+        document.getElementById("resultado").innerHTML = "<p>Faltan datos para el cálculo.</p>";
+        return;
+      }
+      const precio_m2 = 25;
+      const coste = modelo.area_m2 * precio_m2;
+
+      document.getElementById("resultado").innerHTML = `
+        <h3>Presupuesto</h3>
+        <p>Área: ${modelo.area_m2} m²</p>
+        <p>Metros lineales: ${modelo.metros_lineales} m</p>
+        <p><strong>Coste estimado: ${coste.toFixed(2)} €</strong></p>
+      `;
+    }
+  </script>
+</body>
+</html>
