@@ -1,7 +1,272 @@
 {
   "marcas": [
     {
-      "nombre": "Alfa Romeo Giulia",
+      "nombre": "Alto:",
+      "modelos": [
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.928  ",
+          "dimensiones": {
+            "largo": "1.493  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a6-e-tron-avant_mid66e88082b84a1.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.733  ",
+          "dimensiones": {
+            "largo": "1.292  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.733  ",
+          "dimensiones": {
+            "largo": "1.292  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.820  ",
+          "dimensiones": {
+            "largo": "1.580  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "5.252  ",
+          "dimensiones": {
+            "largo": "1.870  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "5.252  ",
+          "dimensiones": {
+            "largo": "1.870  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/land-rover-range-rover_mid65ea3fc577a9b.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.946  ",
+          "dimensiones": {
+            "largo": "1.820  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.946  ",
+          "dimensiones": {
+            "largo": "1.820  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/land-rover-range-rover-sport_mid6555227e52fd6.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "5.336  ",
+          "dimensiones": {
+            "largo": "1.516  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "5.336  ",
+          "dimensiones": {
+            "largo": "1.516  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-s-amg_mid65e625081f31d.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.374  ",
+          "dimensiones": {
+            "largo": "1.465  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-astra-5-puertas.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.374  ",
+          "dimensiones": {
+            "largo": "1.465  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-astra-electric_mid652e4047666c2.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.374  ",
+          "dimensiones": {
+            "largo": "1.465  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-astra-phev.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.642  ",
+          "dimensiones": {
+            "largo": "1.480  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/imagenes/coche-perfil.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.229  ",
+          "dimensiones": {
+            "largo": "1.605  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.229  ",
+          "dimensiones": {
+            "largo": "1.605  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-crossland.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.389  ",
+          "dimensiones": {
+            "largo": "1.627  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.389  ",
+          "dimensiones": {
+            "largo": "1.627  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-frontera_mid678eabb768be2.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.395  ",
+          "dimensiones": {
+            "largo": "1.640  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.395  ",
+          "dimensiones": {
+            "largo": "1.640  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-frontera-electric_mid678ecb626428f.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.151  ",
+          "dimensiones": {
+            "largo": "1.534  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.151  ",
+          "dimensiones": {
+            "largo": "1.534  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.151  ",
+          "dimensiones": {
+            "largo": "1.534  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-mokka_mid67f6e40d1137c.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.151  ",
+          "dimensiones": {
+            "largo": "1.534  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-mokka-electric_mid67f6eb7188748.jpg"
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.151  ",
+          "dimensiones": {
+            "largo": "1.534  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Alto:",
+          "subtitulo": "4.151  ",
+          "dimensiones": {
+            "largo": "1.534  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-mokka-e.jpg"
+        }
+      ]
+    },
+    {
+      "nombre": "Ancho:",
       "modelos": [
         {
           "nombre": "Ancho:",
@@ -22,12 +287,7 @@
             "alto": "1.426  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Alfa Romeo Junior",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -37,12 +297,7 @@
             "alto": "1.532  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Alfa Romeo Stelvio",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -62,12 +317,7 @@
             "alto": "1.681  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/alfa-romeo-stelvio-quadrifoglio.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Alfa Romeo Tonale",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -77,12 +327,7 @@
             "alto": "1.601  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/alfa-romeo-tonale.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Alfa Romeo Milano",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -102,12 +347,7 @@
             "alto": "1.532  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/alfa-romeo-milano_mid661acb247e247.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A1",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -127,12 +367,7 @@
             "alto": "1.483  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a1-citycarver.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A3",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -172,12 +407,7 @@
             "alto": "1.438  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a3-s3_mid662018d2ced1f.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A4",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -217,12 +447,7 @@
             "alto": "1.408  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a4-s4.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A4 Allroad Quattro",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -232,12 +457,7 @@
             "alto": "1.435  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a4-allroad-quattro.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A5",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -307,12 +527,7 @@
             "alto": "1.429  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a5-s5_mid66b14b586c9e6.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A6",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -352,12 +567,7 @@
             "alto": "1.481  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a6-s6.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A6 allroad quattro",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -377,21 +587,6 @@
             "alto": "1.472  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a6-avant_mid67cf3e8a94a7f.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A6 e-tron",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.928  ",
-          "dimensiones": {
-            "largo": "1.493  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a6-e-tron-avant_mid66e88082b84a1.jpg"
         },
         {
           "nombre": "Ancho:",
@@ -402,12 +597,7 @@
             "alto": "1.455  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a6-e-tron-sportback_mid66eea71ebca88.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A7",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -447,12 +637,7 @@
             "alto": "1.417  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a7-s7-sportback.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A8",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -472,12 +657,7 @@
             "alto": "1.475  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-a8-s8.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi e-tron GT",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -487,12 +667,7 @@
             "alto": "1.402  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-e-tron-gt_mid667b2f3f252dc.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q2",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -512,12 +687,7 @@
             "alto": "1.495  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q2-sq2.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q3",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -537,12 +707,7 @@
             "alto": "1.602  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q3-rs_mid660c75ea20dc4.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q3 Sportback",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -562,12 +727,7 @@
             "alto": "1.557  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q3-sportback-rs.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q4 e-tron",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -577,12 +737,7 @@
             "alto": "1.632  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q4-e-tron.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q4 Sportback e-tron",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -592,12 +747,7 @@
             "alto": "1.614  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q4-sportback-e-tron.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q5",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -617,12 +767,7 @@
             "alto": "1.647  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q5-sq5_mid66eefbd30ba98.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q5 SPORTBACK",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -632,12 +777,7 @@
             "alto": "1.660  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q5-sportback_mid675478c12ac48.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q6 e-tron",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -647,12 +787,7 @@
             "alto": "1.685  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q6-e-tron_mid65fb3ac8b6acb.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q6 Sportback e-tron",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -662,12 +797,7 @@
             "alto": "1.685  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q6-sportback-e-tron_mid6744d11f846f2.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q7",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -687,12 +817,7 @@
             "alto": "1.743  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q7-sq7_mid65bf63b7b7736.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q8",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -722,12 +847,7 @@
             "alto": "1.708  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q8-sq8_mid6500d79f8ba45.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q8 e-tron",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -737,12 +857,7 @@
             "alto": "1.633  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q8-e-tron.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q8 Sportback e-tron",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -752,12 +867,7 @@
             "alto": "1.619  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-q8-sportback-e-tron.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi R8",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -777,12 +887,7 @@
             "alto": "1.242  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-r8-spyder.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi TT",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -792,12 +897,7 @@
             "alto": "1.344  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-tt_mid64fb7413eea69.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi e-tron",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -807,12 +907,7 @@
             "alto": "1.629  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-e-tron.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Audi e-tron Sportback",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -822,12 +917,7 @@
             "alto": "1.616  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/audi-e-tron-sportback.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i4",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -837,12 +927,7 @@
             "alto": "1.448  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-i4_mid6696c744521c2.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i5",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -862,12 +947,7 @@
             "alto": "1.505  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-i5-i5-touring_mid65e250d4ebff6.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i7",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -877,12 +957,7 @@
             "alto": "1.544  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-i7.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW iX",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -892,12 +967,7 @@
             "alto": "1.696  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-ix_mid67a8faad3852c.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW iX1",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -907,12 +977,7 @@
             "alto": "1.616  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW iX3",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -922,12 +987,7 @@
             "alto": "1.668  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-ix3.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 1",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -937,12 +997,7 @@
             "alto": "1.459  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-1_mid6670a877a08fe.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 2",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -972,12 +1027,7 @@
             "alto": "1.410  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-2-m2_mid66770e747a92c.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 2 Active Tourer",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -987,12 +1037,7 @@
             "alto": "1.576  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-2-active-tourer.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 3",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1022,12 +1067,7 @@
             "alto": "1.437  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-3-m3.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 4",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1067,12 +1107,7 @@
             "alto": "1.399  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-4-m4.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 5",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1102,12 +1137,7 @@
             "alto": "1.510  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-5-m5_mid66919fd83ea9b.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 7",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1117,12 +1147,7 @@
             "alto": "1.544  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-7.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 8",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1162,12 +1187,7 @@
             "alto": "1.420  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-8-m8.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X1",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1177,12 +1197,7 @@
             "alto": "1.642  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-x1.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X3",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1192,12 +1207,7 @@
             "alto": "1.660  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-x3_mid667b1371450cf.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X4",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1217,12 +1227,7 @@
             "alto": "1.620  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-x4-m.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X5",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1242,12 +1247,7 @@
             "alto": "1.762  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-x5-m.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X6",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1267,12 +1267,7 @@
             "alto": "1.695  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-x6-m.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X7",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1282,12 +1277,7 @@
             "alto": "1.835  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-x7.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW XM",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1297,12 +1287,7 @@
             "alto": "1.755  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-xm.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Z4",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1312,12 +1297,7 @@
             "alto": "1.304  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-z4_mid6536b95d5b283.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i3",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1327,12 +1307,7 @@
             "alto": "1.598  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-i3.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 2 Gran Tourer",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1342,12 +1317,7 @@
             "alto": "1.608  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-2-gran-tourer.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 6",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1357,12 +1327,7 @@
             "alto": "1.540  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-serie-6-gran-turismo.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i1",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1372,12 +1337,7 @@
             "alto": "1.400  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/bmw-i1_mid6595bb1974429.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Bigster",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1387,12 +1347,7 @@
             "alto": "1.662  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/dacia-bigster_mid6782534377cc7.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Duster",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1402,12 +1357,7 @@
             "alto": "1.693  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/dacia-duster_mid6601ff2db31dd.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Jogger",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1417,12 +1367,7 @@
             "alto": "1.632  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/dacia-jogger.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Sandero",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1442,12 +1387,7 @@
             "alto": "1.535  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/dacia-sandero-stepway.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Spring",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1457,37 +1397,7 @@
             "alto": "1.485  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/dacia-spring_mid6656470f0dafd.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari 12cilindri",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.733  ",
-          "dimensiones": {
-            "largo": "1.292  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
         },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.733  ",
-          "dimensiones": {
-            "largo": "1.292  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari 296",
-      "modelos": [
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1507,12 +1417,7 @@
             "alto": "1.191  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari F80",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1522,12 +1427,7 @@
             "alto": "1.138  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari Purosangue",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1537,12 +1437,7 @@
             "alto": "1.589  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari Roma",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1562,12 +1457,7 @@
             "alto": "1.306  "
           },
           "imagen": "https://static.motor.es/imagenes/coche-perfil.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari SF90",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1607,12 +1497,7 @@
             "alto": "1.225  "
           },
           "imagen": "https://static.motor.es/imagenes/coche-perfil.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "DS 3",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1622,12 +1507,7 @@
             "alto": "1.534  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS 4",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1637,12 +1517,7 @@
             "alto": "1.470  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS 7",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1652,12 +1527,7 @@
             "alto": "1.625  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS 9",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1667,27 +1537,7 @@
             "alto": "1.460  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS Nº8",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.820  ",
-          "dimensiones": {
-            "largo": "1.580  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS 3 Crossback",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1697,12 +1547,7 @@
             "alto": "1.534  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Land Rover Defender",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1742,12 +1587,7 @@
             "alto": "1.970  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Land Rover Discovery",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1757,12 +1597,7 @@
             "alto": "1.888  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Land Rover Discovery Sport",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1772,37 +1607,7 @@
             "alto": "1.727  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Range Rover",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "5.252  ",
-          "dimensiones": {
-            "largo": "1.870  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
         },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "5.252  ",
-          "dimensiones": {
-            "largo": "1.870  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/land-rover-range-rover_mid65ea3fc577a9b.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Range Rover Evoque",
-      "modelos": [
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1822,37 +1627,7 @@
             "alto": "1.649  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/land-rover-range-rover-evoque.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Range Rover Sport",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.946  ",
-          "dimensiones": {
-            "largo": "1.820  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
         },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.946  ",
-          "dimensiones": {
-            "largo": "1.820  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/land-rover-range-rover-sport_mid6555227e52fd6.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Range Rover Velar",
-      "modelos": [
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1872,12 +1647,7 @@
             "alto": "1.683  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/land-rover-range-rover-velar_mid6553f0cdbbcaf.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes AMG GT",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1897,12 +1667,7 @@
             "alto": "1.447  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-amg-gt-4-puertas-coupe_mid66ba7fab59d4e.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes AMG GT 4-Puertas Coupé",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1912,12 +1677,7 @@
             "alto": "1.455  "
           },
           "imagen": "https://static.motor.es/imagenes/coche-perfil.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes AMG GT Coupé",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1927,12 +1687,7 @@
             "alto": "1.354  "
           },
           "imagen": "https://static.motor.es/imagenes/coche-perfil.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes AMG SL",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1942,12 +1697,7 @@
             "alto": "1.354  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Citan",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -1957,12 +1707,7 @@
             "alto": "1.832  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-citan.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase A",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2022,12 +1767,7 @@
             "alto": "1.414  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-a-amg.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase B",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2047,12 +1787,7 @@
             "alto": "1.545  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-b.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase C",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2152,12 +1887,7 @@
             "alto": "1.464  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-c-amg_mid680a8b4f84ab9.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes CLA",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2237,12 +1967,7 @@
             "alto": "1.418  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-cla-shooting-brake-amg_mid6540255610695.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes CLS",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2262,12 +1987,7 @@
             "alto": "1.430  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-cls_mid659f1b5287cd3.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase E",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2367,12 +2087,7 @@
             "alto": "1.497  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-e-all-terrain_mid65882cd14da78.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase G",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2412,12 +2127,7 @@
             "alto": "1.966  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-g-amg_mid663400a62b6e2.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLA",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2457,12 +2167,7 @@
             "alto": "1.616  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-gla-amg.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLB",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2482,12 +2187,7 @@
             "alto": "1.659  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-glb.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLC",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2507,12 +2207,7 @@
             "alto": "1.640  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-glc.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLC Coupé",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2532,12 +2227,7 @@
             "alto": "1.605  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-glc-coupe.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLE",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2577,12 +2267,7 @@
             "alto": "1.797  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-gle-amg.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLE Coupé",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2622,12 +2307,7 @@
             "alto": "1.730  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-gle-coupe-amg_mid67c77ab2a6878.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLS",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2647,12 +2327,7 @@
             "alto": "1.823  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-gls.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase S",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2660,16 +2335,6 @@
             "largo": "5.179  ",
             "ancho": "1.954  ",
             "alto": "1.503  "
-          },
-          "imagen": ""
-        },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "5.336  ",
-          "dimensiones": {
-            "largo": "1.516  ",
-            "ancho": "",
-            "alto": ""
           },
           "imagen": ""
         },
@@ -2683,21 +2348,6 @@
           },
           "imagen": "https://static.motor.es/imagenes/coche-perfil.jpg"
         },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "5.336  ",
-          "dimensiones": {
-            "largo": "1.516  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-s-amg_mid65e625081f31d.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase T",
-      "modelos": [
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2717,12 +2367,7 @@
             "alto": "1.811  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-t.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase V",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2762,12 +2407,7 @@
             "alto": "1.900  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-clase-v-5-puertas_mid65b1714dd0499.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes CLE",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2807,12 +2447,7 @@
             "alto": "1.424  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-cle-cabrio_mid65d484d46c307.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQA",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2832,12 +2467,7 @@
             "alto": "1.613  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqa_mid6529923b844c9.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQB",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2857,12 +2487,7 @@
             "alto": "1.689  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqb_mid6596fc1aa1204.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQE",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2882,12 +2507,7 @@
             "alto": "1.510  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqe.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQE SUV",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2907,12 +2527,7 @@
             "alto": "1.685  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqe-suv.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQS",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2932,12 +2547,7 @@
             "alto": "1.512  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqs_mid6668c89b4cc9a.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQS SUV",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2957,12 +2567,7 @@
             "alto": "1.718  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqs-suv.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQT",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -2982,12 +2587,7 @@
             "alto": "1.819  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqt.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQV",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3007,12 +2607,7 @@
             "alto": "1.910  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqv_mid65b4160ecf532.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Maybach SL",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3032,12 +2627,7 @@
             "alto": "1.358  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-maybach-sl_mid6797ea950c651.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Vito",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3057,12 +2647,7 @@
             "alto": "1.910  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-vito_mid660f20b7d22bd.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQC",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3082,12 +2667,7 @@
             "alto": "1.624  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqc.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQG",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3107,21 +2687,6 @@
             "alto": "1.969  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/mercedes-eqg.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Astra",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.374  ",
-          "dimensiones": {
-            "largo": "1.465  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-astra-5-puertas.jpg"
         },
         {
           "nombre": "Ancho:",
@@ -3132,21 +2697,6 @@
             "alto": "1.000  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-astra-sports-tourer_mid64dde6db9a8ab.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Astra Electric",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.374  ",
-          "dimensiones": {
-            "largo": "1.465  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-astra-electric_mid652e4047666c2.jpg"
         },
         {
           "nombre": "Ancho:",
@@ -3157,37 +2707,7 @@
             "alto": "1.480  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-astra-electric-sports-tourer-electric_mid659f16129cb2f.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Astra PHEV",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.374  ",
-          "dimensiones": {
-            "largo": "1.465  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-astra-phev.jpg"
         },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.642  ",
-          "dimensiones": {
-            "largo": "1.480  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/imagenes/coche-perfil.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Combo",
-      "modelos": [
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3207,12 +2727,7 @@
             "alto": "1.880  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-combo_mid65e89ada334fb.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Combo-e Life",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3232,12 +2747,7 @@
             "alto": "1.880  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-combo-e-life.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Combo Electric",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3257,12 +2767,7 @@
             "alto": "1.880  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-combo-electric_mid65bbe75419c55.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Corsa",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3282,12 +2787,7 @@
             "alto": "1.433  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-corsa_mid6808075382986.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Corsa Electric",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3307,87 +2807,7 @@
             "alto": "1.433  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-corsa-electric_mid67f82fa18999f.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Crossland",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.229  ",
-          "dimensiones": {
-            "largo": "1.605  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
         },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.229  ",
-          "dimensiones": {
-            "largo": "1.605  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-crossland.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Frontera",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.389  ",
-          "dimensiones": {
-            "largo": "1.627  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
-        },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.389  ",
-          "dimensiones": {
-            "largo": "1.627  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-frontera_mid678eabb768be2.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Frontera Electric",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.395  ",
-          "dimensiones": {
-            "largo": "1.640  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
-        },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.395  ",
-          "dimensiones": {
-            "largo": "1.640  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-frontera-electric_mid678ecb626428f.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Grandland",
-      "modelos": [
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3427,12 +2847,7 @@
             "alto": "1.666  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-grandland-electric_mid677eef35ef63d.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Grandland PHEV",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3452,82 +2867,7 @@
             "alto": "1.630  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-grandland-phev.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Mokka",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.151  ",
-          "dimensiones": {
-            "largo": "1.534  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
         },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.151  ",
-          "dimensiones": {
-            "largo": "1.534  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
-        },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.151  ",
-          "dimensiones": {
-            "largo": "1.534  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-mokka_mid67f6e40d1137c.jpg"
-        },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.151  ",
-          "dimensiones": {
-            "largo": "1.534  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-mokka-electric_mid67f6eb7188748.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Mokka-e",
-      "modelos": [
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.151  ",
-          "dimensiones": {
-            "largo": "1.534  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
-        },
-        {
-          "nombre": "Alto:",
-          "subtitulo": "4.151  ",
-          "dimensiones": {
-            "largo": "1.534  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": "https://static.motor.es/fotos-marca/medidas/opel-mokka-e.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Zafira-e Life",
-      "modelos": [
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3547,12 +2887,7 @@
             "alto": "1.890  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-zafira-e-life.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Zafira Electric",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3572,12 +2907,7 @@
             "alto": "1.910  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-zafira-electric_mid65ba9dbf6fedf.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Insignia",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3597,12 +2927,7 @@
             "alto": "1.455  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-insignia-berlina.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Zafira Life",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3622,12 +2947,7 @@
             "alto": "1.890  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/opel-zafira-life.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault 4 E-Tech",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3637,12 +2957,7 @@
             "alto": "1.552  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-4-e-tech_mid67d87fff85ea0.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault 5",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3652,12 +2967,7 @@
             "alto": "1.499  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-5_mid665c4c82d46f7.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Arkana",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3667,12 +2977,7 @@
             "alto": "1.571  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-arkana_mid652595a92cc23.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Austral",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3682,12 +2987,7 @@
             "alto": "1.618  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-austral_mid67fed34427491.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Captur",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3697,12 +2997,7 @@
             "alto": "1.575  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-captur_mid663d41e0830ca.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Clio",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3712,12 +3007,7 @@
             "alto": "1.440  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-clio_mid64d8b351a5afd.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Espace",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3737,12 +3027,7 @@
             "alto": "1.645  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-espace_mid67fd73efc4c0f.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Grand Kangoo Combi",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3762,12 +3047,7 @@
             "alto": "1.869  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-grand-kangoo-combi_mid657b4ae3488a6.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Kangoo Combi",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3787,12 +3067,7 @@
             "alto": "1.838  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-kangoo-combi.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Kangoo Combi E-Tech",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3812,12 +3087,7 @@
             "alto": "1.793  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-kangoo-combi-e-tech_mid65b62b6ea5763.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Mégane",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3857,12 +3127,7 @@
             "alto": "1.457  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-megane-sport-tourer_mid64e3d8543a409.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Megane E-Tech",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3882,12 +3147,7 @@
             "alto": "1.505  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-megane-e-tech.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Rafale",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3907,12 +3167,7 @@
             "alto": "1.613  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-rafale_mid65ce61299af23.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Scenic E-Tech",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3932,12 +3187,7 @@
             "alto": "1.571  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-scenic-e-tech_mid65c3da3d6aeae.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Symbioz",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3957,12 +3207,7 @@
             "alto": "1.575  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-symbioz_mid6635512339b0b.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Twingo E-Tech",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -3982,12 +3227,7 @@
             "alto": "1.541  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-twingo-e-tech_mid65b3840bf2554.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault ZOE",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4007,12 +3247,7 @@
             "alto": "1.562  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-zoe.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Scenic",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4032,12 +3267,7 @@
             "alto": "1.571  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-scenic_mid658dc7fbe4854.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Kadjar",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4057,12 +3287,7 @@
             "alto": "1.611  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-kadjar.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Grand Scénic",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4082,12 +3307,7 @@
             "alto": "1.660  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-grand-scenic.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Twingo",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4107,12 +3327,7 @@
             "alto": "1.541  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-twingo_mid6514987c726a4.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Koleos",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4132,12 +3347,7 @@
             "alto": "1.678  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/renault-koleos.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Rolls-Royce Cullinan",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "5.341  ",
@@ -4147,12 +3357,7 @@
             "alto": ""
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/rolls-royce-cullinan_mid6827ae3a6a5cb.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Rolls-Royce Ghost",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4162,12 +3367,7 @@
             "alto": "1.571  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/rolls-royce-ghost_mid682ba1262e0ec.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Rolls-Royce Spectre",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4177,12 +3377,7 @@
             "alto": "1.573  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/rolls-royce-spectre_mid682b8576c008e.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Elroq",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4192,12 +3387,7 @@
             "alto": "1.625  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-elroq_mid6702c42aa6a08.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Enyaq",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4217,12 +3407,7 @@
             "alto": "1.616  "
           },
           "imagen": "https://static.motor.es/imagenes/coche-perfil.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Enyaq Coupe",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4242,12 +3427,7 @@
             "alto": "1.622  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-enyaq-coupe-rs_mid65f6d3a92c36e.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Fabia",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4257,12 +3437,7 @@
             "alto": "1.459  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-fabia-hatchback_mid6511deafb1c11.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Kamiq",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4282,12 +3457,7 @@
             "alto": "1.562  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-kamiq_mid6526f090637d3.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Karoq",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4307,12 +3477,7 @@
             "alto": "1.603  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-karoq_mid6644ff355850c.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Octavia",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4372,12 +3537,7 @@
             "alto": "1.455  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-octavia-rs_mid66a67ae23a1e3.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Scala",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4397,12 +3557,7 @@
             "alto": "1.471  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-scala_mid65a27f7e18b7f.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Superb",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4442,12 +3597,7 @@
             "alto": "1.482  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-superb-combi_mid65b63316d50c6.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Epiq",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4467,12 +3617,7 @@
             "alto": "1.600  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/skoda-epiq_mid65f4d039664e9.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Aygo X Cross",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4482,12 +3627,7 @@
             "alto": "1.525  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-aygo-x-cross.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota BZ4X",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4497,12 +3637,7 @@
             "alto": "1.650  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-bz4x.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota C-HR",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4512,12 +3647,7 @@
             "alto": "1.564  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-c-hr_mid651447eac8bcf.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Camry",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4527,12 +3657,7 @@
             "alto": "1.445  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-camry.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Corolla",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4572,12 +3697,7 @@
             "alto": "1.460  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-corolla-touring-sports_mid6637b35d1c991.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Corolla Cross",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4597,12 +3717,7 @@
             "alto": "1.620  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-corolla-cross_mid64cb815b0e149.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota GR Supra",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4622,12 +3737,7 @@
             "alto": "1.299  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-gr-supra.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota GR Yaris",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4647,12 +3757,7 @@
             "alto": "1.455  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-gr-yaris.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota GR86",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4672,12 +3777,7 @@
             "alto": "1.310  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-gr86.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Highlander",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4697,12 +3797,7 @@
             "alto": "1.755  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-highlander.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Land Cruiser",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4722,12 +3817,7 @@
             "alto": "1.860  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-land-cruiser-3-puertas_mid65f89dce8deb7.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Mirai",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4747,12 +3837,7 @@
             "alto": "1.470  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-mirai.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Proace City Verso",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4772,12 +3857,7 @@
             "alto": "1.797  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-proace-city-verso_mid67181b6800c59.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Proace Verso",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4797,12 +3877,7 @@
             "alto": "1.910  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-proace-verso_mid67182232173bf.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Rav4",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4822,12 +3897,7 @@
             "alto": "1.685  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-rav4.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Yaris",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4847,12 +3917,7 @@
             "alto": "1.500  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-yaris.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Yaris Cross",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4872,12 +3937,7 @@
             "alto": "1.595  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-yaris-cross_mid65dce98756a42.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota bZ1",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4897,12 +3957,7 @@
             "alto": "1.530  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-bz1_mid671aba110e4ad.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota bZ3",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4922,12 +3977,7 @@
             "alto": "1.475  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-bz3.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota C-HR+",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
@@ -4947,12 +3997,7 @@
             "alto": "1.595  "
           },
           "imagen": "https://static.motor.es/fotos-marca/medidas/toyota-c-hr-plus_mid67d9f06c79d83.jpg"
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Urban Cruiser",
-      "modelos": [
+        },
         {
           "nombre": "Ancho:",
           "subtitulo": "Alto:",
