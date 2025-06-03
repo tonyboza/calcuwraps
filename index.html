@@ -335,29 +335,21 @@
     // Función para cargar datos desde GitHub
     async function cargarDatos() {
       try {
-        // Reemplaza con tu URL real de GitHub
         const jsonUrl = 'https://raw.githubusercontent.com/tonyboza/calcuwraps/main/vehiculos_combinado_convertido.json';
-        
         const res = await fetch(jsonUrl);
         
-        if (!res.ok) {
-          throw new Error(`Error al cargar el archivo (${res.status} ${res.statusText})`);
-        }
+        if (!res.ok) throw new Error(`Error al cargar el archivo (${res.status} ${res.statusText})`);
         
         datosVehiculos = await res.json();
         
-        // Validar estructura básica del JSON
         if (!datosVehiculos.marcas || !Array.isArray(datosVehiculos.marcas)) {
           throw new Error("El archivo JSON no tiene la estructura esperada");
         }
         
-        // Ordenar marcas alfabéticamente
         const marcas = datosVehiculos.marcas.sort((a, b) => a.nombre.localeCompare(b.nombre));
         const selectMarca = document.getElementById("marca");
         
-        // Limpiar y agregar opciones
         selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
-        
         marcas.forEach(marca => {
           const option = document.createElement("option");
           option.value = marca.nombre;
@@ -365,61 +357,40 @@
           selectMarca.appendChild(option);
         });
         
-        console.log("Datos de vehículos cargados correctamente");
       } catch (error) {
         console.error("Error al cargar los datos:", error);
-        
-        // Mostrar mensaje de error detallado
-        const errorMsg = `Error al cargar los datos: ${error.message}\n\n`;
-        alert(errorMsg + "Por favor, verifica:\n1. La URL del JSON en GitHub\n2. Que el archivo existe\n3. Tu conexión a internet");
-        
-        // Cargar datos de ejemplo mínimos
+        alert(`Error al cargar los datos: ${error.message}\n\nUsando datos de ejemplo...`);
         cargarDatosDeEjemplo();
       }
     }
 
-    // Función para cargar datos de ejemplo en caso de error
     function cargarDatosDeEjemplo() {
       datosVehiculos = {
-        marcas: [
-          {
-            nombre: "Ejemplo",
-            modelos: [
-              {
-                nombre: "Modelo Demo",
-                subtitulo: "Versión estándar",
-                dimensiones: {
-                  largo: "4500 mm",
-                  ancho: "1820 mm",
-                  alto: "1520 mm"
-                },
-                imagen: "https://static.motor.es/imagenes/coche-perfil.jpg"
-              }
-            ]
-          }
-        ]
+        marcas: [{
+          nombre: "Ejemplo",
+          modelos: [{
+            nombre: "Modelo Demo",
+            subtitulo: "Versión estándar",
+            dimensiones: { largo: "4630 mm", ancho: "1860 mm", alto: "1436 mm" },
+            imagen: "https://static.motor.es/imagenes/coche-perfil.jpg"
+          }]
+        }]
       };
       
-      // Forzar carga de los datos de ejemplo
       const selectMarca = document.getElementById("marca");
       selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
-      
       datosVehiculos.marcas.forEach(marca => {
         const option = document.createElement("option");
         option.value = marca.nombre;
         option.textContent = marca.nombre;
         selectMarca.appendChild(option);
       });
-      
-      console.log("Cargados datos de ejemplo debido a error en la carga");
     }
 
-    // Función para cargar modelos según la marca seleccionada
     function cargarModelos() {
       const marcaSeleccionada = document.getElementById("marca").value;
       const selectModelo = document.getElementById("modelo");
       
-      // Resetear modelo info y resultados
       document.getElementById("modeloInfo").style.display = "none";
       document.getElementById("resultado").style.display = "none";
       
@@ -432,7 +403,6 @@
       const marca = datosVehiculos.marcas.find(m => m.nombre === marcaSeleccionada);
       
       if (marca && marca.modelos) {
-        // Ordenar modelos alfabéticamente por nombre + subtítulo
         modelosActuales = marca.modelos.sort((a, b) => {
           const nombreA = `${a.nombre} ${a.subtitulo || ""}`.toLowerCase();
           const nombreB = `${b.nombre} ${b.subtitulo || ""}`.toLowerCase();
@@ -440,11 +410,9 @@
         });
         
         selectModelo.innerHTML = '<option value="">Selecciona un modelo</option>';
-        
         modelosActuales.forEach((modelo, index) => {
           const opt = document.createElement("option");
           opt.value = index;
-          // Mostrar nombre y subtítulo si existe
           opt.textContent = modelo.nombre + (modelo.subtitulo ? ` (${modelo.subtitulo})` : "");
           selectModelo.appendChild(opt);
         });
@@ -456,7 +424,6 @@
       }
     }
 
-    // Función para mostrar información del modelo seleccionado
     function mostrarDatosModelo() {
       const index = document.getElementById("modelo").value;
       const modeloInfo = document.getElementById("modeloInfo");
@@ -469,11 +436,9 @@
       
       const modelo = modelosActuales[index];
       
-      // Actualizar la información del modelo
       document.getElementById("modeloNombre").textContent = modelo.nombre;
       document.getElementById("modeloSubtitulo").textContent = modelo.subtitulo || "No especificado";
       
-      // Formatear dimensiones
       const dimensiones = `
         Largo: ${modelo.dimensiones.largo}<br>
         Ancho: ${modelo.dimensiones.ancho}<br>
@@ -481,7 +446,6 @@
       `;
       document.getElementById("modeloDimensiones").innerHTML = dimensiones;
       
-      // Mostrar imagen si está disponible
       const imgElement = document.getElementById("modeloImagen");
       if (modelo.imagen && typeof modelo.imagen === 'string' && modelo.imagen.startsWith('http')) {
         imgElement.src = modelo.imagen;
@@ -494,75 +458,72 @@
       modeloInfo.style.display = "block";
     }
 
-    // Función para limpiar y convertir valores numéricos
     function limpiarNumero(valor) {
       if (typeof valor !== "string") return parseFloat(valor) || 0;
-      return parseFloat(valor.replace(/[^0-9.,]/g, "").replace(",", ".")) || 0;
+      return parseFloat(valor.replace(/[^0-9.]/g, "")) || 0;
     }
 
-    // Función principal para calcular el presupuesto
     function calcularPresupuesto() {
       const index = document.getElementById("modelo").value;
       if (index === "") {
         alert("Por favor, selecciona un modelo de vehículo");
         return;
       }
-      
+
       const modelo = modelosActuales[index];
       
       try {
-        // Obtener dimensiones y convertir a metros
-        const largo = limpiarNumero(modelo.dimensiones.largo) / 1000;
-        const ancho = limpiarNumero(modelo.dimensiones.ancho) / 1000;
-        const alto = limpiarNumero(modelo.dimensiones.alto) / 1000;
-        
-        // Validar dimensiones
-        if (largo <= 0 || ancho <= 0 || alto <= 0) {
-          throw new Error("Las dimensiones del vehículo no son válidas");
-        }
-        
-        // Calcular área aproximada (80% de la superficie total)
-        const area = 0.8 * (2 * (largo * alto + ancho * alto) + largo * ancho);
-        
-        // Obtener parámetros del formulario con validación
+        // Obtener dimensiones en metros
+        const largoTotal = limpiarNumero(modelo.dimensiones.largo) / 1000;
+        const anchoTotal = limpiarNumero(modelo.dimensiones.ancho) / 1000;
         const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value) || 1.52;
-        if (anchoVinilo <= 0) throw new Error("El ancho del vinilo debe ser positivo");
         
+        // CÁLCULO SEGÚN TU MÉTODO EXACTO
+        // --------------------------------------------
+        // 1. Laterales (largo total - 1.3m para aletas)
+        const laterales = (largoTotal - 1.3) * 2;
+        
+        // 2. Parachoques (solo el más largo)
+        const parachoques = Math.max(anchoTotal * 1.2, anchoTotal * 0.9);
+        
+        // 3. Piezas grandes (valores fijos como indicaste)
+        const piezasGrandes = 2.0 + 2.0 + 2.0; // capo + techo + porton
+        
+        // Metros lineales totales
+        const mlTotales = laterales + parachoques + piezasGrandes;
+        
+        // Cálculo de área (considerando aprovechamiento real)
+        const areaLaterales = laterales * (anchoVinilo / 2);
+        const areaParachoques = parachoques * (anchoVinilo / 2);
+        const areaPiezasGrandes = piezasGrandes * anchoVinilo;
+        const areaTotal = areaLaterales + areaParachoques + areaPiezasGrandes;
+        
+        // Costes
         const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 15;
         const dificultad = parseFloat(document.getElementById("dificultad").value) || 1;
+        const horas = parseFloat(document.getElementById("horas").value) || 20;
+        const tarifa = parseFloat(document.getElementById("tarifa").value) || 30;
         
-        const horas = parseFloat(document.getElementById("horas").value);
-        if (isNaN(horas) || horas <= 0) throw new Error("Horas de trabajo no válidas");
-        
-        const tarifa = parseFloat(document.getElementById("tarifa").value);
-        if (isNaN(tarifa) || tarifa <= 0) throw new Error("Tarifa por hora no válida");
-        
-        // Calcular metros lineales
-        const ml = area / anchoVinilo;
-        
-        // Calcular costes
-        const costeMaterial = area * tipoPrecio;
+        const costeMaterial = areaTotal * tipoPrecio;
         const costeTrabajo = horas * tarifa * dificultad;
         const total = costeMaterial + costeTrabajo;
-        
+
         // Mostrar resultados
-        document.getElementById("areaResultado").textContent = area.toFixed(2) + " m²";
-        document.getElementById("metrosResultado").textContent = ml.toFixed(2) + " m";
+        document.getElementById("areaResultado").textContent = areaTotal.toFixed(2) + " m²";
+        document.getElementById("metrosResultado").textContent = mlTotales.toFixed(2) + " m";
         document.getElementById("materialResultado").textContent = costeMaterial.toFixed(2) + " €";
         document.getElementById("manoObraResultado").textContent = costeTrabajo.toFixed(2) + " €";
         document.getElementById("totalResultado").textContent = total.toFixed(2) + " €";
-        
+
         document.getElementById("resultado").style.display = "block";
         
-        // Scroll suave al resultado
-        document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
       } catch (error) {
         console.error("Error en el cálculo:", error);
         alert(`Error al calcular: ${error.message}`);
       }
     }
 
-    // Cargar datos al iniciar la página
+    // Iniciar
     window.onload = cargarDatos;
   </script>
 </body>
