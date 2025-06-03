@@ -1,10 +1,10 @@
 {
   "marcas": [
     {
-      "nombre": "Alfa Romeo Giulia",
+      "nombre": "Alfa",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "Romeo Giulia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.643  ",
@@ -14,7 +14,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Romeo Giulia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.639  ",
@@ -22,14 +22,9 @@
             "alto": "1.426  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Alfa Romeo Junior",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Romeo Junior",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.173  ",
@@ -37,14 +32,9 @@
             "alto": "1.532  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Alfa Romeo Stelvio",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Romeo Stelvio",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.687  ",
@@ -54,7 +44,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Romeo Stelvio",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.702  ",
@@ -62,14 +52,9 @@
             "alto": "1.681  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Alfa Romeo Tonale",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Romeo Tonale",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.528  ",
@@ -77,14 +62,9 @@
             "alto": "1.601  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Alfa Romeo Milano",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Romeo Milano",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.173  ",
@@ -94,7 +74,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Romeo Milano",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.173  ",
@@ -106,10 +86,10 @@
       ]
     },
     {
-      "nombre": "Audi A1",
+      "nombre": "Audi",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "A1",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.029  ",
@@ -119,7 +99,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A1",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.046  ",
@@ -127,14 +107,9 @@
             "alto": "1.483  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A3",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "A3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.504  ",
@@ -144,7 +119,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.353  ",
@@ -154,7 +129,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.353  ",
@@ -164,7 +139,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.352  ",
@@ -172,14 +147,9 @@
             "alto": "1.438  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A4",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "A4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.762  ",
@@ -189,7 +159,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.762  ",
@@ -199,7 +169,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.782  ",
@@ -209,7 +179,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.770  ",
@@ -217,14 +187,9 @@
             "alto": "1.408  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A4 Allroad Quattro",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "A4 Allroad Quattro",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.762  ",
@@ -232,14 +197,9 @@
             "alto": "1.435  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A5",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "A5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.829  ",
@@ -249,7 +209,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.829  ",
@@ -259,7 +219,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.697  ",
@@ -269,7 +229,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.723  ",
@@ -279,7 +239,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.757  ",
@@ -289,7 +249,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.783  ",
@@ -299,7 +259,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.835  ",
@@ -307,14 +267,9 @@
             "alto": "1.429  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A6",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "A6",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.999  ",
@@ -324,7 +279,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A6",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.999  ",
@@ -334,7 +289,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A6",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.995  ",
@@ -344,7 +299,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A6",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.954  ",
@@ -352,14 +307,9 @@
             "alto": "1.481  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A6 allroad quattro",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "A6 allroad quattro",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.951  ",
@@ -369,7 +319,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A6 allroad quattro",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.999  ",
@@ -377,14 +327,9 @@
             "alto": "1.472  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A6 e-tron",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "A6 e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.493  ",
@@ -394,7 +339,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A6 e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.928  ",
@@ -402,14 +347,9 @@
             "alto": "1.455  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A7",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "A7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.969  ",
@@ -419,7 +359,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.009  ",
@@ -429,7 +369,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.009  ",
@@ -439,7 +379,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.979  ",
@@ -447,14 +387,9 @@
             "alto": "1.417  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi A8",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "A8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.320  ",
@@ -464,7 +399,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "A8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.190  ",
@@ -472,14 +407,9 @@
             "alto": "1.475  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi e-tron GT",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "e-tron GT",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.004  ",
@@ -487,14 +417,9 @@
             "alto": "1.402  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q2",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q2",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.208  ",
@@ -504,7 +429,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q2",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.216  ",
@@ -512,14 +437,9 @@
             "alto": "1.495  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q3",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.484  ",
@@ -529,7 +449,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.506  ",
@@ -537,14 +457,9 @@
             "alto": "1.602  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q3 Sportback",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q3 Sportback",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.500  ",
@@ -554,7 +469,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q3 Sportback",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.507  ",
@@ -562,14 +477,9 @@
             "alto": "1.557  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q4 e-tron",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q4 e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.588  ",
@@ -577,14 +487,9 @@
             "alto": "1.632  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q4 Sportback e-tron",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q4 Sportback e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.588  ",
@@ -592,14 +497,9 @@
             "alto": "1.614  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q5",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.717  ",
@@ -609,7 +509,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.717  ",
@@ -617,14 +517,9 @@
             "alto": "1.647  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q5 SPORTBACK",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q5 SPORTBACK",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.689  ",
@@ -632,14 +527,9 @@
             "alto": "1.660  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q6 e-tron",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q6 e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.771  ",
@@ -647,14 +537,9 @@
             "alto": "1.685  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q6 Sportback e-tron",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q6 Sportback e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.771  ",
@@ -662,14 +547,9 @@
             "alto": "1.685  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q7",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.072  ",
@@ -679,7 +559,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.072  ",
@@ -687,14 +567,9 @@
             "alto": "1.743  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q8",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.992  ",
@@ -704,7 +579,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.022  ",
@@ -714,7 +589,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.004  ",
@@ -722,14 +597,9 @@
             "alto": "1.708  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q8 e-tron",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q8 e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.915  ",
@@ -737,14 +607,9 @@
             "alto": "1.633  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi Q8 Sportback e-tron",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Q8 Sportback e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.915  ",
@@ -752,14 +617,9 @@
             "alto": "1.619  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi R8",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "R8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.429  ",
@@ -769,7 +629,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "R8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.429  ",
@@ -777,14 +637,9 @@
             "alto": "1.242  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi TT",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "TT",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.201  ",
@@ -792,14 +647,9 @@
             "alto": "1.344  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi e-tron",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "e-tron",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.901  ",
@@ -807,14 +657,9 @@
             "alto": "1.629  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Audi e-tron Sportback",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "e-tron Sportback",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.901  ",
@@ -826,10 +671,10 @@
       ]
     },
     {
-      "nombre": "BMW i4",
+      "nombre": "Bmw",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "i4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.783  ",
@@ -837,14 +682,9 @@
             "alto": "1.448  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i5",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "i5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.060  ",
@@ -854,7 +694,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "i5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.060  ",
@@ -862,14 +702,9 @@
             "alto": "1.505  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i7",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "i7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.391  ",
@@ -877,14 +712,9 @@
             "alto": "1.544  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW iX",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "iX",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.953  ",
@@ -892,14 +722,9 @@
             "alto": "1.696  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW iX1",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "iX1",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.500  ",
@@ -907,14 +732,9 @@
             "alto": "1.616  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW iX3",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "iX3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.734  ",
@@ -922,14 +742,9 @@
             "alto": "1.668  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 1",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 1",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.361  ",
@@ -937,14 +752,9 @@
             "alto": "1.459  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 2",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 2",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.537  ",
@@ -954,7 +764,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 2",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.546  ",
@@ -964,7 +774,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 2",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.580  ",
@@ -972,14 +782,9 @@
             "alto": "1.410  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 2 Active Tourer",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 2 Active Tourer",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.386  ",
@@ -987,14 +792,9 @@
             "alto": "1.576  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 3",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.713  ",
@@ -1004,7 +804,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.713  ",
@@ -1014,7 +814,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.794  ",
@@ -1022,14 +822,9 @@
             "alto": "1.437  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 4",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.768  ",
@@ -1039,7 +834,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.768  ",
@@ -1049,7 +844,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.783  ",
@@ -1059,7 +854,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.801  ",
@@ -1067,14 +862,9 @@
             "alto": "1.399  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 5",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.060  ",
@@ -1084,7 +874,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.060  ",
@@ -1094,7 +884,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.096  ",
@@ -1102,14 +892,9 @@
             "alto": "1.510  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 7",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.391  ",
@@ -1117,14 +902,9 @@
             "alto": "1.544  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 8",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.843  ",
@@ -1134,7 +914,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.851  ",
@@ -1144,7 +924,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.074  ",
@@ -1154,7 +934,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.098  ",
@@ -1162,14 +942,9 @@
             "alto": "1.420  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X1",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "X1",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.500  ",
@@ -1177,14 +952,9 @@
             "alto": "1.642  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X3",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "X3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.755  ",
@@ -1192,14 +962,9 @@
             "alto": "1.660  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X4",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "X4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.752  ",
@@ -1209,7 +974,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "X4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.754  ",
@@ -1217,14 +982,9 @@
             "alto": "1.620  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X5",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "X5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.935  ",
@@ -1234,7 +994,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "X5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.948  ",
@@ -1242,14 +1002,9 @@
             "alto": "1.762  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X6",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "X6",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.960  ",
@@ -1259,7 +1014,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "X6",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.948  ",
@@ -1267,14 +1022,9 @@
             "alto": "1.695  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW X7",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "X7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.181  ",
@@ -1282,14 +1032,9 @@
             "alto": "1.835  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW XM",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "XM",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.110  ",
@@ -1297,14 +1042,9 @@
             "alto": "1.755  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Z4",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Z4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.324  ",
@@ -1312,14 +1052,9 @@
             "alto": "1.304  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i3",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "i3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.011  ",
@@ -1327,14 +1062,9 @@
             "alto": "1.598  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 2 Gran Tourer",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 2 Gran Tourer",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.568  ",
@@ -1342,14 +1072,9 @@
             "alto": "1.608  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW Serie 6",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Serie 6",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.091  ",
@@ -1357,14 +1082,9 @@
             "alto": "1.540  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "BMW i1",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "i1",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.400  ",
@@ -1376,10 +1096,10 @@
       ]
     },
     {
-      "nombre": "Dacia Bigster",
+      "nombre": "Dacia",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "Bigster",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.570  ",
@@ -1387,14 +1107,9 @@
             "alto": "1.662  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Duster",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Duster",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.343  ",
@@ -1402,14 +1117,9 @@
             "alto": "1.693  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Jogger",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Jogger",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.547  ",
@@ -1417,14 +1127,9 @@
             "alto": "1.632  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Sandero",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Sandero",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.088  ",
@@ -1434,7 +1139,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Sandero",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.099  ",
@@ -1442,14 +1147,9 @@
             "alto": "1.535  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Dacia Spring",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Spring",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.701  ",
@@ -1461,10 +1161,10 @@
       ]
     },
     {
-      "nombre": "Ferrari 12cilindri",
+      "nombre": "Ferrari",
       "modelos": [
         {
-          "nombre": "Alto:",
+          "nombre": "12cilindri",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.292  ",
@@ -1474,7 +1174,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "12cilindri",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.292  ",
@@ -1482,14 +1182,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari 296",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "296",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.565  ",
@@ -1499,7 +1194,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "296",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.565  ",
@@ -1507,14 +1202,9 @@
             "alto": "1.191  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari F80",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "F80",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.840  ",
@@ -1522,14 +1212,9 @@
             "alto": "1.138  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari Purosangue",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Purosangue",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.973  ",
@@ -1537,14 +1222,9 @@
             "alto": "1.589  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari Roma",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Roma",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.656  ",
@@ -1554,7 +1234,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Roma",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.656  ",
@@ -1562,14 +1242,9 @@
             "alto": "1.306  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Ferrari SF90",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "SF90",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.850  ",
@@ -1579,7 +1254,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "SF90",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.850  ",
@@ -1589,7 +1264,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "SF90",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.850  ",
@@ -1599,7 +1274,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "SF90",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.850  ",
@@ -1611,10 +1286,10 @@
       ]
     },
     {
-      "nombre": "DS 3",
+      "nombre": "Ds",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.118  ",
@@ -1622,14 +1297,9 @@
             "alto": "1.534  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS 4",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.400  ",
@@ -1637,14 +1307,9 @@
             "alto": "1.470  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS 7",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "7",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.593  ",
@@ -1652,14 +1317,9 @@
             "alto": "1.625  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS 9",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "9",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.934  ",
@@ -1667,14 +1327,9 @@
             "alto": "1.460  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS Nº8",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "Nº8",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.580  ",
@@ -1682,14 +1337,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "DS 3 Crossback",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "3 Crossback",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.118  ",
@@ -1701,10 +1351,10 @@
       ]
     },
     {
-      "nombre": "Land Rover Defender",
+      "nombre": "Land",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Defender",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.758  ",
@@ -1714,7 +1364,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Defender",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.323  ",
@@ -1724,7 +1374,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Defender",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.758  ",
@@ -1734,7 +1384,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Defender",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.099  ",
@@ -1742,14 +1392,9 @@
             "alto": "1.970  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Land Rover Discovery",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Discovery",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.956  ",
@@ -1757,14 +1402,9 @@
             "alto": "1.888  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Land Rover Discovery Sport",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Discovery Sport",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.597  ",
@@ -1776,10 +1416,10 @@
       ]
     },
     {
-      "nombre": "Range Rover",
+      "nombre": "Range",
       "modelos": [
         {
-          "nombre": "Alto:",
+          "nombre": "Rover",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.870  ",
@@ -1789,7 +1429,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Rover",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.870  ",
@@ -1797,14 +1437,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Range Rover Evoque",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Evoque",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.371  ",
@@ -1814,7 +1449,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Evoque",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.371  ",
@@ -1822,14 +1457,9 @@
             "alto": "1.649  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Range Rover Sport",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "Rover Sport",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.820  ",
@@ -1839,7 +1469,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Rover Sport",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.820  ",
@@ -1847,14 +1477,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Range Rover Velar",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Velar",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.797  ",
@@ -1864,7 +1489,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rover Velar",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.797  ",
@@ -1876,10 +1501,10 @@
       ]
     },
     {
-      "nombre": "Mercedes AMG GT",
+      "nombre": "Mercedes",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "AMG GT",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.728  ",
@@ -1889,7 +1514,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "AMG GT",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.054  ",
@@ -1897,14 +1522,9 @@
             "alto": "1.447  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes AMG GT 4-Puertas Coupé",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "AMG GT 4-Puertas Coupé",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.054  ",
@@ -1912,14 +1532,9 @@
             "alto": "1.455  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes AMG GT Coupé",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "AMG GT Coupé",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.728  ",
@@ -1927,14 +1542,9 @@
             "alto": "1.354  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes AMG SL",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "AMG SL",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.705  ",
@@ -1942,14 +1552,9 @@
             "alto": "1.354  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Citan",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Citan",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.498  ",
@@ -1957,14 +1562,9 @@
             "alto": "1.832  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase A",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase A",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.428  ",
@@ -1974,7 +1574,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase A",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.558  ",
@@ -1984,7 +1584,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase A",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.453  ",
@@ -1994,7 +1594,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase A",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.428  ",
@@ -2004,7 +1604,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase A",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.558  ",
@@ -2014,7 +1614,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase A",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.453  ",
@@ -2022,14 +1622,9 @@
             "alto": "1.414  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase B",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase B",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.419  ",
@@ -2039,7 +1634,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase B",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.419  ",
@@ -2047,14 +1642,9 @@
             "alto": "1.545  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase C",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.793  ",
@@ -2064,7 +1654,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.693  ",
@@ -2074,7 +1664,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.686  ",
@@ -2084,7 +1674,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.793  ",
@@ -2094,7 +1684,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.842  ",
@@ -2104,7 +1694,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.793  ",
@@ -2114,7 +1704,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.693  ",
@@ -2124,7 +1714,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.686  ",
@@ -2134,7 +1724,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.793  ",
@@ -2144,7 +1734,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase C",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.842  ",
@@ -2152,14 +1742,9 @@
             "alto": "1.464  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes CLA",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.688  ",
@@ -2169,7 +1754,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.688  ",
@@ -2179,7 +1764,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.701  ",
@@ -2189,7 +1774,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.701  ",
@@ -2199,7 +1784,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.688  ",
@@ -2209,7 +1794,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.688  ",
@@ -2219,7 +1804,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.701  ",
@@ -2229,7 +1814,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.701  ",
@@ -2237,14 +1822,9 @@
             "alto": "1.418  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes CLS",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLS",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.988  ",
@@ -2254,7 +1834,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLS",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.988  ",
@@ -2262,14 +1842,9 @@
             "alto": "1.430  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase E",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.949  ",
@@ -2279,7 +1854,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.835  ",
@@ -2289,7 +1864,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.835  ",
@@ -2299,7 +1874,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.933  ",
@@ -2309,7 +1884,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.949  ",
@@ -2319,7 +1894,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.949  ",
@@ -2329,7 +1904,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.835  ",
@@ -2339,7 +1914,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.835  ",
@@ -2349,7 +1924,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.933  ",
@@ -2359,7 +1934,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase E",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.949  ",
@@ -2367,14 +1942,9 @@
             "alto": "1.497  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase G",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase G",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.606  ",
@@ -2384,7 +1954,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase G",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.606  ",
@@ -2394,7 +1964,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase G",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.606  ",
@@ -2404,7 +1974,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase G",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.606  ",
@@ -2412,14 +1982,9 @@
             "alto": "1.966  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLA",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.412  ",
@@ -2429,7 +1994,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.412  ",
@@ -2439,7 +2004,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.412  ",
@@ -2449,7 +2014,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.412  ",
@@ -2457,14 +2022,9 @@
             "alto": "1.616  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLB",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLB",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.634  ",
@@ -2474,7 +2034,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLB",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.634  ",
@@ -2482,14 +2042,9 @@
             "alto": "1.659  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLC",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLC",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.716  ",
@@ -2499,7 +2054,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLC",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.716  ",
@@ -2507,14 +2062,9 @@
             "alto": "1.640  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLC Coupé",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLC Coupé",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.764  ",
@@ -2524,7 +2074,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLC Coupé",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.764  ",
@@ -2532,14 +2082,9 @@
             "alto": "1.605  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLE",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.924  ",
@@ -2549,7 +2094,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.924  ",
@@ -2559,7 +2104,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.924  ",
@@ -2569,7 +2114,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.924  ",
@@ -2577,14 +2122,9 @@
             "alto": "1.797  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLE Coupé",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLE Coupé",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.941  ",
@@ -2594,7 +2134,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLE Coupé",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.941  ",
@@ -2604,7 +2144,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLE Coupé",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.941  ",
@@ -2614,7 +2154,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLE Coupé",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.941  ",
@@ -2622,14 +2162,9 @@
             "alto": "1.730  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes GLS",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLS",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.209  ",
@@ -2639,7 +2174,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GLS",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.209  ",
@@ -2647,14 +2182,9 @@
             "alto": "1.823  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase S",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase S",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.179  ",
@@ -2664,7 +2194,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Clase S",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.516  ",
@@ -2674,7 +2204,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase S",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.179  ",
@@ -2684,7 +2214,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Clase S",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.516  ",
@@ -2692,14 +2222,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase T",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase T",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.498  ",
@@ -2709,7 +2234,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase T",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.498  ",
@@ -2717,14 +2242,9 @@
             "alto": "1.811  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Clase V",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase V",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.140  ",
@@ -2734,7 +2254,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase V",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.370  ",
@@ -2744,7 +2264,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase V",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.140  ",
@@ -2754,7 +2274,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clase V",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.370  ",
@@ -2762,14 +2282,9 @@
             "alto": "1.900  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes CLE",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.850  ",
@@ -2779,7 +2294,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.850  ",
@@ -2789,7 +2304,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.850  ",
@@ -2799,7 +2314,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "CLE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.850  ",
@@ -2807,14 +2322,9 @@
             "alto": "1.424  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQA",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.463  ",
@@ -2824,7 +2334,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQA",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.463  ",
@@ -2832,14 +2342,9 @@
             "alto": "1.613  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQB",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQB",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.684  ",
@@ -2849,7 +2354,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQB",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.684  ",
@@ -2857,14 +2362,9 @@
             "alto": "1.689  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQE",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.946  ",
@@ -2874,7 +2374,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.946  ",
@@ -2882,14 +2382,9 @@
             "alto": "1.510  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQE SUV",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQE SUV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.863  ",
@@ -2899,7 +2394,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQE SUV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.863  ",
@@ -2907,14 +2402,9 @@
             "alto": "1.685  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQS",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQS",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.223  ",
@@ -2924,7 +2414,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQS",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.223  ",
@@ -2932,14 +2422,9 @@
             "alto": "1.512  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQS SUV",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQS SUV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.125  ",
@@ -2949,7 +2434,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQS SUV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.125  ",
@@ -2957,14 +2442,9 @@
             "alto": "1.718  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQT",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQT",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.922  ",
@@ -2974,7 +2454,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQT",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.922  ",
@@ -2982,14 +2462,9 @@
             "alto": "1.819  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQV",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.140  ",
@@ -2999,7 +2474,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.140  ",
@@ -3007,14 +2482,9 @@
             "alto": "1.910  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Maybach SL",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Maybach SL",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.697  ",
@@ -3024,7 +2494,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Maybach SL",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.697  ",
@@ -3032,14 +2502,9 @@
             "alto": "1.358  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes Vito",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Vito",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.895  ",
@@ -3049,7 +2514,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Vito",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.895  ",
@@ -3057,14 +2522,9 @@
             "alto": "1.910  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQC",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQC",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.761  ",
@@ -3074,7 +2534,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQC",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.761  ",
@@ -3082,14 +2542,9 @@
             "alto": "1.624  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Mercedes EQG",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQG",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.606  ",
@@ -3099,7 +2554,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "EQG",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.606  ",
@@ -3111,10 +2566,10 @@
       ]
     },
     {
-      "nombre": "Opel Astra",
+      "nombre": "Opel",
       "modelos": [
         {
-          "nombre": "Alto:",
+          "nombre": "Astra",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.465  ",
@@ -3124,7 +2579,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Astra",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.000  ",
@@ -3132,14 +2587,9 @@
             "alto": "1.000  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Astra Electric",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "Astra Electric",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.465  ",
@@ -3149,7 +2599,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Astra Electric",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.642  ",
@@ -3157,14 +2607,9 @@
             "alto": "1.480  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Astra PHEV",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "Astra PHEV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.465  ",
@@ -3174,7 +2619,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Astra PHEV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.480  ",
@@ -3182,14 +2627,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Combo",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Combo",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.403  ",
@@ -3199,7 +2639,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Combo",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.403  ",
@@ -3207,14 +2647,9 @@
             "alto": "1.880  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Combo-e Life",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Combo-e Life",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.753  ",
@@ -3224,22 +2659,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
-          "subtitulo": "",
-          "dimensiones": {
-            "largo": "4.753  ",
-            "ancho": "1.848  ",
-            "alto": "1.880  "
-          },
-          "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Combo Electric",
-      "modelos": [
-        {
-          "nombre": "Ancho:",
+          "nombre": "Combo-e Life",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.753  ",
@@ -3249,7 +2669,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Combo Electric",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.753  ",
@@ -3257,14 +2677,19 @@
             "alto": "1.880  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Corsa",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Combo Electric",
+          "subtitulo": "",
+          "dimensiones": {
+            "largo": "4.753  ",
+            "ancho": "1.848  ",
+            "alto": "1.880  "
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Corsa",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.060  ",
@@ -3274,22 +2699,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
-          "subtitulo": "",
-          "dimensiones": {
-            "largo": "4.060  ",
-            "ancho": "1.765  ",
-            "alto": "1.433  "
-          },
-          "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Corsa Electric",
-      "modelos": [
-        {
-          "nombre": "Ancho:",
+          "nombre": "Corsa",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.060  ",
@@ -3299,7 +2709,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Corsa Electric",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.060  ",
@@ -3307,14 +2717,19 @@
             "alto": "1.433  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Crossland",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "Corsa Electric",
+          "subtitulo": "",
+          "dimensiones": {
+            "largo": "4.060  ",
+            "ancho": "1.765  ",
+            "alto": "1.433  "
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Crossland",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.605  ",
@@ -3324,7 +2739,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Crossland",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.605  ",
@@ -3332,14 +2747,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Frontera",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "Frontera",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.627  ",
@@ -3349,7 +2759,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Frontera",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.627  ",
@@ -3357,14 +2767,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Frontera Electric",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "Frontera Electric",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.640  ",
@@ -3374,7 +2779,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Frontera Electric",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.640  ",
@@ -3382,14 +2787,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Grandland",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grandland",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.650  ",
@@ -3399,7 +2799,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grandland",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.650  ",
@@ -3409,7 +2809,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grandland",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.650  ",
@@ -3419,7 +2819,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grandland",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.650  ",
@@ -3427,14 +2827,9 @@
             "alto": "1.666  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Grandland PHEV",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grandland PHEV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.477  ",
@@ -3444,7 +2839,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grandland PHEV",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.477  ",
@@ -3452,14 +2847,9 @@
             "alto": "1.630  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Mokka",
-      "modelos": [
+        },
         {
-          "nombre": "Alto:",
+          "nombre": "Mokka",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.534  ",
@@ -3469,7 +2859,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Mokka",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.534  ",
@@ -3479,7 +2869,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Mokka",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.534  ",
@@ -3489,22 +2879,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
-          "subtitulo": "",
-          "dimensiones": {
-            "largo": "1.534  ",
-            "ancho": "",
-            "alto": ""
-          },
-          "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Mokka-e",
-      "modelos": [
-        {
-          "nombre": "Alto:",
+          "nombre": "Mokka",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.534  ",
@@ -3514,7 +2889,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Alto:",
+          "nombre": "Mokka-e",
           "subtitulo": "",
           "dimensiones": {
             "largo": "1.534  ",
@@ -3522,14 +2897,19 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Zafira-e Life",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Mokka-e",
+          "subtitulo": "",
+          "dimensiones": {
+            "largo": "1.534  ",
+            "ancho": "",
+            "alto": ""
+          },
+          "imagen": ""
+        },
+        {
+          "nombre": "Zafira-e Life",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.306  ",
@@ -3539,7 +2919,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Zafira-e Life",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.306  ",
@@ -3547,14 +2927,9 @@
             "alto": "1.890  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Zafira Electric",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Zafira Electric",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.981  ",
@@ -3564,7 +2939,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Zafira Electric",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.981  ",
@@ -3572,14 +2947,9 @@
             "alto": "1.910  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Insignia",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Insignia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.897  ",
@@ -3589,7 +2959,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Insignia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.897  ",
@@ -3597,14 +2967,9 @@
             "alto": "1.455  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Opel Zafira Life",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Zafira Life",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.956  ",
@@ -3614,7 +2979,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Zafira Life",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.956  ",
@@ -3626,10 +2991,10 @@
       ]
     },
     {
-      "nombre": "Renault 4 E-Tech",
+      "nombre": "Renault",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "4 E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.144  ",
@@ -3637,14 +3002,9 @@
             "alto": "1.552  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault 5",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "5",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.922  ",
@@ -3652,14 +3012,9 @@
             "alto": "1.499  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Arkana",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Arkana",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.568  ",
@@ -3667,14 +3022,9 @@
             "alto": "1.571  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Austral",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Austral",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.533  ",
@@ -3682,14 +3032,9 @@
             "alto": "1.618  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Captur",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Captur",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.239  ",
@@ -3697,14 +3042,9 @@
             "alto": "1.575  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Clio",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Clio",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.050  ",
@@ -3712,14 +3052,9 @@
             "alto": "1.440  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Espace",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Espace",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.746  ",
@@ -3729,7 +3064,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Espace",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.746  ",
@@ -3737,14 +3072,9 @@
             "alto": "1.645  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Grand Kangoo Combi",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grand Kangoo Combi",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.911  ",
@@ -3754,7 +3084,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grand Kangoo Combi",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.911  ",
@@ -3762,14 +3092,9 @@
             "alto": "1.869  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Kangoo Combi",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Kangoo Combi",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.486  ",
@@ -3779,7 +3104,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Kangoo Combi",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.486  ",
@@ -3787,14 +3112,9 @@
             "alto": "1.838  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Kangoo Combi E-Tech",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Kangoo Combi E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.486  ",
@@ -3804,7 +3124,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Kangoo Combi E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.486  ",
@@ -3812,14 +3132,9 @@
             "alto": "1.793  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Mégane",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Mégane",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.359  ",
@@ -3829,7 +3144,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Mégane",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.626  ",
@@ -3839,7 +3154,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Mégane",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.359  ",
@@ -3849,7 +3164,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Mégane",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.626  ",
@@ -3857,14 +3172,9 @@
             "alto": "1.457  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Megane E-Tech",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Megane E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.199  ",
@@ -3874,7 +3184,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Megane E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.199  ",
@@ -3882,14 +3192,9 @@
             "alto": "1.505  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Rafale",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rafale",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.710  ",
@@ -3899,7 +3204,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rafale",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.710  ",
@@ -3907,14 +3212,9 @@
             "alto": "1.613  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Scenic E-Tech",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Scenic E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.470  ",
@@ -3924,7 +3224,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Scenic E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.470  ",
@@ -3932,14 +3232,9 @@
             "alto": "1.571  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Symbioz",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Symbioz",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.413  ",
@@ -3949,7 +3244,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Symbioz",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.413  ",
@@ -3957,14 +3252,9 @@
             "alto": "1.575  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Twingo E-Tech",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Twingo E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.615  ",
@@ -3974,7 +3264,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Twingo E-Tech",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.615  ",
@@ -3982,14 +3272,9 @@
             "alto": "1.541  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault ZOE",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "ZOE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.087  ",
@@ -3999,7 +3284,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "ZOE",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.087  ",
@@ -4007,14 +3292,9 @@
             "alto": "1.562  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Scenic",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Scenic",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.470  ",
@@ -4024,7 +3304,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Scenic",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.470  ",
@@ -4032,14 +3312,9 @@
             "alto": "1.571  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Kadjar",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Kadjar",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.489  ",
@@ -4049,7 +3324,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Kadjar",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.489  ",
@@ -4057,14 +3332,9 @@
             "alto": "1.611  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Grand Scénic",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grand Scénic",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.634  ",
@@ -4074,7 +3344,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Grand Scénic",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.634  ",
@@ -4082,14 +3352,9 @@
             "alto": "1.660  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Twingo",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Twingo",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.615  ",
@@ -4099,7 +3364,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Twingo",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.615  ",
@@ -4107,14 +3372,9 @@
             "alto": "1.541  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Renault Koleos",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Koleos",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.672  ",
@@ -4124,7 +3384,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Koleos",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.672  ",
@@ -4136,10 +3396,10 @@
       ]
     },
     {
-      "nombre": "Rolls-Royce Cullinan",
+      "nombre": "Rolls-royce",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "Cullinan",
           "subtitulo": "",
           "dimensiones": {
             "largo": "2.164  ",
@@ -4147,14 +3407,9 @@
             "alto": ""
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Rolls-Royce Ghost",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Ghost",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.546  ",
@@ -4162,14 +3417,9 @@
             "alto": "1.571  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Rolls-Royce Spectre",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Spectre",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.475  ",
@@ -4181,10 +3431,10 @@
       ]
     },
     {
-      "nombre": "Skoda Elroq",
+      "nombre": "Skoda",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "Elroq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.488  ",
@@ -4192,14 +3442,9 @@
             "alto": "1.625  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Enyaq",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Enyaq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.658  ",
@@ -4209,7 +3454,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Enyaq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.649  ",
@@ -4217,14 +3462,9 @@
             "alto": "1.616  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Enyaq Coupe",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Enyaq Coupe",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.658  ",
@@ -4234,7 +3474,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Enyaq Coupe",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.653  ",
@@ -4242,14 +3482,9 @@
             "alto": "1.622  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Fabia",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Fabia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.108  ",
@@ -4257,14 +3492,9 @@
             "alto": "1.459  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Kamiq",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Kamiq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.241  ",
@@ -4274,7 +3504,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Kamiq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.241  ",
@@ -4282,14 +3512,9 @@
             "alto": "1.562  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Karoq",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Karoq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.390  ",
@@ -4299,7 +3524,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Karoq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.390  ",
@@ -4307,14 +3532,9 @@
             "alto": "1.603  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Octavia",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Octavia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.698  ",
@@ -4324,7 +3544,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Octavia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.698  ",
@@ -4334,7 +3554,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Octavia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.709  ",
@@ -4344,7 +3564,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Octavia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.698  ",
@@ -4354,7 +3574,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Octavia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.698  ",
@@ -4364,7 +3584,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Octavia",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.709  ",
@@ -4372,14 +3592,9 @@
             "alto": "1.455  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Scala",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Scala",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.365  ",
@@ -4389,7 +3604,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Scala",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.365  ",
@@ -4397,14 +3612,9 @@
             "alto": "1.471  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Superb",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Superb",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.912  ",
@@ -4414,7 +3624,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Superb",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.902  ",
@@ -4424,7 +3634,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Superb",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.912  ",
@@ -4434,7 +3644,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Superb",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.902  ",
@@ -4442,14 +3652,9 @@
             "alto": "1.482  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Skoda Epiq",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Epiq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.100  ",
@@ -4459,7 +3664,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Epiq",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.100  ",
@@ -4471,10 +3676,10 @@
       ]
     },
     {
-      "nombre": "Toyota Aygo X Cross",
+      "nombre": "Toyota",
       "modelos": [
         {
-          "nombre": "Ancho:",
+          "nombre": "Aygo X Cross",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.700  ",
@@ -4482,14 +3687,9 @@
             "alto": "1.525  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota BZ4X",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "BZ4X",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.690  ",
@@ -4497,14 +3697,9 @@
             "alto": "1.650  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota C-HR",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "C-HR",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.362  ",
@@ -4512,14 +3707,9 @@
             "alto": "1.564  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Camry",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Camry",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.885  ",
@@ -4527,14 +3717,9 @@
             "alto": "1.445  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Corolla",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Corolla",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.370  ",
@@ -4544,7 +3729,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Corolla",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.630  ",
@@ -4554,7 +3739,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Corolla",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.650  ",
@@ -4564,7 +3749,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Corolla",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.650  ",
@@ -4572,14 +3757,9 @@
             "alto": "1.460  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Corolla Cross",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Corolla Cross",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.460  ",
@@ -4589,7 +3769,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Corolla Cross",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.460  ",
@@ -4597,14 +3777,9 @@
             "alto": "1.620  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota GR Supra",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GR Supra",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.379  ",
@@ -4614,7 +3789,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GR Supra",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.379  ",
@@ -4622,14 +3797,9 @@
             "alto": "1.299  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota GR Yaris",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GR Yaris",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.995  ",
@@ -4639,7 +3809,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GR Yaris",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.995  ",
@@ -4647,14 +3817,9 @@
             "alto": "1.455  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota GR86",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "GR86",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.265  ",
@@ -4664,7 +3829,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "GR86",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.265  ",
@@ -4672,14 +3837,9 @@
             "alto": "1.310  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Highlander",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Highlander",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.966  ",
@@ -4689,7 +3849,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Highlander",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.966  ",
@@ -4697,14 +3857,9 @@
             "alto": "1.755  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Land Cruiser",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Land Cruiser",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.925  ",
@@ -4714,7 +3869,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Land Cruiser",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.925  ",
@@ -4722,14 +3877,9 @@
             "alto": "1.860  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Mirai",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Mirai",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.975  ",
@@ -4739,7 +3889,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Mirai",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.975  ",
@@ -4747,14 +3897,9 @@
             "alto": "1.470  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Proace City Verso",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Proace City Verso",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.403  ",
@@ -4764,7 +3909,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Proace City Verso",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.403  ",
@@ -4772,14 +3917,9 @@
             "alto": "1.797  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Proace Verso",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Proace Verso",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.331  ",
@@ -4789,7 +3929,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Proace Verso",
           "subtitulo": "",
           "dimensiones": {
             "largo": "5.331  ",
@@ -4797,14 +3937,9 @@
             "alto": "1.910  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Rav4",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rav4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.600  ",
@@ -4814,7 +3949,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Rav4",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.600  ",
@@ -4822,14 +3957,9 @@
             "alto": "1.685  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Yaris",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Yaris",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.940  ",
@@ -4839,7 +3969,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Yaris",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.940  ",
@@ -4847,14 +3977,9 @@
             "alto": "1.500  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Yaris Cross",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Yaris Cross",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.180  ",
@@ -4864,7 +3989,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Yaris Cross",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.180  ",
@@ -4872,14 +3997,9 @@
             "alto": "1.595  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota bZ1",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "bZ1",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.700  ",
@@ -4889,7 +4009,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "bZ1",
           "subtitulo": "",
           "dimensiones": {
             "largo": "3.700  ",
@@ -4897,14 +4017,9 @@
             "alto": "1.530  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota bZ3",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "bZ3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.725  ",
@@ -4914,7 +4029,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "bZ3",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.725  ",
@@ -4922,14 +4037,9 @@
             "alto": "1.475  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota C-HR+",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "C-HR+",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.520  ",
@@ -4939,7 +4049,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "C-HR+",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.520  ",
@@ -4947,14 +4057,9 @@
             "alto": "1.595  "
           },
           "imagen": ""
-        }
-      ]
-    },
-    {
-      "nombre": "Toyota Urban Cruiser",
-      "modelos": [
+        },
         {
-          "nombre": "Ancho:",
+          "nombre": "Urban Cruiser",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.285  ",
@@ -4964,7 +4069,7 @@
           "imagen": ""
         },
         {
-          "nombre": "Ancho:",
+          "nombre": "Urban Cruiser",
           "subtitulo": "",
           "dimensiones": {
             "largo": "4.285  ",
