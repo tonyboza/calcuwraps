@@ -342,39 +342,60 @@
   </div>
 
   <script>
-    let datosVehiculos = {};
+    let datosVehiculos = { marcas: [] };
     let modelosActuales = [];
 
-    // Función para cargar datos desde GitHub
+    // Función para cargar datos desde GitHub con mejor manejo de errores
     async function cargarDatos() {
       try {
         const jsonUrl = 'https://raw.githubusercontent.com/tonyboza/calcuwraps/main/vehiculos_combinado_convertido.json';
         const res = await fetch(jsonUrl);
         
-        if (!res.ok) throw new Error(`Error al cargar el archivo (${res.status} ${res.statusText})`);
-        
-        datosVehiculos = await res.json();
-        
-        if (!datosVehiculos.marcas || !Array.isArray(datosVehiculos.marcas)) {
-          throw new Error("El archivo JSON no tiene la estructura esperada");
+        if (!res.ok) {
+          throw new Error(`Error HTTP: ${res.status}`);
         }
         
-        const marcas = datosVehiculos.marcas.sort((a, b) => a.nombre.localeCompare(b.nombre));
-        const selectMarca = document.getElementById("marca");
+        const data = await res.json();
         
-        selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
-        marcas.forEach(marca => {
-          const option = document.createElement("option");
-          option.value = marca.nombre;
-          option.textContent = marca.nombre;
-          selectMarca.appendChild(option);
-        });
+        // Validar estructura básica del JSON
+        if (!data || !data.marcas || !Array.isArray(data.marcas)) {
+          throw new Error("El JSON no tiene la estructura esperada (falta propiedad 'marcas')");
+        }
+        
+        // Validar que cada marca tenga modelos
+        const marcasValidas = data.marcas.filter(marca => 
+          marca.nombre && marca.modelos && Array.isArray(marca.modelos)
+          .map(marca => ({
+            ...marca,
+            modelos: marca.modelos.filter(modelo => 
+              modelo.nombre && modelo.dimensiones
+            )
+          }));
+        
+        if (marcasValidas.length === 0) {
+          throw new Error("No se encontraron marcas válidas con modelos");
+        }
+        
+        datosVehiculos.marcas = marcasValidas.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        llenarSelectMarcas();
         
       } catch (error) {
-        console.error("Error al cargar los datos:", error);
-        alert(`Error al cargar los datos: ${error.message}\n\nUsando datos de ejemplo...`);
+        console.error("Error al cargar datos:", error);
+        alert(`Error al cargar datos: ${error.message}\nUsando datos de ejemplo...`);
         cargarDatosDeEjemplo();
       }
+    }
+
+    function llenarSelectMarcas() {
+      const selectMarca = document.getElementById("marca");
+      selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
+      
+      datosVehiculos.marcas.forEach(marca => {
+        const option = document.createElement("option");
+        option.value = marca.nombre;
+        option.textContent = marca.nombre;
+        selectMarca.appendChild(option);
+      });
     }
 
     function cargarDatosDeEjemplo() {
@@ -389,21 +410,14 @@
           }]
         }]
       };
-      
-      const selectMarca = document.getElementById("marca");
-      selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
-      datosVehiculos.marcas.forEach(marca => {
-        const option = document.createElement("option");
-        option.value = marca.nombre;
-        option.textContent = marca.nombre;
-        selectMarca.appendChild(option);
-      });
+      llenarSelectMarcas();
     }
 
     function cargarModelos() {
       const marcaSeleccionada = document.getElementById("marca").value;
       const selectModelo = document.getElementById("modelo");
       
+      // Ocultar secciones dependientes
       document.getElementById("modeloInfo").style.display = "none";
       document.getElementById("resultado").style.display = "none";
       
@@ -415,7 +429,7 @@
       
       const marca = datosVehiculos.marcas.find(m => m.nombre === marcaSeleccionada);
       
-      if (marca && marca.modelos) {
+      if (marca && marca.modelos && marca.modelos.length > 0) {
         modelosActuales = marca.modelos.sort((a, b) => {
           const nombreA = `${a.nombre} ${a.subtitulo || ""}`.toLowerCase();
           const nombreB = `${b.nombre} ${b.subtitulo || ""}`.toLowerCase();
@@ -426,7 +440,9 @@
         modelosActuales.forEach((modelo, index) => {
           const opt = document.createElement("option");
           opt.value = index;
-          opt.textContent = modelo.nombre + (modelo.subtitulo ? ` (${modelo.subtitulo})` : "");
+          const textoModelo = modelo.subtitulo ? 
+            `${modelo.nombre} - ${modelo.subtitulo}` : modelo.nombre;
+          opt.textContent = textoModelo;
           selectModelo.appendChild(opt);
         });
         
@@ -441,7 +457,7 @@
       const index = document.getElementById("modelo").value;
       const modeloInfo = document.getElementById("modeloInfo");
       
-      if (index === "") {
+      if (index === "" || !modelosActuales[index]) {
         modeloInfo.style.display = "none";
         document.getElementById("resultado").style.display = "none";
         return;
@@ -449,19 +465,25 @@
       
       const modelo = modelosActuales[index];
       
+      // Mostrar información básica
       document.getElementById("modeloNombre").textContent = modelo.nombre;
       document.getElementById("modeloSubtitulo").textContent = modelo.subtitulo || "No especificado";
       
+      // Mostrar dimensiones con validación
+      const dim = modelo.dimensiones || {};
       const dimensiones = `
-        Largo: ${modelo.dimensiones.largo}<br>
-        Ancho: ${modelo.dimensiones.ancho}<br>
-        Alto: ${modelo.dimensiones.alto}
+        Largo: ${dim.largo || "No disponible"}<br>
+        Ancho: ${dim.ancho || "No disponible"}<br>
+        Alto: ${dim.alto || "No disponible"}
       `;
       document.getElementById("modeloDimensiones").innerHTML = dimensiones;
       
+      // Manejar imagen del modelo
       const imgElement = document.getElementById("modeloImagen");
-      if (modelo.imagen && typeof modelo.imagen === 'string' && modelo.imagen.startsWith('http')) {
-        imgElement.src = modelo.imagen;
+      if (modelo.imagen && typeof modelo.imagen === 'string') {
+        imgElement.src = modelo.imagen.startsWith('http') ? 
+          modelo.imagen : 
+          `https://raw.githubusercontent.com/tonyboza/calcuwraps/main/${modelo.imagen}`;
         imgElement.alt = `${modelo.nombre} ${modelo.subtitulo || ""}`;
       } else {
         imgElement.src = "https://static.motor.es/imagenes/coche-perfil.jpg";
@@ -471,61 +493,68 @@
       modeloInfo.style.display = "block";
     }
 
-    function validarDimension(valor) {
-      if (typeof valor === "number") return valor;
+    function extraerValorNumerico(valor) {
+      if (typeof valor === 'number') return valor;
+      if (typeof valor !== 'string') return NaN;
       
-      // Extraer números incluyendo decimales
-      const numero = parseFloat(valor.toString().replace(",", ".").replace(/[^0-9.]/g, ""));
+      // Extraer el primer número encontrado (con punto o coma decimal)
+      const match = valor.match(/[0-9]+([,.][0-9]+)?/);
+      if (!match) return NaN;
       
-      if (isNaN(numero) || numero <= 0) {
-        throw new Error(`Valor de dimensión no válido: "${valor}"`);
+      return parseFloat(match[0].replace(',', '.'));
+    }
+
+    function validarDimension(valor, nombreDimension) {
+      const numero = extraerValorNumerico(valor);
+      
+      if (isNaN(numero)) {
+        throw new Error(`Valor no válido para ${nombreDimension}: "${valor}"`);
       }
+      
+      // Convertir a milímetros si el valor parece estar en metros (muy pequeño)
       if (numero < 10) {
         return numero * 1000;
-      }  
+      }
+      
       return numero;
     }
 
     function calcularPresupuesto() {
-      const index = document.getElementById("modelo").value;
-      if (index === "") {
-        alert("Por favor, selecciona un modelo de vehículo");
-        return;
-      }
-
-      const modelo = modelosActuales[index];
-      
       try {
-        // 1. OBTENER DIMENSIONES CON VALIDACIÓN
-        const dimensiones = modelo.dimensiones;
-        const largoTotal = validarDimension(dimensiones.largo) / 1000; // en metros
-        const anchoTotal = validarDimension(dimensiones.ancho) / 1000;
-        const altoTotal = validarDimension(dimensiones.alto) / 1000;
-        
-        console.log("Dimensiones procesadas:", {largoTotal, anchoTotal, altoTotal}); // Para depuración
-
-        if (largoTotal < 3 || anchoTotal < 1 || altoTotal < 1) {
-          throw new Error("Dimensiones del vehículo no válidas (demasiado pequeñas)");
+        const index = document.getElementById("modelo").value;
+        if (index === "" || !modelosActuales[index]) {
+          throw new Error("Por favor, selecciona un modelo de vehículo válido");
         }
 
-        // 2. FACTORES DE CÁLCULO (ajústalos según necesites)
+        const modelo = modelosActuales[index];
+        const dimensiones = modelo.dimensiones || {};
+        
+        // 1. VALIDAR Y OBTENER DIMENSIONES
+        const largoTotal = validarDimension(dimensiones.largo, "largo") / 1000; // en metros
+        const anchoTotal = validarDimension(dimensiones.ancho, "ancho") / 1000;
+        const altoTotal = validarDimension(dimensiones.alto, "alto") / 1000;
+        
+        // Validar dimensiones mínimas razonables
+        if (largoTotal < 2 || anchoTotal < 1 || altoTotal < 1) {
+          throw new Error(`Dimensiones del vehículo no válidas (largo: ${largoTotal}m, ancho: ${anchoTotal}m, alto: ${altoTotal}m)`);
+        }
+
+        // 2. FACTORES DE CÁLCULO (ajustables según necesidades)
         const FACTORES = {
           ALETAS: 0.25,       // 25% del largo para aletas
           CAPO: 0.4,          // 40% del largo para capó
           TECHO: 0.5,         // 50% del largo para techo
           PORTON: 0.3,        // 30% del largo para portón
-          MARGEN: 1.15        // 15% de margen adicional
+          MARGEN: 1.15,       // 15% de margen adicional
+          PARACHOQUES_EXTRA: 0.2 // 20% extra para parachoques
         };
 
-        // 3. CÁLCULO REALISTA
+        // 3. CÁLCULO DE METROS LINEALES
         // Laterales: (largo total - aletas) * 2 lados
         const mlLaterales = (largoTotal - (largoTotal * FACTORES.ALETAS)) * 2 * FACTORES.MARGEN;
         
-        // Parachoques: solo el más largo (delantero o trasero)
-        const mlParachoques = Math.max(
-          anchoTotal * 1.25,  // Delantero (25% más que el ancho)
-          anchoTotal * 0.9    // Trasero (90% del ancho)
-        ) * FACTORES.MARGEN;
+        // Parachoques: ancho + margen (considerando que suelen ser más anchos que el vehículo)
+        const mlParachoques = (anchoTotal * (1 + FACTORES.PARACHOQUES_EXTRA)) * FACTORES.MARGEN;
         
         // Piezas grandes (capó + techo + portón)
         const mlPiezasGrandes = (
@@ -537,9 +566,12 @@
         // 4. TOTALES
         const mlTotales = mlLaterales + mlParachoques + mlPiezasGrandes;
         const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value) || 1.52;
-        const areaTotal = (mlLaterales + mlParachoques) * (anchoVinilo/2) + mlPiezasGrandes * anchoVinilo;
+        
+        // Área total: laterales y parachoques usan la mitad del ancho del vinilo
+        const areaTotal = (mlLaterales + mlParachoques) * (anchoVinilo/2) + 
+                         mlPiezasGrandes * anchoVinilo;
 
-        // 5. COSTES
+        // 5. CALCULAR COSTES
         const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 15;
         const dificultad = parseFloat(document.getElementById("dificultad").value) || 1;
         const horas = parseFloat(document.getElementById("horas").value) || 20;
@@ -560,12 +592,12 @@
 
       } catch (error) {
         console.error("Error en el cálculo:", error);
-        alert(`ERROR: ${error.message}\n\nRevisa que las dimensiones del vehículo estén correctamente definidas en el archivo JSON.`);
+        alert(`Error: ${error.message}`);
       }
     }
 
-    // Iniciar
-    window.onload = cargarDatos;
+    // Iniciar la carga de datos cuando la página esté lista
+    document.addEventListener('DOMContentLoaded', cargarDatos);
   </script>
 </body>
 </html>
