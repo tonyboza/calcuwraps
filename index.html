@@ -355,7 +355,7 @@
           throw new Error(`Error HTTP: ${res.status}`);
         }
         
-        const data = await res.json();
+        let data = await res.json();
         // Adaptar la estructura del JSON cargado
         const marcasAdaptadas = Object.entries(data).map(([nombreMarca, modelosArray]) => ({
           nombre: nombreMarca,
