@@ -334,9 +334,8 @@
         <span id="totalResultado">0.00 €</span>
       </div>
       <div class="margen-error">
-        <strong>Nota:</strong> Este cálculo incluye un margen base del 12%. Para trabajos complejos, 
-        considere añadir un <strong>10-15% adicional</strong> en metros lineales para cubrir 
-        posibles errores o piezas especiales.
+        <strong>Nota:</strong> Este cálculo incluye un margen base del 15%. Para trabajos complejos, 
+        considere añadir un <strong>10% adicional</strong> en metros lineales.
       </div>
     </div>
   </div>
@@ -345,34 +344,44 @@
     let datosVehiculos = {};
     let modelosActuales = [];
 
-    // Función para cargar datos desde GitHub
+    // Función para validar dimensiones
+    function validarDimension(valor) {
+      if (typeof valor === "number") return valor;
+      
+      const numero = parseFloat(valor.toString().replace(/[^0-9.]/g, ""));
+      if (isNaN(numero) {
+        console.error("Valor no numérico detectado:", valor);
+        return 0;
+      }
+      return numero;
+    }
+
+    // Función para cargar datos
     async function cargarDatos() {
       try {
         const jsonUrl = 'https://raw.githubusercontent.com/tonyboza/calcuwraps/main/vehiculos_combinado_convertido.json';
         const res = await fetch(jsonUrl);
         
-        if (!res.ok) throw new Error(`Error al cargar el archivo (${res.status} ${res.statusText})`);
+        if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
         
         datosVehiculos = await res.json();
         
-        if (!datosVehiculos.marcas || !Array.isArray(datosVehiculos.marcas)) {
-          throw new Error("El archivo JSON no tiene la estructura esperada");
-        }
+        if (!datosVehiculos.marcas) throw new Error("Estructura JSON incorrecta");
         
-        const marcas = datosVehiculos.marcas.sort((a, b) => a.nombre.localeCompare(b.nombre));
         const selectMarca = document.getElementById("marca");
-        
         selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
-        marcas.forEach(marca => {
-          const option = document.createElement("option");
-          option.value = marca.nombre;
-          option.textContent = marca.nombre;
-          selectMarca.appendChild(option);
-        });
         
+        datosVehiculos.marcas.sort((a, b) => a.nombre.localeCompare(b.nombre))
+          .forEach(marca => {
+            const option = document.createElement("option");
+            option.value = marca.nombre;
+            option.textContent = marca.nombre;
+            selectMarca.appendChild(option);
+          });
+          
       } catch (error) {
-        console.error("Error al cargar los datos:", error);
-        alert(`Error al cargar los datos: ${error.message}\n\nUsando datos de ejemplo...`);
+        console.error("Error cargando datos:", error);
+        alert(`Error: ${error.message}\nUsando datos de ejemplo...`);
         cargarDatosDeEjemplo();
       }
     }
@@ -380,24 +389,26 @@
     function cargarDatosDeEjemplo() {
       datosVehiculos = {
         marcas: [{
-          nombre: "Ejemplo",
+          nombre: "BMW",
           modelos: [{
-            nombre: "Modelo Demo",
-            subtitulo: "Versión estándar",
-            dimensiones: { largo: "4630 mm", ancho: "1860 mm", alto: "1436 mm" },
-            imagen: "https://static.motor.es/imagenes/coche-perfil.jpg"
+            nombre: "Serie 6",
+            subtitulo: "Gran Coupé",
+            dimensiones: {
+              largo: "4920 mm",
+              ancho: "1970 mm",
+              alto: "1480 mm"
+            },
+            imagen: "https://via.placeholder.com/300x200?text=BMW+Serie+6"
           }]
         }]
       };
       
       const selectMarca = document.getElementById("marca");
       selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
-      datosVehiculos.marcas.forEach(marca => {
-        const option = document.createElement("option");
-        option.value = marca.nombre;
-        option.textContent = marca.nombre;
-        selectMarca.appendChild(option);
-      });
+      const option = document.createElement("option");
+      option.value = "BMW";
+      option.textContent = "BMW";
+      selectMarca.appendChild(option);
     }
 
     function cargarModelos() {
@@ -415,18 +426,16 @@
       
       const marca = datosVehiculos.marcas.find(m => m.nombre === marcaSeleccionada);
       
-      if (marca && marca.modelos) {
-        modelosActuales = marca.modelos.sort((a, b) => {
-          const nombreA = `${a.nombre} ${a.subtitulo || ""}`.toLowerCase();
-          const nombreB = `${b.nombre} ${b.subtitulo || ""}`.toLowerCase();
-          return nombreA.localeCompare(nombreB);
-        });
+      if (marca?.modelos) {
+        modelosActuales = marca.modelos.sort((a, b) => 
+          `${a.nombre} ${a.subtitulo || ""}`.localeCompare(`${b.nombre} ${b.subtitulo || ""}`)
+        );
         
         selectModelo.innerHTML = '<option value="">Selecciona un modelo</option>';
         modelosActuales.forEach((modelo, index) => {
           const opt = document.createElement("option");
           opt.value = index;
-          opt.textContent = modelo.nombre + (modelo.subtitulo ? ` (${modelo.subtitulo})` : "");
+          opt.textContent = `${modelo.nombre}${modelo.subtitulo ? ` (${modelo.subtitulo})` : ""}`;
           selectModelo.appendChild(opt);
         });
         
@@ -443,7 +452,6 @@
       
       if (index === "") {
         modeloInfo.style.display = "none";
-        document.getElementById("resultado").style.display = "none";
         return;
       }
       
@@ -452,91 +460,80 @@
       document.getElementById("modeloNombre").textContent = modelo.nombre;
       document.getElementById("modeloSubtitulo").textContent = modelo.subtitulo || "No especificado";
       
-      const dimensiones = `
+      document.getElementById("modeloDimensiones").innerHTML = `
         Largo: ${modelo.dimensiones.largo}<br>
         Ancho: ${modelo.dimensiones.ancho}<br>
         Alto: ${modelo.dimensiones.alto}
       `;
-      document.getElementById("modeloDimensiones").innerHTML = dimensiones;
       
-      const imgElement = document.getElementById("modeloImagen");
-      if (modelo.imagen && typeof modelo.imagen === 'string' && modelo.imagen.startsWith('http')) {
-        imgElement.src = modelo.imagen;
-        imgElement.alt = `${modelo.nombre} ${modelo.subtitulo || ""}`;
-      } else {
-        imgElement.src = "https://static.motor.es/imagenes/coche-perfil.jpg";
-        imgElement.alt = "Imagen no disponible";
-      }
+      const img = document.getElementById("modeloImagen");
+      img.src = modelo.imagen?.startsWith('http') ? modelo.imagen : "https://via.placeholder.com/300x200?text=Imagen+no+disponible";
+      img.alt = modelo.nombre;
       
       modeloInfo.style.display = "block";
-    }
-
-    function limpiarNumero(valor) {
-      if (typeof valor !== "string") return parseFloat(valor) || 0;
-      return parseFloat(valor.replace(/[^0-9.]/g, "")) || 0;
     }
 
     function calcularPresupuesto() {
       const index = document.getElementById("modelo").value;
       if (index === "") {
-        alert("Por favor, selecciona un modelo de vehículo");
+        alert("Selecciona un modelo primero");
         return;
       }
 
       const modelo = modelosActuales[index];
       
       try {
-        // 1. Obtener dimensiones en metros
-        const largoTotal = limpiarNumero(modelo.dimensiones.largo) / 1000;
-        const anchoTotal = limpiarNumero(modelo.dimensiones.ancho) / 1000;
-        const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value) || 1.52;
+        // Validar y procesar dimensiones
+        const largo = validarDimension(modelo.dimensiones.largo) / 1000;
+        const ancho = validarDimension(modelo.dimensiones.ancho) / 1000;
+        
+        if (largo < 3 || ancho < 1) {
+          throw new Error("Dimensiones del vehículo no válidas");
+        }
 
-        // 2. Factores de proporcionalidad (ajustables)
+        // Factores de cálculo (ajustables)
         const FACTORES = {
-          ALETAS: 0.28,    // 28% del largo para aletas
-          CAPO: 0.45,      // 45% del largo para capó
-          TECHO: 0.55,     // 55% del largo para techo
-          PORTON: 0.35,    // 35% del largo para portón
-          MARGEN_ERROR: 1.12 // 12% de margen adicional
+          ALETAS: 0.25,
+          CAPO: 0.4,
+          TECHO: 0.5,
+          PORTON: 0.3,
+          MARGEN: 1.15
         };
 
-        // 3. Cálculo proporcional
-        const aletas = largoTotal * FACTORES.ALETAS;
-        const laterales = (largoTotal - aletas) * 2 * FACTORES.MARGEN_ERROR;
-        const parachoques = Math.max(anchoTotal * 1.2, anchoTotal * 0.9) * FACTORES.MARGEN_ERROR;
+        // Cálculo de metros lineales
+        const mlLaterales = (largo - (largo * FACTORES.ALETAS)) * 2 * FACTORES.MARGEN;
+        const mlParachoques = Math.max(ancho * 1.25, ancho * 0.9) * FACTORES.MARGEN;
+        const mlPiezasGrandes = (
+          (largo * FACTORES.CAPO) + 
+          (largo * FACTORES.TECHO) + 
+          (largo * FACTORES.PORTON)
+        ) * FACTORES.MARGEN;
         
-        const piezasGrandes = (
-          (largoTotal * FACTORES.CAPO) + 
-          (largoTotal * FACTORES.TECHO) + 
-          (largoTotal * FACTORES.PORTON)
-        ) * FACTORES.MARGEN_ERROR;
-
-        // 4. Totales
-        const mlTotales = laterales + parachoques + piezasGrandes;
-        const areaTotal = (laterales + parachoques) * (anchoVinilo/2) + piezasGrandes * anchoVinilo;
-
-        // 5. Costes
+        const mlTotales = mlLaterales + mlParachoques + mlPiezasGrandes;
+        
+        // Cálculo de área (considerando aprovechamiento del vinilo)
+        const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value) || 1.52;
+        const areaTotal = (mlLaterales + mlParachoques) * (anchoVinilo/2) + mlPiezasGrandes * anchoVinilo;
+        
+        // Calcular costes
         const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 15;
-        const dificultad = parseFloat(document.getElementById("dificultad").value) || 1;
-        const horas = parseFloat(document.getElementById("horas").value) || 20;
-        const tarifa = parseFloat(document.getElementById("tarifa").value) || 30;
-        
         const costeMaterial = areaTotal * tipoPrecio;
-        const costeTrabajo = horas * tarifa * dificultad;
-        const total = costeMaterial + costeTrabajo;
-
+        const costeTrabajo = parseFloat(document.getElementById("horas").value) * 
+                             parseFloat(document.getElementById("tarifa").value) * 
+                             parseFloat(document.getElementById("dificultad").value);
+        
         // Mostrar resultados
-        document.getElementById("areaResultado").textContent = areaTotal.toFixed(2) + " m²";
         document.getElementById("metrosResultado").textContent = mlTotales.toFixed(2) + " m";
+        document.getElementById("areaResultado").textContent = areaTotal.toFixed(2) + " m²";
         document.getElementById("materialResultado").textContent = costeMaterial.toFixed(2) + " €";
         document.getElementById("manoObraResultado").textContent = costeTrabajo.toFixed(2) + " €";
-        document.getElementById("totalResultado").textContent = total.toFixed(2) + " €";
-
+        document.getElementById("totalResultado").textContent = (costeMaterial + costeTrabajo).toFixed(2) + " €";
+        
         document.getElementById("resultado").style.display = "block";
-
+        
       } catch (error) {
-        console.error("Error en el cálculo:", error);
-        alert(`Error al calcular: ${error.message}`);
+        console.error("Error en cálculo:", error);
+        alert(`Error: ${error.message}\n\nVerifica las dimensiones del vehículo.`);
       }
     }
 
