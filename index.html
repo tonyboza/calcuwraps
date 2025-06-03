@@ -348,14 +348,14 @@
     // Función para cargar datos desde GitHub con mejor manejo de errores
     async function cargarDatos() {
       try {
-        t jsonUrl = 'https://raw.githubusercontent.com/tonyboza/calcuwraps/main/vehiculos_combinado_convertido.json';
-        t res = await fetch(jsonUrl);
+        const jsonUrl = 'https://raw.githubusercontent.com/tonyboza/calcuwraps/main/vehiculos_combinado_convertido.json';
+        const res = await fetch(jsonUrl);
         
         if (!res.ok) {
           throw new Error(`Error HTTP: ${res.status}`);
         }
         
-        t data = await res.json();
+        const data = await res.json();
         
         // Validar estructura básica del JSON
         if (!data || !data.marcas || !Array.isArray(data.marcas)) {
