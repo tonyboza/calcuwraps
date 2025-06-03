@@ -206,3 +206,342 @@
       background: #fff8e1;
       border-left: 4px solid #ffc107;
       font-size: 14px;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+        margin: 20px 10px;
+      }
+      
+      .header-logos img {
+        height: 60px;
+      }
+      
+      .modelo-details {
+        flex-direction: column;
+      }
+      
+      .modelo-image, .modelo-specs {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header-logos">
+    <img src="img/gsix9.png" alt="GSIX9 Logo">
+    <div class="center-logo"><img src="img/oracal.png" alt="ORACAL Logo"></div>
+    <img src="img/totenser.png" alt="TOTENSER Logo">
+  </div>
+  
+  <div class="container">
+    <h1>Calculadora de Vinilo para Coches</h1>
+
+    <div class="form-group">
+      <label for="marca">Marca:</label>
+      <select id="marca" onchange="cargarModelos()">
+        <option value="">Selecciona una marca</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="modelo">Modelo:</label>
+      <select id="modelo" onchange="mostrarDatosModelo()" disabled>
+        <option value="">Primero selecciona una marca</option>
+      </select>
+    </div>
+
+    <div class="modelo-info" id="modeloInfo">
+      <h3>Información del vehículo</h3>
+      <div class="modelo-details">
+        <div class="modelo-image">
+          <img id="modeloImagen" src="" alt="Imagen del vehículo">
+        </div>
+        <div class="modelo-specs">
+          <div class="spec-item">
+            <span class="spec-label">Modelo:</span>
+            <span id="modeloNombre"></span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Versión:</span>
+            <span id="modeloSubtitulo"></span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Dimensiones:</span>
+            <div id="modeloDimensiones"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="tipoVinilo">Tipo de vinilo:</label>
+      <select id="tipoVinilo">
+        <option value="15">Vinilo estándar (€15/m²)</option>
+        <option value="25">Vinilo premium (€25/m²)</option>
+        <option value="30">Cambio de color (€30/m²)</option>
+        <option value="35">Personalizado (€35/m²)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="dificultad">Dificultad del trabajo:</label>
+      <select id="dificultad">
+        <option value="1">Fácil (x1.0)</option>
+        <option value="1.2">Media (x1.2)</option>
+        <option value="1.5">Difícil (x1.5)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="horas">Horas de trabajo estimadas:</label>
+      <input type="number" id="horas" min="1" value="20">
+    </div>
+
+    <div class="form-group">
+      <label for="tarifa">Tarifa por hora (€):</label>
+      <input type="number" id="tarifa" min="10" step="5" value="30">
+    </div>
+
+    <div class="form-group">
+      <label for="anchoVinilo">Ancho del vinilo (metros):</label>
+      <input type="number" id="anchoVinilo" min="0.5" max="2" step="0.01" value="1.52">
+    </div>
+
+    <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+
+    <div class="resultado" id="resultado">
+      <h3>Resumen del Presupuesto</h3>
+      <div class="price-item">
+        <span>Área estimada:</span>
+        <span id="areaResultado">0.00 m²</span>
+      </div>
+      <div class="price-item">
+        <span>Metros lineales:</span>
+        <span id="metrosResultado">0.00 m</span>
+      </div>
+      <div class="price-item">
+        <span>Coste material:</span>
+        <span id="materialResultado">0.00 €</span>
+      </div>
+      <div class="price-item">
+        <span>Coste mano de obra:</span>
+        <span id="manoObraResultado">0.00 €</span>
+      </div>
+      <div class="price-item">
+        <span>Total estimado:</span>
+        <span id="totalResultado">0.00 €</span>
+      </div>
+      <div class="margen-error">
+        <strong>Nota:</strong> Este cálculo incluye un margen base del 12%. Para trabajos complejos, 
+        considere añadir un <strong>10-15% adicional</strong> en metros lineales para cubrir 
+        posibles errores o piezas especiales.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let datosVehiculos = {};
+    let modelosActuales = [];
+
+    // Función para cargar datos desde GitHub
+    async function cargarDatos() {
+      try {
+        const jsonUrl = 'https://raw.githubusercontent.com/tonyboza/calcuwraps/main/vehiculos_combinado_convertido.json';
+        const res = await fetch(jsonUrl);
+        
+        if (!res.ok) throw new Error(`Error al cargar el archivo (${res.status} ${res.statusText})`);
+        
+        datosVehiculos = await res.json();
+        
+        if (!datosVehiculos.marcas || !Array.isArray(datosVehiculos.marcas)) {
+          throw new Error("El archivo JSON no tiene la estructura esperada");
+        }
+        
+        const marcas = datosVehiculos.marcas.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        const selectMarca = document.getElementById("marca");
+        
+        selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
+        marcas.forEach(marca => {
+          const option = document.createElement("option");
+          option.value = marca.nombre;
+          option.textContent = marca.nombre;
+          selectMarca.appendChild(option);
+        });
+        
+      } catch (error) {
+        console.error("Error al cargar los datos:", error);
+        alert(`Error al cargar los datos: ${error.message}\n\nUsando datos de ejemplo...`);
+        cargarDatosDeEjemplo();
+      }
+    }
+
+    function cargarDatosDeEjemplo() {
+      datosVehiculos = {
+        marcas: [{
+          nombre: "Ejemplo",
+          modelos: [{
+            nombre: "Modelo Demo",
+            subtitulo: "Versión estándar",
+            dimensiones: { largo: "4630 mm", ancho: "1860 mm", alto: "1436 mm" },
+            imagen: "https://static.motor.es/imagenes/coche-perfil.jpg"
+          }]
+        }]
+      };
+      
+      const selectMarca = document.getElementById("marca");
+      selectMarca.innerHTML = '<option value="">Selecciona una marca</option>';
+      datosVehiculos.marcas.forEach(marca => {
+        const option = document.createElement("option");
+        option.value = marca.nombre;
+        option.textContent = marca.nombre;
+        selectMarca.appendChild(option);
+      });
+    }
+
+    function cargarModelos() {
+      const marcaSeleccionada = document.getElementById("marca").value;
+      const selectModelo = document.getElementById("modelo");
+      
+      document.getElementById("modeloInfo").style.display = "none";
+      document.getElementById("resultado").style.display = "none";
+      
+      if (!marcaSeleccionada) {
+        selectModelo.innerHTML = '<option value="">Primero selecciona una marca</option>';
+        selectModelo.disabled = true;
+        return;
+      }
+      
+      const marca = datosVehiculos.marcas.find(m => m.nombre === marcaSeleccionada);
+      
+      if (marca && marca.modelos) {
+        modelosActuales = marca.modelos.sort((a, b) => {
+          const nombreA = `${a.nombre} ${a.subtitulo || ""}`.toLowerCase();
+          const nombreB = `${b.nombre} ${b.subtitulo || ""}`.toLowerCase();
+          return nombreA.localeCompare(nombreB);
+        });
+        
+        selectModelo.innerHTML = '<option value="">Selecciona un modelo</option>';
+        modelosActuales.forEach((modelo, index) => {
+          const opt = document.createElement("option");
+          opt.value = index;
+          opt.textContent = modelo.nombre + (modelo.subtitulo ? ` (${modelo.subtitulo})` : "");
+          selectModelo.appendChild(opt);
+        });
+        
+        selectModelo.disabled = false;
+      } else {
+        selectModelo.innerHTML = '<option value="">No hay modelos disponibles</option>';
+        selectModelo.disabled = true;
+      }
+    }
+
+    function mostrarDatosModelo() {
+      const index = document.getElementById("modelo").value;
+      const modeloInfo = document.getElementById("modeloInfo");
+      
+      if (index === "") {
+        modeloInfo.style.display = "none";
+        document.getElementById("resultado").style.display = "none";
+        return;
+      }
+      
+      const modelo = modelosActuales[index];
+      
+      document.getElementById("modeloNombre").textContent = modelo.nombre;
+      document.getElementById("modeloSubtitulo").textContent = modelo.subtitulo || "No especificado";
+      
+      const dimensiones = `
+        Largo: ${modelo.dimensiones.largo}<br>
+        Ancho: ${modelo.dimensiones.ancho}<br>
+        Alto: ${modelo.dimensiones.alto}
+      `;
+      document.getElementById("modeloDimensiones").innerHTML = dimensiones;
+      
+      const imgElement = document.getElementById("modeloImagen");
+      if (modelo.imagen && typeof modelo.imagen === 'string' && modelo.imagen.startsWith('http')) {
+        imgElement.src = modelo.imagen;
+        imgElement.alt = `${modelo.nombre} ${modelo.subtitulo || ""}`;
+      } else {
+        imgElement.src = "https://static.motor.es/imagenes/coche-perfil.jpg";
+        imgElement.alt = "Imagen no disponible";
+      }
+      
+      modeloInfo.style.display = "block";
+    }
+
+    function limpiarNumero(valor) {
+      if (typeof valor !== "string") return parseFloat(valor) || 0;
+      return parseFloat(valor.replace(/[^0-9.]/g, "")) || 0;
+    }
+
+    function calcularPresupuesto() {
+      const index = document.getElementById("modelo").value;
+      if (index === "") {
+        alert("Por favor, selecciona un modelo de vehículo");
+        return;
+      }
+
+      const modelo = modelosActuales[index];
+      
+      try {
+        // 1. Obtener dimensiones en metros
+        const largoTotal = limpiarNumero(modelo.dimensiones.largo) / 1000;
+        const anchoTotal = limpiarNumero(modelo.dimensiones.ancho) / 1000;
+        const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value) || 1.52;
+
+        // 2. Factores de proporcionalidad (ajustables)
+        const FACTORES = {
+          ALETAS: 0.28,    // 28% del largo para aletas
+          CAPO: 0.45,      // 45% del largo para capó
+          TECHO: 0.55,     // 55% del largo para techo
+          PORTON: 0.35,    // 35% del largo para portón
+          MARGEN_ERROR: 1.12 // 12% de margen adicional
+        };
+
+        // 3. Cálculo proporcional
+        const aletas = largoTotal * FACTORES.ALETAS;
+        const laterales = (largoTotal - aletas) * 2 * FACTORES.MARGEN_ERROR;
+        const parachoques = Math.max(anchoTotal * 1.2, anchoTotal * 0.9) * FACTORES.MARGEN_ERROR;
+        
+        const piezasGrandes = (
+          (largoTotal * FACTORES.CAPO) + 
+          (largoTotal * FACTORES.TECHO) + 
+          (largoTotal * FACTORES.PORTON)
+        ) * FACTORES.MARGEN_ERROR;
+
+        // 4. Totales
+        const mlTotales = laterales + parachoques + piezasGrandes;
+        const areaTotal = (laterales + parachoques) * (anchoVinilo/2) + piezasGrandes * anchoVinilo;
+
+        // 5. Costes
+        const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 15;
+        const dificultad = parseFloat(document.getElementById("dificultad").value) || 1;
+        const horas = parseFloat(document.getElementById("horas").value) || 20;
+        const tarifa = parseFloat(document.getElementById("tarifa").value) || 30;
+        
+        const costeMaterial = areaTotal * tipoPrecio;
+        const costeTrabajo = horas * tarifa * dificultad;
+        const total = costeMaterial + costeTrabajo;
+
+        // Mostrar resultados
+        document.getElementById("areaResultado").textContent = areaTotal.toFixed(2) + " m²";
+        document.getElementById("metrosResultado").textContent = mlTotales.toFixed(2) + " m";
+        document.getElementById("materialResultado").textContent = costeMaterial.toFixed(2) + " €";
+        document.getElementById("manoObraResultado").textContent = costeTrabajo.toFixed(2) + " €";
+        document.getElementById("totalResultado").textContent = total.toFixed(2) + " €";
+
+        document.getElementById("resultado").style.display = "block";
+
+      } catch (error) {
+        console.error("Error en el cálculo:", error);
+        alert(`Error al calcular: ${error.message}`);
+      }
+    }
+
+    // Iniciar
+    window.onload = cargarDatos;
+  </script>
+</body>
+</html>
