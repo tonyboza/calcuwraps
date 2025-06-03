@@ -364,14 +364,13 @@
         
         // Validar que cada marca tenga modelos
         const marcasValidas = data.marcas
- 
           .filter(marca => marca.nombre && Array.isArray(marca.modelos))
           .map(marca => ({
             ...marca,
             modelos: marca.modelos.filter(modelo => 
               modelo.nombre && modelo.dimensiones
             )
-          }));
+          }))
           .filter(marca => marca.modelos.length > 0);
         
         if (marcasValidas.length === 0) {
