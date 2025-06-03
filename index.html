@@ -356,6 +356,23 @@
         }
         
         const data = await res.json();
+        // Adaptar la estructura del JSON cargado
+        const marcasAdaptadas = Object.entries(data).map(([nombreMarca, modelosArray]) => ({
+          nombre: nombreMarca,
+          modelos: modelosArray.map(m => ({
+            nombre: m.modelo,
+            subtitulo: "",
+            dimensiones: {
+              largo: m.largo + " mm",
+              ancho: m.ancho + " mm",
+              alto: m.alto + " mm"
+            },
+            imagen: m.imagen
+          }))
+        }));
+        
+        data = { marcas: marcasAdaptadas };
+
         
         // Validar estructura básica del JSON
         if (!data || !data.marcas || !Array.isArray(data.marcas)) {
