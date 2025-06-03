@@ -475,11 +475,14 @@
       if (typeof valor === "number") return valor;
       
       // Extraer números incluyendo decimales
-      const numero = parseFloat(valor.toString().replace(/[^0-9.]/g, ""));
+      const numero = parseFloat(valor.toString().replace(",", ".").replace(/[^0-9.]/g, ""));
       
       if (isNaN(numero) || numero <= 0) {
         throw new Error(`Valor de dimensión no válido: "${valor}"`);
       }
+      if (numero < 10) {
+        return numero * 1000;
+      }  
       return numero;
     }
 
