@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -28,8 +27,8 @@
       line-height: 1.6;
     }
     
-    .header-logos {
-      background: white;
+    .header {
+      background: #000;
       padding: 15px 5%;
       display: flex;
       justify-content: space-between;
@@ -37,15 +36,15 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     
-    .header-logos img {
-      height: 80px;
-      object-fit: contain;
-      max-width: 200px;
+    .header-logo {
+      height: 50px;
     }
     
-    .header-logos .center-logo {
-      flex-grow: 1;
-      text-align: center;
+    .header-title {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 15px;
     }
     
     .container {
@@ -214,8 +213,14 @@
         margin: 20px 10px;
       }
       
-      .header-logos img {
-        height: 60px;
+      .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+      }
+      
+      .header-logo {
+        margin-bottom: 10px;
       }
       
       .modelo-details {
@@ -229,10 +234,9 @@
   </style>
 </head>
 <body>
-  <div class="header-logos">
-    <img src="img/gsix9.png" alt="GSIX9 Logo">
-    <div class="center-logo"><img src="img/oracal.png" alt="ORACAL Logo"></div>
-    <img src="img/totenser.png" alt="TOTENSER Logo">
+  <div class="header">
+    <img src="logo.png" alt="Logo" class="header-logo">
+    <div class="header-title">Calculadora Wraps</div>
   </div>
   
   <div class="container">
@@ -278,10 +282,10 @@
     <div class="form-group">
       <label for="tipoVinilo">Tipo de vinilo:</label>
       <select id="tipoVinilo">
-        <option value="15">Colores Standar (€25/m²)</option>
-        <option value="25">Negro mate (€33/m²)</option>
-        <option value="30">Colores Metalizados (€38/m²)</option>
-        <option value="35">Personalizado Impresion Digital(€49/m²)</option>
+        <option value="25">Colores Standar (€25/m²)</option>
+        <option value="33">Negro mate (€33/m²)</option>
+        <option value="38">Colores Metalizados (€38/m²)</option>
+        <option value="49">Personalizado Impresión Digital (€49/m²)</option>
       </select>
     </div>
 
@@ -345,61 +349,42 @@
     let datosVehiculos = { marcas: [] };
     let modelosActuales = [];
 
-    // Función para cargar datos desde GitHub con mejor manejo de errores
+    // Función para cargar datos desde GitHub
     async function cargarDatos() {
       try {
         const jsonUrl = 'https://raw.githubusercontent.com/tonyboza/calcuwraps/main/vehiculos_combinado_convertido.json';
         const res = await fetch(jsonUrl);
         
         if (!res.ok) {
-          throw new Error(Error HTTP: ${res.status});
+          throw new Error(`Error HTTP: ${res.status}`);
         }
         
-        let data = await res.json();
-        // Adaptar la estructura del JSON cargado
-        const marcasAdaptadas = Object.entries(data).map(([nombreMarca, modelosArray]) => ({
-          nombre: nombreMarca,
-          modelos: modelosArray.map(m => ({
-            nombre: m.modelo,
-            subtitulo: "",
-            dimensiones: {
-              largo: m.largo + " mm",
-              ancho: m.ancho + " mm",
-              alto: m.alto + " mm"
-            },
-            imagen: m.imagen
-          }))
-        }));
+        const data = await res.json();
         
-        data = { marcas: marcasAdaptadas };
-
+        // Convertir el objeto JSON en array de marcas
+        const marcasAdaptadas = Object.keys(data).map(marcaNombre => {
+          return {
+            nombre: marcaNombre,
+            modelos: Array.isArray(data[marcaNombre]) ? 
+              data[marcaNombre].map(modelo => ({
+                nombre: modelo.modelo || "Modelo no especificado",
+                subtitulo: modelo.version || "",
+                dimensiones: {
+                  largo: `${modelo.largo || 0} mm`,
+                  ancho: `${modelo.ancho || 0} mm`,
+                  alto: `${modelo.alto || 0} mm`
+                },
+                imagen: modelo.imagen || ""
+              })) : []
+          };
+        }).filter(marca => marca.modelos.length > 0);
         
-        // Validar estructura básica del JSON
-        if (!data || !data.marcas || !Array.isArray(data.marcas)) {
-          throw new Error("El JSON no tiene la estructura esperada (falta propiedad 'marcas')");
-        }
-        
-        // Validar que cada marca tenga modelos
-        const marcasValidas = data.marcas
-          .filter(marca => marca.nombre && Array.isArray(marca.modelos))
-          .map(marca => ({
-            ...marca,
-            modelos: marca.modelos.filter(modelo => 
-              modelo.nombre && modelo.dimensiones
-            )
-          }))
-          .filter(marca => marca.modelos.length > 0);
-        
-        if (marcasValidas.length === 0) {
-          throw new Error("No se encontraron marcas válidas con modelos");
-        }
-        
-        datosVehiculos.marcas = marcasValidas.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        datosVehiculos.marcas = marcasAdaptadas.sort((a, b) => a.nombre.localeCompare(b.nombre));
         llenarSelectMarcas();
         
       } catch (error) {
         console.error("Error al cargar datos:", error);
-        alert(Error al cargar datos: ${error.message}\nUsando datos de ejemplo...);
+        alert(`Error al cargar datos: ${error.message}\nUsando datos de ejemplo...`);
         cargarDatosDeEjemplo();
       }
     }
@@ -419,12 +404,20 @@
     function cargarDatosDeEjemplo() {
       datosVehiculos = {
         marcas: [{
-          nombre: "Ejemplo",
+          nombre: "Toyota",
           modelos: [{
-            nombre: "Modelo Demo",
-            subtitulo: "Versión estándar",
-            dimensiones: { largo: "4630 mm", ancho: "1860 mm", alto: "1436 mm" },
-            imagen: "https://static.motor.es/imagenes/coche-perfil.jpg"
+            nombre: "Corolla",
+            subtitulo: "Versión 2023",
+            dimensiones: { largo: "4630 mm", ancho: "1780 mm", alto: "1435 mm" },
+            imagen: "https://cdn.motor1.com/images/mgl/7e8MoL/s1/toyota-corolla-2023.jpg"
+          }]
+        }, {
+          nombre: "Honda",
+          modelos: [{
+            nombre: "Civic",
+            subtitulo: "Sport 2022",
+            dimensiones: { largo: "4655 mm", ancho: "1799 mm", alto: "1416 mm" },
+            imagen: "https://cdn.motor1.com/images/mgl/6ZXJZR/s1/honda-civic-2022.jpg"
           }]
         }]
       };
@@ -449,8 +442,8 @@
       
       if (marca && marca.modelos && marca.modelos.length > 0) {
         modelosActuales = marca.modelos.sort((a, b) => {
-          const nombreA = ${a.nombre} ${a.subtitulo || ""}.toLowerCase();
-          const nombreB = ${b.nombre} ${b.subtitulo || ""}.toLowerCase();
+          const nombreA = `${a.nombre} ${a.subtitulo || ""}`.toLowerCase();
+          const nombreB = `${b.nombre} ${b.subtitulo || ""}`.toLowerCase();
           return nombreA.localeCompare(nombreB);
         });
         
@@ -459,7 +452,7 @@
           const opt = document.createElement("option");
           opt.value = index;
           const textoModelo = modelo.subtitulo ? 
-            ${modelo.nombre} - ${modelo.subtitulo} : modelo.nombre;
+            `${modelo.nombre} - ${modelo.subtitulo}` : modelo.nombre;
           opt.textContent = textoModelo;
           selectModelo.appendChild(opt);
         });
@@ -490,10 +483,9 @@
       // Mostrar dimensiones con validación
       const dim = modelo.dimensiones || {};
       const dimensiones = 
-        Largo: ${dim.largo || "No disponible"}<br>
+        `Largo: ${dim.largo || "No disponible"}<br>
         Ancho: ${dim.ancho || "No disponible"}<br>
-        Alto: ${dim.alto || "No disponible"}
-      ;
+        Alto: ${dim.alto || "No disponible"}`;
       document.getElementById("modeloDimensiones").innerHTML = dimensiones;
       
       // Manejar imagen del modelo
@@ -501,8 +493,8 @@
       if (modelo.imagen && typeof modelo.imagen === 'string') {
         imgElement.src = modelo.imagen.startsWith('http') ? 
           modelo.imagen : 
-          https://raw.githubusercontent.com/tonyboza/calcuwraps/main/${modelo.imagen};
-        imgElement.alt = ${modelo.nombre} ${modelo.subtitulo || ""};
+          `https://raw.githubusercontent.com/tonyboza/calcuwraps/main/${modelo.imagen}`;
+        imgElement.alt = `${modelo.nombre} ${modelo.subtitulo || ""}`;
       } else {
         imgElement.src = "https://static.motor.es/imagenes/coche-perfil.jpg";
         imgElement.alt = "Imagen no disponible";
@@ -526,7 +518,7 @@
       const numero = extraerValorNumerico(valor);
       
       if (isNaN(numero)) {
-        throw new Error(Valor no válido para ${nombreDimension}: "${valor}");
+        throw new Error(`Valor no válido para ${nombreDimension}: "${valor}"`);
       }
       
       // Convertir a milímetros si el valor parece estar en metros (muy pequeño)
@@ -554,7 +546,7 @@
         
         // Validar dimensiones mínimas razonables
         if (largoTotal < 2 || anchoTotal < 1 || altoTotal < 1) {
-          throw new Error(Dimensiones del vehículo no válidas (largo: ${largoTotal}m, ancho: ${anchoTotal}m, alto: ${altoTotal}m));
+          throw new Error(`Dimensiones del vehículo no válidas (largo: ${largoTotal}m, ancho: ${anchoTotal}m, alto: ${altoTotal}m)`);
         }
 
         // 2. FACTORES DE CÁLCULO (ajustables según necesidades)
@@ -590,7 +582,7 @@
                          mlPiezasGrandes * anchoVinilo;
 
         // 5. CALCULAR COSTES
-        const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 15;
+        const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 25;
         const dificultad = parseFloat(document.getElementById("dificultad").value) || 1;
         const horas = parseFloat(document.getElementById("horas").value) || 20;
         const tarifa = parseFloat(document.getElementById("tarifa").value) || 30;
@@ -610,7 +602,7 @@
 
       } catch (error) {
         console.error("Error en el cálculo:", error);
-        alert(Error: ${error.message});
+        alert(`Error: ${error.message}`);
       }
     }
 
@@ -618,4 +610,4 @@
     document.addEventListener('DOMContentLoaded', cargarDatos);
   </script>
 </body>
-</html> 
+</html>
