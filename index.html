@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de Vinilo para Coches</title>
+  <title>Calculadora Wrap´s para Coches</title>
   <style>
     :root {
       --primary-color: #e74c3c;
@@ -12,6 +12,7 @@
       --medium-gray: #ecf0f1;
       --dark-gray: #7f8c8d;
       --success-color: #27ae60;
+      --gold-color: #FFD700;
     }
     
     * {
@@ -34,17 +35,24 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      gap: 20px;
     }
     
     .header-logo {
-      height: 50px;
+      height: 80px; /* Aumentado el tamaño del logo */
+      object-fit: contain;
+      transition: transform 0.3s;
     }
-    
+    .header-logo:hover {
+      transform: scale(1.05);
+    }
     .header-title {
-      color: white;
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 0 15px;
+      color: var(--gold-color); /* Texto en dorado */
+      font-size: 2rem; /* Tamaño aumentado */
+      font-weight: 700;
+      margin: 0;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      letter-spacing: 1px;
     }
     
     .container {
