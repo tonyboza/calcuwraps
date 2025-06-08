@@ -1,58 +1,81 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora Wrap´s para Coches</title>
+  <title>Calculadora de Vinilo para Coches</title>
   <style>
     :root {
       --primary-color: #e74c3c;
       --primary-hover: #c0392b;
       --secondary-color: #2c3e50;
-      --light-gray: #f3f3f3;
-      --medium-gray: #ecf0f1;
-      --dark-gray: #7f8c8d;
-      --success-color: #27ae60;
+      --light-gray: #f8f9fa;
+      --medium-gray: #e9ecef;
+      --dark-gray: #495057;
+      --success-color: #28a745;
       --gold-color: #FFD700;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
     }
     
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--light-gray);
-      margin: 0;
-      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
       color: var(--secondary-color);
       line-height: 1.6;
+      min-height: 100vh;
     }
     
     .header {
-      background: #000;
+      background: linear-gradient(to right, #000000, #1a1a1a);
       padding: 15px 5%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow);
       gap: 20px;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--gold-color), var(--primary-color));
     }
     
     .header-logo {
-      height: 80px; /* Aumentado el tamaño del logo */
+      height: 80px;
       object-fit: contain;
-      transition: transform 0.3s;
+      transition: var(--transition);
+      filter: drop-shadow(0 2px 4px rgba(255, 215, 0, 0.3));
     }
+    
     .header-logo:hover {
       transform: scale(1.05);
     }
+    
     .header-title {
-      color: var(--gold-color); /* Texto en dorado */
-      font-size: 2rem; /* Tamaño aumentado */
+      color: var(--gold-color);
+      font-size: 2rem;
       font-weight: 700;
       margin: 0;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
       letter-spacing: 1px;
+      background: linear-gradient(to right, var(--gold-color), #ffffff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
     
     .container {
@@ -61,14 +84,26 @@
       background: white;
       padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary-color), var(--gold-color));
     }
     
     h1 {
       text-align: center;
       color: var(--secondary-color);
       margin-bottom: 30px;
-      font-size: 28px;
+      font-size: 2.2rem;
       position: relative;
       padding-bottom: 15px;
     }
@@ -81,11 +116,12 @@
       transform: translateX(-50%);
       width: 100px;
       height: 3px;
-      background: var(--primary-color);
+      background: linear-gradient(to right, var(--gold-color), var(--primary-color));
     }
     
     .form-group {
       margin-bottom: 25px;
+      position: relative;
     }
     
     label {
@@ -93,6 +129,7 @@
       display: block;
       margin-bottom: 8px;
       color: var(--secondary-color);
+      font-size: 0.95rem;
     }
     
     select, input {
@@ -101,8 +138,9 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       font-size: 16px;
-      transition: all 0.3s;
+      transition: var(--transition);
       background-color: white;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
     }
     
     select:focus, input:focus {
@@ -115,19 +153,28 @@
       display: block;
       width: 100%;
       padding: 15px;
-      background: var(--primary-color);
+      background: linear-gradient(to right, var(--primary-color), var(--primary-hover));
       color: white;
       border: none;
       border-radius: 8px;
       font-size: 18px;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: var(--transition);
       margin: 30px 0;
+      box-shadow: var(--shadow);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     
     button:hover {
-      background: var(--primary-hover);
+      background: linear-gradient(to right, var(--primary-hover), var(--primary-color));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    button:active {
+      transform: translateY(0);
     }
     
     .resultado {
@@ -137,13 +184,7 @@
       border-left: 5px solid var(--success-color);
       border-radius: 8px;
       display: none;
-    }
-    
-    .resultado h3 {
-      margin-top: 0;
-      color: var(--secondary-color);
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
+      animation: fadeIn 0.5s ease-out;
     }
     
     .modelo-info {
@@ -152,6 +193,7 @@
       background: var(--medium-gray);
       border-radius: 8px;
       display: none;
+      animation: fadeIn 0.5s ease-out;
     }
     
     .modelo-info h3 {
@@ -215,6 +257,11 @@
       font-size: 14px;
     }
     
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
     @media (max-width: 768px) {
       .container {
         padding: 20px;
@@ -229,6 +276,11 @@
       
       .header-logo {
         margin-bottom: 10px;
+        height: 70px;
+      }
+      
+      .header-title {
+        font-size: 1.5rem;
       }
       
       .modelo-details {
@@ -244,7 +296,7 @@
 <body>
   <div class="header">
     <img src="img/logo.png" alt="Logo" class="header-logo">
-    <div class="header-title">Calculadora Wraps</div>
+    <div class="header-title">CALCULADORA WRAPS</div>
   </div>
   
   <div class="container">
@@ -357,7 +409,6 @@
     let datosVehiculos = { marcas: [] };
     let modelosActuales = [];
 
-    // Función para cargar datos desde GitHub
     async function cargarDatos() {
       try {
         const jsonUrl = 'https://raw.githubusercontent.com/tonyboza/calcuwraps/main/vehiculos_combinado_convertido.json';
@@ -369,7 +420,6 @@
         
         const data = await res.json();
         
-        // Convertir el objeto JSON en array de marcas
         const marcasAdaptadas = Object.keys(data).map(marcaNombre => {
           return {
             nombre: marcaNombre,
@@ -436,7 +486,6 @@
       const marcaSeleccionada = document.getElementById("marca").value;
       const selectModelo = document.getElementById("modelo");
       
-      // Ocultar secciones dependientes
       document.getElementById("modeloInfo").style.display = "none";
       document.getElementById("resultado").style.display = "none";
       
@@ -484,11 +533,9 @@
       
       const modelo = modelosActuales[index];
       
-      // Mostrar información básica
       document.getElementById("modeloNombre").textContent = modelo.nombre;
       document.getElementById("modeloSubtitulo").textContent = modelo.subtitulo || "No especificado";
       
-      // Mostrar dimensiones con validación
       const dim = modelo.dimensiones || {};
       const dimensiones = 
         `Largo: ${dim.largo || "No disponible"}<br>
@@ -496,7 +543,6 @@
         Alto: ${dim.alto || "No disponible"}`;
       document.getElementById("modeloDimensiones").innerHTML = dimensiones;
       
-      // Manejar imagen del modelo
       const imgElement = document.getElementById("modeloImagen");
       if (modelo.imagen && typeof modelo.imagen === 'string') {
         imgElement.src = modelo.imagen.startsWith('http') ? 
@@ -515,7 +561,6 @@
       if (typeof valor === 'number') return valor;
       if (typeof valor !== 'string') return NaN;
       
-      // Extraer el primer número encontrado (con punto o coma decimal)
       const match = valor.match(/[0-9]+([,.][0-9]+)?/);
       if (!match) return NaN;
       
@@ -529,7 +574,6 @@
         throw new Error(`Valor no válido para ${nombreDimension}: "${valor}"`);
       }
       
-      // Convertir a milímetros si el valor parece estar en metros (muy pequeño)
       if (numero < 10) {
         return numero * 1000;
       }
@@ -547,49 +591,37 @@
         const modelo = modelosActuales[index];
         const dimensiones = modelo.dimensiones || {};
         
-        // 1. VALIDAR Y OBTENER DIMENSIONES
-        const largoTotal = validarDimension(dimensiones.largo, "largo") / 1000; // en metros
+        const largoTotal = validarDimension(dimensiones.largo, "largo") / 1000;
         const anchoTotal = validarDimension(dimensiones.ancho, "ancho") / 1000;
         const altoTotal = validarDimension(dimensiones.alto, "alto") / 1000;
         
-        // Validar dimensiones mínimas razonables
         if (largoTotal < 2 || anchoTotal < 1 || altoTotal < 1) {
           throw new Error(`Dimensiones del vehículo no válidas (largo: ${largoTotal}m, ancho: ${anchoTotal}m, alto: ${altoTotal}m)`);
         }
 
-        // 2. FACTORES DE CÁLCULO (ajustables según necesidades)
         const FACTORES = {
-          ALETAS: 0.25,       // 25% del largo para aletas
-          CAPO: 0.4,          // 40% del largo para capó
-          TECHO: 0.5,         // 50% del largo para techo
-          PORTON: 0.3,        // 30% del largo para portón
-          MARGEN: 1.15,       // 15% de margen adicional
-          PARACHOQUES_EXTRA: 0.2 // 20% extra para parachoques
+          ALETAS: 0.25,
+          CAPO: 0.4,
+          TECHO: 0.5,
+          PORTON: 0.3,
+          MARGEN: 1.15,
+          PARACHOQUES_EXTRA: 0.2
         };
 
-        // 3. CÁLCULO DE METROS LINEALES
-        // Laterales: (largo total - aletas) * 2 lados
         const mlLaterales = (largoTotal - (largoTotal * FACTORES.ALETAS)) * 2 * FACTORES.MARGEN;
-        
-        // Parachoques: ancho + margen (considerando que suelen ser más anchos que el vehículo)
         const mlParachoques = (anchoTotal * (1 + FACTORES.PARACHOQUES_EXTRA)) * FACTORES.MARGEN;
-        
-        // Piezas grandes (capó + techo + portón)
         const mlPiezasGrandes = (
           (largoTotal * FACTORES.CAPO) + 
           (largoTotal * FACTORES.TECHO) + 
           (largoTotal * FACTORES.PORTON)
         ) * FACTORES.MARGEN;
 
-        // 4. TOTALES
         const mlTotales = mlLaterales + mlParachoques + mlPiezasGrandes;
         const anchoVinilo = parseFloat(document.getElementById("anchoVinilo").value) || 1.52;
         
-        // Área total: laterales y parachoques usan la mitad del ancho del vinilo
         const areaTotal = (mlLaterales + mlParachoques) * (anchoVinilo/2) + 
                          mlPiezasGrandes * anchoVinilo;
 
-        // 5. CALCULAR COSTES
         const tipoPrecio = parseFloat(document.getElementById("tipoVinilo").value) || 25;
         const dificultad = parseFloat(document.getElementById("dificultad").value) || 1;
         const horas = parseFloat(document.getElementById("horas").value) || 20;
@@ -599,7 +631,6 @@
         const costeTrabajo = horas * tarifa * dificultad;
         const total = costeMaterial + costeTrabajo;
 
-        // 6. MOSTRAR RESULTADOS
         document.getElementById("areaResultado").textContent = areaTotal.toFixed(2) + " m²";
         document.getElementById("metrosResultado").textContent = mlTotales.toFixed(2) + " m";
         document.getElementById("materialResultado").textContent = costeMaterial.toFixed(2) + " €";
@@ -614,7 +645,6 @@
       }
     }
 
-    // Iniciar la carga de datos cuando la página esté lista
     document.addEventListener('DOMContentLoaded', cargarDatos);
   </script>
 </body>
