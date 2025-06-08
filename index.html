@@ -647,5 +647,39 @@
 
     document.addEventListener('DOMContentLoaded', cargarDatos);
   </script>
+  <section style="margin-top: 50px;">
+  <h2 style="text-align:center;">Gráfica de funciones</h2>
+  <canvas id="chartFunciones" width="100%" height="300"></canvas>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('chartFunciones').getContext('2d');
+  const labels = Array.from({length: 360}, (_, i) => i);
+  const sen = labels.map(x => Math.sin(x * Math.PI / 180));
+  const cos = labels.map(x => Math.cos(x * Math.PI / 180));
+  const exp = labels.map(x => Math.exp(x / 100) / 20);
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Seno', data: sen, borderColor: '#e74c3c', fill: false },
+        { label: 'Coseno', data: cos, borderColor: '#2ecc71', fill: false },
+        { label: 'Exponencial', data: exp, borderColor: '#3498db', fill: false }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'top' } },
+      scales: {
+        x: { title: { display: true, text: 'Grados' }},
+        y: { title: { display: true, text: 'Valor' }}
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
